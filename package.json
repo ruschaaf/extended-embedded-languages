@@ -1,0 +1,33 @@
+{
+  "name": "extended-embedded-languages",
+  "displayName": "Extended Embedded Languages",
+  "description": "Extends several languages to support syntax highlighting for other languages embedded within strings (for example snippets of SQL within Python code)",
+  "version": "0.0.1",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.8.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "cpp_injection"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "cpp_injection",
+        "scopeName": "source.cpp.embedded.codeblock",
+        "injectTo": [
+          "source.cpp"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.string.raw.json.cpp": "javascript"
+        },
+        "path": "./syntaxes/cpp.tmLanguage.json"
+      }
+    ]
+  }
+}
