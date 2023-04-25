@@ -11,23 +11,29 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [
-      {
-        "id": "cpp_injection"
-      }
-    ],
     "grammars": [
       {
-        "language": "cpp_injection",
         "scopeName": "source.cpp.embedded.codeblock",
         "injectTo": [
           "source.cpp"
         ],
         "embeddedLanguages": {
-          "meta.embedded.string.raw.json.cpp": "javascript"
+          "meta.embedded.string.raw.bat.cpp": "bat",
+          "meta.embedded.string.raw.cpp.cpp": "cpp",
+          "meta.embedded.string.raw.c.cpp": "c",
+          "meta.embedded.string.raw.css.cpp": "css",
+          "meta.embedded.string.raw.html.cpp": "html",
+          "meta.embedded.string.raw.toml.cpp": "toml",
+          "meta.embedded.string.raw.ini.cpp": "ini",
+          "meta.embedded.string.raw.json.cpp": "json",
+          "meta.embedded.string.raw.python.cpp": "python",
+          "meta.embedded.string.raw.shell.cpp": "shellscript",
+          "meta.embedded.string.raw.sql.cpp": "sql",
+          "meta.embedded.string.raw.yaml.cpp": "yaml",
+          "meta.embedded.string.raw.xml.cpp": "xml"
         },
-        "path": "./syntaxes/cpp.tmLanguage.json"
+        "path": "./syntaxes/cpp.embedded.json"
       }
     ]
-  }
+  },
 }

@@ -1,0 +1,104 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"injectionSelector": "L:source.cpp",
+	"scopeName": "source.cpp.embedded.codeblock",
+	"patterns": [
+		{
+			"include": "#raw_strings"
+		}
+	],
+	"repository": {
+		"raw_strings": {
+			"comment": "These patterns all match C++ raw strings and select one language. The C++ syntax is taken from ",
+			"patterns": [
+				{
+					"begin": "((?:u|U|L|u8)?R)\\\"(json|JSON)\\(",
+					"end": "\\)(\\2)\\\"",
+					"contentName": "meta.embedded.string.raw.json.cpp",
+					"patterns": [
+						{
+							"include": "source.json"
+						}
+					],
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin.cpp"
+						},
+						"1": {
+							"name": "meta.encoding.cpp"
+						},
+						"2": {
+							"name": "meta.encoding.cpp"
+						}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end.cpp"
+						},
+						"1": {
+							"name": "meta.encoding.cpp"
+						}
+					}
+				},
+				{
+					"begin": "((?:u|U|L|u8)?R)\\\"(py|PY|python|PYTHON)\\(",
+					"end": "\\)(\\2)\\\"",
+					"contentName": "meta.embedded.string.raw.python.cpp",
+					"patterns": [
+						{
+							"include": "source.python"
+						}
+					],
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin.cpp"
+						},
+						"1": {
+							"name": "meta.encoding.cpp"
+						},
+						"2": {
+							"name": "meta.encoding.cpp"
+						}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end.cpp"
+						},
+						"1": {
+							"name": "meta.encoding.cpp"
+						}
+					}
+				},
+				{
+					"begin": "((?:u|U|L|u8)?R)\\\"(sql|SQL)\\(",
+					"end": "\\)(\\2)\\\"",
+					"contentName": "meta.embedded.string.raw.sql.cpp",
+					"patterns": [
+						{
+							"include": "source.sql"
+						}
+					],
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin.cpp"
+						},
+						"1": {
+							"name": "meta.encoding.cpp"
+						},
+						"2": {
+							"name": "meta.encoding.cpp"
+						}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end.cpp"
+						},
+						"1": {
+							"name": "meta.encoding.cpp"
+						}
+					}
+				}
+			]
+		}
+	}
+}
