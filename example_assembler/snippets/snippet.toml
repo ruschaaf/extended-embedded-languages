@@ -1,0 +1,9 @@
+# Basic TOML document
+
+url = "http://example.com"
+name = "Sample Document"
+
+[user]
+name = "Foobar"
+id = 1234
+active = true

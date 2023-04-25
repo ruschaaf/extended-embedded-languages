@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Basic XML document -->
+<user active="true" id="1234">
+  <name>Foobar</name>
+  <desc> a &lt; b </desc>
+  <![CDATA[
+  Unparsed string data
+  ]]>
+</user>

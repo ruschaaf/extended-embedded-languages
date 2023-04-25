@@ -1,0 +1,10 @@
+/* This is basic CSS document */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #0066cc;
+}

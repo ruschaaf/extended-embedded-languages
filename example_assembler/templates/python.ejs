@@ -1,0 +1,17 @@
+import os, sys
+
+# These strings all contain examples of other languages embedded into
+# python. Because python doesn't have custom delimiters for multiline 
+# strings we use a comment at the start of the embedded text to 
+# indicate which language to use
+
+<% snippets.forEach(function(snippet) { %>
+<% if (snippet.comment) { %>
+# <%= snippet.name %> Example
+<%= snippet.id %>_string = """<%snippet.comment%>
+<%-snippet.body%>
+"""
+<% } }); %>
+
+if __name__ == "__main__":
+    print("Hello world!");

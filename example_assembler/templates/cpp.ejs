@@ -1,0 +1,18 @@
+#include <iostream>
+
+// These strings all contain example embedded languages using the 
+// C++ raw string syntax
+
+<% snippets.forEach(function(snippet){ %>
+// <%= snippet.name %> Example
+static const char* <%= snippet.id %>_string = R"<%=
+snippet.id %>(
+<%-snippet.body%>
+)<%= snippet.id %>";
+
+<% }); %>
+
+int main(const char* argv, int argc)
+{
+    return 0;
+}

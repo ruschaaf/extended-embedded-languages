@@ -1,0 +1,12 @@
+# This is a basic YAML document
+users: &id1234
+  - foobar: 
+    id: 1234
+    active: true
+    group: "main"
+    links: [ *id2345, *id2346, null, !!str false ]
+    desc: >
+  A lengthy multiline
+  description string
+
+  
