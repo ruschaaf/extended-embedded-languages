@@ -4,6 +4,16 @@
 // C++ raw string syntax
 
 
+// Batch Example
+static const char* bat_string = R"bat(
+REM this is a basic BAT file
+@echo off
+set WORLD="world"
+echo "Hello %WORLD%!"
+
+)bat";
+
+
 // C++ Example
 static const char* cpp_string = R"cpp(
 // This is a basic C++ document
@@ -89,6 +99,19 @@ static const char* json_string = R"json(
 )json";
 
 
+// JSONC Example
+static const char* json_string = R"json(
+// This is a JSONC (json-with-comments) file
+{
+    "a": "b",
+    "c": true,
+    "d": [1,2,3, null],
+    "e": 1.02
+}
+
+)json";
+
+
 // Python Example
 static const char* py_string = R"py(
 # This is a basic python file
@@ -170,6 +193,22 @@ users: &id1234
 
   
 )yaml";
+
+
+// C Example
+static const char* c_string = R"c(
+/* Basic C document - with notable differences from C++ */
+int template = 3;
+int static_assert = 4;
+
+int
+add(a, b)
+int a, b;
+{
+  return a + b;
+}
+
+)c";
 
 
 

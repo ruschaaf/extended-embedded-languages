@@ -1,0 +1,7 @@
+// This is a JSONC (json-with-comments) file
+{
+    "a": "b",
+    "c": true,
+    "d": [1,2,3, null],
+    "e": 1.02
+}

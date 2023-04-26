@@ -5,10 +5,10 @@
 
 <% snippets.forEach(function(snippet){ %>
 // <%= snippet.name %> Example
-static const char* <%= snippet.id %>_string = R"<%=
-snippet.id %>(
-<%-snippet.body%>
-)<%= snippet.id %>";
+static const char* <%= snippet.ids[0] %>_string = R"<%=
+snippet.ids[0] %>(
+<%-snippet.code%>
+)<%= snippet.ids[0] %>";
 
 <% }); %>
 

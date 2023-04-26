@@ -1,0 +1,12 @@
+# These strings all contain examples of other languages embedded into
+# YAML. 
+
+examples:
+# There may be another way to signal which language to use in yaml,
+# but for now we will use a comment after the block marker
+<% snippets.forEach(function(snippet) { %>
+  # <%= snippet.name %> Example
+  sample_<%= snippet.ids[0] %>: | #<%-snippet.ids[0]%>
+    <%-snippet.code.replaceAll("\n", "\n    ")%>
+<% }); %>
+

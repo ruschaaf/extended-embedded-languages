@@ -1,0 +1,16 @@
+{
+  "name": "utilities",
+  "version": "1.0.0",
+  "description": "Utilities to generate syntax definitions and examples",
+  "main": "syntax_assembler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Russell Schaaf",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "csv": "^6.2.10",
+    "ejs": "^3.1.9"
+  }
+}

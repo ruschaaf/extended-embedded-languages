@@ -1,104 +1,482 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"injectionSelector": "L:source.cpp",
-	"scopeName": "source.cpp.embedded.codeblock",
-	"patterns": [
-		{
-			"include": "#raw_strings"
-		}
-	],
-	"repository": {
-		"raw_strings": {
-			"comment": "These patterns all match C++ raw strings and select one language. The C++ syntax is taken from ",
-			"patterns": [
-				{
-					"begin": "((?:u|U|L|u8)?R)\\\"(json|JSON)\\(",
-					"end": "\\)(\\2)\\\"",
-					"contentName": "meta.embedded.string.raw.json.cpp",
-					"patterns": [
-						{
-							"include": "source.json"
-						}
-					],
-					"beginCaptures": {
-						"0": {
-							"name": "punctuation.definition.string.begin.cpp"
-						},
-						"1": {
-							"name": "meta.encoding.cpp"
-						},
-						"2": {
-							"name": "meta.encoding.cpp"
-						}
-					},
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.definition.string.end.cpp"
-						},
-						"1": {
-							"name": "meta.encoding.cpp"
-						}
-					}
-				},
-				{
-					"begin": "((?:u|U|L|u8)?R)\\\"(py|PY|python|PYTHON)\\(",
-					"end": "\\)(\\2)\\\"",
-					"contentName": "meta.embedded.string.raw.python.cpp",
-					"patterns": [
-						{
-							"include": "source.python"
-						}
-					],
-					"beginCaptures": {
-						"0": {
-							"name": "punctuation.definition.string.begin.cpp"
-						},
-						"1": {
-							"name": "meta.encoding.cpp"
-						},
-						"2": {
-							"name": "meta.encoding.cpp"
-						}
-					},
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.definition.string.end.cpp"
-						},
-						"1": {
-							"name": "meta.encoding.cpp"
-						}
-					}
-				},
-				{
-					"begin": "((?:u|U|L|u8)?R)\\\"(sql|SQL)\\(",
-					"end": "\\)(\\2)\\\"",
-					"contentName": "meta.embedded.string.raw.sql.cpp",
-					"patterns": [
-						{
-							"include": "source.sql"
-						}
-					],
-					"beginCaptures": {
-						"0": {
-							"name": "punctuation.definition.string.begin.cpp"
-						},
-						"1": {
-							"name": "meta.encoding.cpp"
-						},
-						"2": {
-							"name": "meta.encoding.cpp"
-						}
-					},
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.definition.string.end.cpp"
-						},
-						"1": {
-							"name": "meta.encoding.cpp"
-						}
-					}
-				}
-			]
-		}
-	}
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "injectionSelector": "L:source.cpp",
+  "scopeName": "source.cpp.embedded.codeblock",
+  "patterns": [
+    {
+      "include": "#raw_strings"
+    }
+  ],
+  "repository": {
+    "raw_strings": {
+      "comment": "These patterns all match C++ raw strings and select one language. The syntax is injected into https://github.com/microsoft/vscode/blob/main/extensions/cpp/syntaxes/cpp.tmLanguage.json",
+      "patterns": [
+        {
+          "comment": "Batch-formatted raw strings",
+          "begin": "((?:u|U|L|u8)?R)\\\"((?i:bat)(?:[:^alpha:].*)?)\\(",
+          "end": "\\)(\\2)\\\"",
+          "contentName": "meta.embedded.string.raw.bat.cpp",
+          "patterns": [
+            {
+              "include": "source.batchfile"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "C++-formatted raw strings",
+          "begin": "((?:u|U|L|u8)?R)\\\"((?i:cpp|c\\+\\+)(?:[:^alpha:].*)?)\\(",
+          "end": "\\)(\\2)\\\"",
+          "contentName": "meta.embedded.string.raw.cpp.cpp",
+          "patterns": [
+            {
+              "include": "source.cpp"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "CSS-formatted raw strings",
+          "begin": "((?:u|U|L|u8)?R)\\\"((?i:css)(?:[:^alpha:].*)?)\\(",
+          "end": "\\)(\\2)\\\"",
+          "contentName": "meta.embedded.string.raw.css.cpp",
+          "patterns": [
+            {
+              "include": "source.css"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "HTML-formatted raw strings",
+          "begin": "((?:u|U|L|u8)?R)\\\"((?i:html)(?:[:^alpha:].*)?)\\(",
+          "end": "\\)(\\2)\\\"",
+          "contentName": "meta.embedded.string.raw.html.cpp",
+          "patterns": [
+            {
+              "include": "text.html.derivative"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "INI-formatted raw strings",
+          "begin": "((?:u|U|L|u8)?R)\\\"((?i:ini)(?:[:^alpha:].*)?)\\(",
+          "end": "\\)(\\2)\\\"",
+          "contentName": "meta.embedded.string.raw.ini.cpp",
+          "patterns": [
+            {
+              "include": "source.ini"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "Javascript-formatted raw strings",
+          "begin": "((?:u|U|L|u8)?R)\\\"((?i:js|javascript)(?:[:^alpha:].*)?)\\(",
+          "end": "\\)(\\2)\\\"",
+          "contentName": "meta.embedded.string.raw.javascript.cpp",
+          "patterns": [
+            {
+              "include": "source.js"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "JSON-formatted raw strings",
+          "begin": "((?:u|U|L|u8)?R)\\\"((?i:json)(?:[:^alpha:].*)?)\\(",
+          "end": "\\)(\\2)\\\"",
+          "contentName": "meta.embedded.string.raw.json.cpp",
+          "patterns": [
+            {
+              "include": "source.json"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "JSONC-formatted raw strings",
+          "begin": "((?:u|U|L|u8)?R)\\\"((?i:json)(?:[:^alpha:].*)?)\\(",
+          "end": "\\)(\\2)\\\"",
+          "contentName": "meta.embedded.string.raw.jsonc.cpp",
+          "patterns": [
+            {
+              "include": "source.jsonc"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "Python-formatted raw strings",
+          "begin": "((?:u|U|L|u8)?R)\\\"((?i:py|python)(?:[:^alpha:].*)?)\\(",
+          "end": "\\)(\\2)\\\"",
+          "contentName": "meta.embedded.string.raw.python.cpp",
+          "patterns": [
+            {
+              "include": "source.python"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "Shell-formatted raw strings",
+          "begin": "((?:u|U|L|u8)?R)\\\"((?i:sh|bash|shell|shellscript)(?:[:^alpha:].*)?)\\(",
+          "end": "\\)(\\2)\\\"",
+          "contentName": "meta.embedded.string.raw.shell.cpp",
+          "patterns": [
+            {
+              "include": "source.shell"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "SQL-formatted raw strings",
+          "begin": "((?:u|U|L|u8)?R)\\\"((?i:sql)(?:[:^alpha:].*)?)\\(",
+          "end": "\\)(\\2)\\\"",
+          "contentName": "meta.embedded.string.raw.sql.cpp",
+          "patterns": [
+            {
+              "include": "source.sql"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "TOML-formatted raw strings",
+          "begin": "((?:u|U|L|u8)?R)\\\"((?i:toml)(?:[:^alpha:].*)?)\\(",
+          "end": "\\)(\\2)\\\"",
+          "contentName": "meta.embedded.string.raw.toml.cpp",
+          "patterns": [
+            {
+              "include": "source.toml"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "XML-formatted raw strings",
+          "begin": "((?:u|U|L|u8)?R)\\\"((?i:xml)(?:[:^alpha:].*)?)\\(",
+          "end": "\\)(\\2)\\\"",
+          "contentName": "meta.embedded.string.raw.xml.cpp",
+          "patterns": [
+            {
+              "include": "text.xml"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "YAML-formatted raw strings",
+          "begin": "((?:u|U|L|u8)?R)\\\"((?i:yaml)(?:[:^alpha:].*)?)\\(",
+          "end": "\\)(\\2)\\\"",
+          "contentName": "meta.embedded.string.raw.yaml.cpp",
+          "patterns": [
+            {
+              "include": "source.yaml"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "C-formatted raw strings",
+          "begin": "((?:u|U|L|u8)?R)\\\"((?i:c)(?:[:^alpha:].*)?)\\(",
+          "end": "\\)(\\2)\\\"",
+          "contentName": "meta.embedded.string.raw.c.cpp",
+          "patterns": [
+            {
+              "include": "source.c"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        }
+      ]
+    }
+  }
 }

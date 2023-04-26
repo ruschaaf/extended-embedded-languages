@@ -6,10 +6,10 @@ import os, sys
 # indicate which language to use
 
 <% snippets.forEach(function(snippet) { %>
-<% if (snippet.comment) { %>
+<% if (snippet.example_comment) { %>
 # <%= snippet.name %> Example
-<%= snippet.id %>_string = """<%snippet.comment%>
-<%-snippet.body%>
+<%= snippet.ids[0] %>_string = """<%-snippet.example_comment%>
+<%-snippet.code%>
 """
 <% } }); %>
 
