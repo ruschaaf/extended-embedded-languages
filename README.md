@@ -1,49 +1,37 @@
 # extended-embedded-languages README
 
-This is a Visual Studio Code extension which enables better syntax
-highlighting for programming languagess embedded as strings within other
-programming language files. 
+This Visual Studio Code extension enables better syntax
+highlighting for snippets of code that are embedded
+within another language. 
 
-For example, if you are writing a Python script, and have snippets of
-SQL embedded as strings within that file, you may want to syntax
-highlight the SQL as if it were its own document.
+For example, a Python script might have strings containing SQL or HTML
+or Bash. This plugin will add syntax
+highlighting, and additionally code folding and language-specific editor
+features _within_ those strings. 
 
 This is similar to how you can select syntax highlighting within
-Markdown documents using a language specifier (e.g. ` ```py `)
+Markdown documents using a language specifier (e.g. ` ```py `) or switch
+between HTML, Javascript, and CSS in the same HTML document.
 
+![extension_example](images/extension_usage_anim.gif)
 
 ## Features
 
-This supplements existing syntax highlighters by injecting new behavior
-when specific types of multiline string delimiters or "HERE DOC" sigils are found.
-It does not contain its own language definitions. 
+This plugin extends the TextMate syntax highlighting definitions of
+several **host** languages in order to look for **embedded**
+sub-languages within strings. It does not contain any of its own syntax
+highlighting rules, instead it typically replaces one single rule in the
+host language which defines a multiline string, and looks for specific
+indicators regarding which embedded language to use when highlighting
+the string.
 
 Within the embedded language block, your editor will behave as if it is
 editing the embedded language. For example if you are editing SQL within
 a C++ document, the VSCode "Toggle Line Comment" command will prefix
-lines with `--` not `//`. 
+lines with `--` not `//`. Code folding will use the natural structure of
+the embedded language block too - collapsing `<tags>` in an XML
+string, or `{` braces in a C string
 
-## Language Support
-
-Here is a grid showing which languages are embeddable into which other
-languages:
-
-| Embedded Languages | Prefix          | Notes |
-| ------------------ | --------------- | ----- |
-| C++                | cpp             |       |
-| CSS                | css             |       |
-| GLSL               | glsl            |       |
-| HTML               | html            |       |
-| Ini                | ini             |       |
-| Javascript         | js, javascript  |       |
-| JSON               | json            |       |
-| Python             | py, python      |       |
-| Shell Script       | shell, bash, sh |       |
-| SQL                | sql             |       |
-| TOML               | toml            |       |
-| XML                | xml             |       |
-| YAML               | yaml            |       |
-|                    |
 
 ### Host Language - C++
 
@@ -51,38 +39,14 @@ C++ uses _raw strings_ to specify the language.
 
 A raw string in C++ looks like 
 ```cpp
-auto s = R"( ...text )";
+auto s = R"foo( ...text )foo";
 ```
 
-But between the `"` and "(" an arbitrary token can be placed which we use here to specify the language:
+Between the `"` and `(` an arbitrary token can be placed which we
+use here to specify the language. This token needs to exist at the end
+of the string as well:
 
-```cpp
-auto s1 = R"json( {"a": "b", "c": [1,2,3]} )json";
-
-auto s2 = R"sql( 
-    SELECT * FROM users
-    WHERE id = 1234; 
-)sql";
-
-auto s3 = R"py(
-if __name__ == "__main__":
-  print "hello world!"
-)py";
-
-```
-
-In addition - we also support a _leading comment_ in the embedded
-language.
-
-```cpp
-auto s1 = R"(#py
-from os import path
-)"
-
-auto s2 = R("--sql
-INSERT INTO users VALUES 2345, "foobar";
-);
-```
+![cpp_example.png](images/cpp_example.png)
 
 ### Host language - Python
 
@@ -91,28 +55,76 @@ Perl or other languages do. As such, we rely on _leading comments_ to
 identify a language. This comment must be immediately after the `'''` or
 `"""` which starts a multiline string
 
-```py
-def JSON(x) return x
+![py_example.png](images/py_example.png)
 
-s = r"""--sql
-SELECT * FROM events WHERE user_id = 1234;
-"""
 
-# Is there a way to format JSON?
-s = r"""
-{"a":"b", "c": [1,2,3]}
-"""
+### Host language - YAML
 
-```
+YAML has block strings that begin with a `|` or `>` and continue based
+on the indentation level of a block of text. Following the start
+indicator you can put a comment (this is a *YAML* comment) which
+indicates the language
+
+![yaml_example.png](images/yaml_example.png)
+
+
+### Embedded Languages
+
+The available embedded languages are listed in this table. The "ID"
+column is the IDs you can use in host languages like C++ and YAML where
+you can specify an ID in the _host_ language. The "Comment" column is
+for host languages like Python which have no way to indicate the
+embedded language type directly, and shows
+what the first characters of the _embedded_ language string needs to be to
+signal which language you are using.
+
+| Name       | ID                           | Comment                                    |
+| ---------- | ---------------------------- | ------------------------------------------ |
+| Batch      | bat                          | `REM`, `@REM`, `::bat`                     |
+| C          | c                            | `/*c*/`                                    |
+| C++        | cpp, c++                     | `//cpp`, `//c++`                           |
+| CSS        | css                          | `/*css*/`                                  |
+| HTML       | html                         | `<!DOCTYPE`, `<html`, `<!--html`           |
+| Ini        | ini                          | `;ini`                                     |
+| Javascript | js, javascript               | `//js`                                     |
+| JSON       | json                         | (1)                                        |
+| JSONC      | jsonc                        | `//jsonc`                                  |
+| Python     | py, python                   | `#py`                                      |
+| Shell      | sh, bash, shell, shellscript | `#sh`, `#bash`, `#shell`, `#!/bin/sh`, ... |
+| SQL        | sql                          | `--sql`                                    |
+| TOML       | toml                         | `#toml`                                    |
+| XML        | xml                          | `<?xml`, `<? xml`, `<!--xml`               |
+| YAML       | yaml                         | `#yaml`                                    |
+
+* (1): JSON does not support comments, so there is no way to indicate a
+  string is a JSON document within the string. 
+
+## Developer Notes
+
+See CONTRIBUTING.md for adding new languages
+
+Useful links:
+TextMate / Oniguruma regular expression language: 
+https://macromates.com/manual/en/regular_expressions
+
+TextMate language rules:
+https://macromates.com/manual/en/language_grammars
+
+Notes on grammar injection:
+https://github.com/microsoft/vscode/issues/161177
+
+Notes on writing a textmate grammar:
+https://www.apeth.com/nonblog/stories/textmatebundle.html
 
 
 
 ## Requirements
 
 
+
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+
 
 ## Release Notes
 
