@@ -6,8 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Russell Schaaf",
-  "license": "MIT",
   "type": "module",
   "dependencies": {
     "csv": "^6.2.10",

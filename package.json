@@ -10,6 +10,9 @@
   "categories": [
     "Programming Languages"
   ],
+  "repository": {
+    "url": "https://github.com/ruschaaf/extended-embedded-languages"
+  },
   "contributes": {
     "grammars": [
       {
