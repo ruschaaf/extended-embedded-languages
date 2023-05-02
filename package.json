@@ -1,6 +1,7 @@
 {
   "name": "extended-embedded-languages",
   "displayName": "Extended Embedded Languages",
+  "icon": "images/EEL_icon_256.png",
   "description": "Extends several languages to support syntax highlighting for other languages embedded within strings (for example snippets of SQL within Python code)",
   "version": "0.0.1",
   "license": "MIT",
@@ -10,7 +11,20 @@
   "categories": [
     "Programming Languages"
   ],
+  "keywords": [
+    "syntax highlighting",
+    "nested",
+    "comments",
+    "embedded",
+    "language"
+  ],
+  "author": {
+    "name": "ruschaaf",
+    "email": "russ.schaaf@gmail.com",
+    "url": "https://github.com/ruschaaf"
+  },
   "repository": {
+    "type": "git",
     "url": "https://github.com/ruschaaf/extended-embedded-languages"
   },
   "contributes": {
