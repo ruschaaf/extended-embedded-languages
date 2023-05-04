@@ -86,6 +86,30 @@
           "meta.embedded.string.raw.yaml.yaml": "yaml",
           "meta.embedded.string.raw.c.yaml": "c"
         }
+      },
+      {
+        "scopeName": "source.javascript.embedded.codeblock",
+        "injectTo": [
+          "source.javascript"
+        ],
+        "path": "./syntaxes/javscript.embedded.json",
+        "embeddedLanguages": {
+          "meta.embedded.string.raw.bat.javascript": "bat",
+          "meta.embedded.string.raw.cpp.javascript": "cpp",
+          "meta.embedded.string.raw.css.javascript": "css",
+          "meta.embedded.string.raw.html.javascript": "html",
+          "meta.embedded.string.raw.ini.javascript": "ini",
+          "meta.embedded.string.raw.javascript.javascript": "javascript",
+          "meta.embedded.string.raw.json.javascript": "json",
+          "meta.embedded.string.raw.jsonc.javascript": "jsonc",
+          "meta.embedded.string.raw.python.javascript": "python",
+          "meta.embedded.string.raw.shell.javascript": "shell",
+          "meta.embedded.string.raw.sql.javascript": "sql",
+          "meta.embedded.string.raw.toml.javascript": "toml",
+          "meta.embedded.string.raw.xml.javascript": "xml",
+          "meta.embedded.string.raw.yaml.javascript": "yaml",
+          "meta.embedded.string.raw.c.javascript": "c"
+        }
       }
     ]
   }

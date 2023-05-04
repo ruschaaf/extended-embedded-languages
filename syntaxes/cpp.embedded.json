@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "injectionSelector": "L:source.cpp",
+  "injectionSelector": "L:source.cpp -comment -string",
   "scopeName": "source.cpp.embedded.codeblock",
   "patterns": [
     {
@@ -13,7 +13,7 @@
       "patterns": [
         {
           "comment": "Batch-formatted raw strings",
-          "begin": "((?:u|U|L|u8)?R)\\\"((?i:bat)(?:[:^alpha:].*)?)\\(",
+          "begin": "(?x) \n\\b ( (?:u|U|L|u8)? R ) \\\" \n( \n  (?i:bat) \n  \\b \n  [^\\(]* \n)\n\\( # literal '('",
           "end": "\\)(\\2)\\\"",
           "contentName": "meta.embedded.string.raw.bat.cpp",
           "patterns": [
@@ -44,7 +44,7 @@
         },
         {
           "comment": "C++-formatted raw strings",
-          "begin": "((?:u|U|L|u8)?R)\\\"((?i:cpp|c\\+\\+)(?:[:^alpha:].*)?)\\(",
+          "begin": "(?x) \n\\b ( (?:u|U|L|u8)? R ) \\\" \n( \n  (?i:cpp|c\\+\\+) \n  \\b \n  [^\\(]* \n)\n\\( # literal '('",
           "end": "\\)(\\2)\\\"",
           "contentName": "meta.embedded.string.raw.cpp.cpp",
           "patterns": [
@@ -75,7 +75,7 @@
         },
         {
           "comment": "CSS-formatted raw strings",
-          "begin": "((?:u|U|L|u8)?R)\\\"((?i:css)(?:[:^alpha:].*)?)\\(",
+          "begin": "(?x) \n\\b ( (?:u|U|L|u8)? R ) \\\" \n( \n  (?i:css) \n  \\b \n  [^\\(]* \n)\n\\( # literal '('",
           "end": "\\)(\\2)\\\"",
           "contentName": "meta.embedded.string.raw.css.cpp",
           "patterns": [
@@ -106,7 +106,7 @@
         },
         {
           "comment": "HTML-formatted raw strings",
-          "begin": "((?:u|U|L|u8)?R)\\\"((?i:html)(?:[:^alpha:].*)?)\\(",
+          "begin": "(?x) \n\\b ( (?:u|U|L|u8)? R ) \\\" \n( \n  (?i:html) \n  \\b \n  [^\\(]* \n)\n\\( # literal '('",
           "end": "\\)(\\2)\\\"",
           "contentName": "meta.embedded.string.raw.html.cpp",
           "patterns": [
@@ -137,7 +137,7 @@
         },
         {
           "comment": "INI-formatted raw strings",
-          "begin": "((?:u|U|L|u8)?R)\\\"((?i:ini)(?:[:^alpha:].*)?)\\(",
+          "begin": "(?x) \n\\b ( (?:u|U|L|u8)? R ) \\\" \n( \n  (?i:ini) \n  \\b \n  [^\\(]* \n)\n\\( # literal '('",
           "end": "\\)(\\2)\\\"",
           "contentName": "meta.embedded.string.raw.ini.cpp",
           "patterns": [
@@ -168,7 +168,7 @@
         },
         {
           "comment": "Javascript-formatted raw strings",
-          "begin": "((?:u|U|L|u8)?R)\\\"((?i:js|javascript)(?:[:^alpha:].*)?)\\(",
+          "begin": "(?x) \n\\b ( (?:u|U|L|u8)? R ) \\\" \n( \n  (?i:js|javascript) \n  \\b \n  [^\\(]* \n)\n\\( # literal '('",
           "end": "\\)(\\2)\\\"",
           "contentName": "meta.embedded.string.raw.javascript.cpp",
           "patterns": [
@@ -199,7 +199,7 @@
         },
         {
           "comment": "JSON-formatted raw strings",
-          "begin": "((?:u|U|L|u8)?R)\\\"((?i:json)(?:[:^alpha:].*)?)\\(",
+          "begin": "(?x) \n\\b ( (?:u|U|L|u8)? R ) \\\" \n( \n  (?i:json) \n  \\b \n  [^\\(]* \n)\n\\( # literal '('",
           "end": "\\)(\\2)\\\"",
           "contentName": "meta.embedded.string.raw.json.cpp",
           "patterns": [
@@ -230,7 +230,7 @@
         },
         {
           "comment": "JSONC-formatted raw strings",
-          "begin": "((?:u|U|L|u8)?R)\\\"((?i:json)(?:[:^alpha:].*)?)\\(",
+          "begin": "(?x) \n\\b ( (?:u|U|L|u8)? R ) \\\" \n( \n  (?i:jsonc) \n  \\b \n  [^\\(]* \n)\n\\( # literal '('",
           "end": "\\)(\\2)\\\"",
           "contentName": "meta.embedded.string.raw.jsonc.cpp",
           "patterns": [
@@ -261,7 +261,7 @@
         },
         {
           "comment": "Python-formatted raw strings",
-          "begin": "((?:u|U|L|u8)?R)\\\"((?i:py|python)(?:[:^alpha:].*)?)\\(",
+          "begin": "(?x) \n\\b ( (?:u|U|L|u8)? R ) \\\" \n( \n  (?i:py|python) \n  \\b \n  [^\\(]* \n)\n\\( # literal '('",
           "end": "\\)(\\2)\\\"",
           "contentName": "meta.embedded.string.raw.python.cpp",
           "patterns": [
@@ -292,7 +292,7 @@
         },
         {
           "comment": "Shell-formatted raw strings",
-          "begin": "((?:u|U|L|u8)?R)\\\"((?i:sh|bash|shell|shellscript)(?:[:^alpha:].*)?)\\(",
+          "begin": "(?x) \n\\b ( (?:u|U|L|u8)? R ) \\\" \n( \n  (?i:sh|bash|shell|shellscript) \n  \\b \n  [^\\(]* \n)\n\\( # literal '('",
           "end": "\\)(\\2)\\\"",
           "contentName": "meta.embedded.string.raw.shell.cpp",
           "patterns": [
@@ -323,7 +323,7 @@
         },
         {
           "comment": "SQL-formatted raw strings",
-          "begin": "((?:u|U|L|u8)?R)\\\"((?i:sql)(?:[:^alpha:].*)?)\\(",
+          "begin": "(?x) \n\\b ( (?:u|U|L|u8)? R ) \\\" \n( \n  (?i:sql) \n  \\b \n  [^\\(]* \n)\n\\( # literal '('",
           "end": "\\)(\\2)\\\"",
           "contentName": "meta.embedded.string.raw.sql.cpp",
           "patterns": [
@@ -354,7 +354,7 @@
         },
         {
           "comment": "TOML-formatted raw strings",
-          "begin": "((?:u|U|L|u8)?R)\\\"((?i:toml)(?:[:^alpha:].*)?)\\(",
+          "begin": "(?x) \n\\b ( (?:u|U|L|u8)? R ) \\\" \n( \n  (?i:toml) \n  \\b \n  [^\\(]* \n)\n\\( # literal '('",
           "end": "\\)(\\2)\\\"",
           "contentName": "meta.embedded.string.raw.toml.cpp",
           "patterns": [
@@ -385,7 +385,7 @@
         },
         {
           "comment": "XML-formatted raw strings",
-          "begin": "((?:u|U|L|u8)?R)\\\"((?i:xml)(?:[:^alpha:].*)?)\\(",
+          "begin": "(?x) \n\\b ( (?:u|U|L|u8)? R ) \\\" \n( \n  (?i:xml) \n  \\b \n  [^\\(]* \n)\n\\( # literal '('",
           "end": "\\)(\\2)\\\"",
           "contentName": "meta.embedded.string.raw.xml.cpp",
           "patterns": [
@@ -416,7 +416,7 @@
         },
         {
           "comment": "YAML-formatted raw strings",
-          "begin": "((?:u|U|L|u8)?R)\\\"((?i:yaml)(?:[:^alpha:].*)?)\\(",
+          "begin": "(?x) \n\\b ( (?:u|U|L|u8)? R ) \\\" \n( \n  (?i:yaml) \n  \\b \n  [^\\(]* \n)\n\\( # literal '('",
           "end": "\\)(\\2)\\\"",
           "contentName": "meta.embedded.string.raw.yaml.cpp",
           "patterns": [
@@ -447,7 +447,7 @@
         },
         {
           "comment": "C-formatted raw strings",
-          "begin": "((?:u|U|L|u8)?R)\\\"((?i:c)(?:[:^alpha:].*)?)\\(",
+          "begin": "(?x) \n\\b ( (?:u|U|L|u8)? R ) \\\" \n( \n  (?i:c) \n  \\b \n  [^\\(]* \n)\n\\( # literal '('",
           "end": "\\)(\\2)\\\"",
           "contentName": "meta.embedded.string.raw.c.cpp",
           "patterns": [

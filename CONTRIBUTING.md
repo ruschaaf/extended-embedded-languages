@@ -35,7 +35,34 @@ Embedded languages are relatively simple to add.
 
 ## Adding a Host language
 
-Fill this out
+When adding a rule to the host language, here are some things to keep in mind:
+
+* If the host language supports "here docs" or similar text blocks that have an arbitrary delimiter, use this delimiter to hold the language ID
+```c++
+// C++
+str = R"css(
+  .h1 { .color = #003366; }
+)";
+```
+
+* If the host langugate supports multiline strings _and_ inline comments, put the language ID in a comment before the multiline string
+```js
+// Javascript
+str = /*css*/`
+  .h1 { .color = #003366; }
+`
+```
+
+* If there is no way to specify the language in the host (without changing the semantics of the host code), we can fall back to specifying in the embedded language.
+
+```py
+# Python
+s = """/*css*/
+  .h1 { .color = #003366; }
+"""
+```
+
+
 
 ## Testing changes
 

@@ -13,7 +13,7 @@ const regexpEscape = (string) => {
 function build_cpp_syntax(hostSpec, embeddedSpecs) {
     let syntax = {
         "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-        "injectionSelector": "L:source.cpp",
+        "injectionSelector": "L:source.cpp -comment -string",
         "scopeName": `${hostSpec.embedded_scope}`,
         "patterns": [{ "include": "#raw_strings" }],
         "repository": {
@@ -33,7 +33,14 @@ function build_cpp_syntax(hostSpec, embeddedSpecs) {
         syntax.repository.raw_strings.patterns.push(
             {
                 "comment": `${lang.name}-formatted raw strings`,
-                "begin": `((?:u|U|L|u8)?R)\\\"((?i:${langChoices})(?:[:^alpha:].*)?)\\(`,
+                "begin": `(?x) 
+\\b ( (?:u|U|L|u8)? R ) \\\" 
+( 
+  (?i:${langChoices}) 
+  \\b 
+  [^\\(]* 
+)
+\\( # literal '('`,
                 "end": "\\)(\\2)\\\"",
                 "contentName": `meta.embedded.string.raw.${lang.vsname}.cpp`,
                 "patterns": [{ "include": `${lang.root_scope}` }],
@@ -67,7 +74,7 @@ function build_python_syntax(hostSpec, embeddedSpecs) {
         // it appears that the patterns then overrun the previously
         // found 'end' tag - similar to an issue described on this page:
         // https://www.apeth.com/nonblog/stories/textmatebundle.html
-        "injectionSelector": "L:source.python",
+        "injectionSelector": "L:source.python -string -comment",
         "scopeName": `${hostSpec.embedded_scope}`,
         "patterns": [{ "include": "#triple_quoted_strings" }],
         "repository": {
@@ -111,7 +118,54 @@ function build_python_syntax(hostSpec, embeddedSpecs) {
 function build_yaml_syntax(hostSpec, embeddedSpecs) {
     let syntax = {
         "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-        "injectionSelector": "L:source.yaml",
+        "injectionSelector": "L:source.yaml -string -comment",
+        "scopeName": `${hostSpec.embedded_scope}`,
+        "patterns": [{ "include": "#block-scalar-with-embedding" }],
+        "repository": {
+            "block-scalar-with-embedding": {
+                "comment": "These patterns all match YAML block scalar strings and select one language." +
+                    "The syntax is injected into https://github.com/microsoft/vscode/blob/main/extensions/yaml/syntaxes/yaml.tmLanguage.json",
+                "patterns": []
+            }
+        }
+    }
+    embeddedSpecs.forEach(function (lang) {
+        const escapedLangs = lang.ids.map((s) => regexpEscape(s));
+        const langChoices = escapedLangs.join("|");
+
+        syntax.repository["block-scalar-with-embedding"].patterns.push(
+            {
+                "comment": `${lang.name}-formatted block scalar strings`,
+                "name": "string.quoted.multi.embedded.yaml",
+                "begin": `(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:${langChoices}))\\b\\s*\\n?`,
+                "beginCaptures": {
+                    "1": { "name": "keyword.control.flow.block-scalar.literal.yaml" },
+                    "2": { "name": "keyword.control.flow.block-scalar.folded.yaml" },
+                    "3": { "name": "constant.numeric.indentation-indicator.yaml" },
+                    "4": { "name": "storage.modifier.chomping-indicator.yaml" },
+                    "5": { "name": `meta.encoding.yaml` },
+                },
+                "end": "^(?=\\S)|(?!\\G)",
+                "patterns": [
+                    {
+                        "begin": "^([ ]+)(?! )",
+                        "end": "^(?!\\1|\\s*$)",
+                        "patterns": [{ "include": `${lang.root_scope}` }],
+                        "name": `meta.embedded.string.raw.${lang.vsname}.yaml`
+                    }
+                ]
+            }
+        );
+    });
+
+    return syntax;
+}
+
+
+function build_javascript_syntax(hostSpec, embeddedSpecs) {
+    let syntax = {
+        "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+        "injectionSelector": "L:source.yaml -string -comment",
         "scopeName": `${hostSpec.embedded_scope}`,
         "patterns": [{ "include": "#block-scalar-with-embedding" }],
         "repository": {
@@ -214,6 +268,13 @@ function main() {
             syntax_builder: build_yaml_syntax,
             vsname: "yaml",
             embedded_scope: "source.yaml.embedded.codeblock"
+        },
+        {
+            file: "javscript.embedded.json",
+            root_scope: "source.javascript",
+            syntax_builder: build_javascript_syntax,
+            vsname: "javascript",
+            embedded_scope: "source.javascript.embedded.codeblock"
         }
     ]
 

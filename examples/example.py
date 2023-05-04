@@ -92,7 +92,7 @@ function print_url(path) {
 
 
 # JSONC Example
-json_string = """//jsonc
+jsonc_string = """//jsonc
 // This is a JSONC (json-with-comments) file
 {
     "a": "b",

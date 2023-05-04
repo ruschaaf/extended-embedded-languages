@@ -1,21 +1,21 @@
-#include <iostream>
+import foo from 'bar'
 
 // These strings all contain example embedded languages using the 
-// C++ raw string syntax
+// javascript template string syntax
 
 
 // Batch Example
-static const char* bat_string = R"bat(
+const bat_string = /*bat*/ `
 REM this is a basic BAT file
 @echo off
 set WORLD="world"
 echo "Hello %WORLD%!"
 
-)bat";
+`;
 
 
 // C++ Example
-static const char* cpp_string = R"cpp(
+const cpp_string = /*cpp*/ `
 // This is a basic C++ document
 #include <iostream>
 
@@ -26,11 +26,11 @@ int main(int argc, char* argv) {
     return 0;
 }
 
-)cpp";
+`;
 
 
 // CSS Example
-static const char* css_string = R"css(
+const css_string = /*css*/ `
 /* This is basic CSS document */
 body {
     font-family: Arial, sans-serif;
@@ -41,11 +41,11 @@ body {
 h1 {
     color: #0066cc;
 }
-)css";
+`;
 
 
 // HTML Example
-static const char* html_string = R"html(
+const html_string = /*html*/ `
 <!DOCTYPE html>
 <!-- This is a basic HTML document -->
 <html>
@@ -58,11 +58,11 @@ static const char* html_string = R"html(
     HTML with syntax highlighting
 </body>
 </html>
-)html";
+`;
 
 
 // INI Example
-static const char* ini_string = R"ini(
+const ini_string = /*ini*/ `
 ; This is a basic INI file
 [prefs]
 user = example
@@ -71,11 +71,11 @@ theme = dark
 last_file = "example.txt"
 
 
-)ini";
+`;
 
 
 // Javascript Example
-static const char* js_string = R"js(
+const js_string = /*js*/ `
 // This is a basic javascript file
 var url = "http://example.com"
 
@@ -84,11 +84,11 @@ function print_url(path) {
 }
 
 
-)js";
+`;
 
 
 // JSON Example
-static const char* json_string = R"json(
+const json_string = /*json*/ `
 {
     "comment": "This is a basic JSON file",
     "a": "b",
@@ -96,11 +96,11 @@ static const char* json_string = R"json(
     "d": [1,2,3, null],
     "e": 1.02
 }
-)json";
+`;
 
 
 // JSONC Example
-static const char* jsonc_string = R"jsonc(
+const jsonc_string = /*jsonc*/ `
 // This is a JSONC (json-with-comments) file
 {
     "a": "b",
@@ -109,11 +109,11 @@ static const char* jsonc_string = R"jsonc(
     "e": 1.02
 }
 
-)jsonc";
+`;
 
 
 // Python Example
-static const char* py_string = R"py(
+const py_string = /*py*/ `
 # This is a basic python file
 from os import path
 
@@ -121,25 +121,25 @@ def test():
     if path.exists(__name__):
         print("I'm a real file")
 
-)py";
+`;
 
 
 // Shell Example
-static const char* sh_string = R"sh(
+const sh_string = /*sh*/ `
 # This is a basic shell script
 
 print_host() {
-    HOSTNAME=`hostname`
-    if [ -n ${HOSTNAME} ]; then 
-        echo "Hello world from ${HOSTNAME}"
+    HOSTNAME=\`hostname\`
+    if [ -n \${HOSTNAME} ]; then 
+        echo "Hello world from \${HOSTNAME}"
     fi
 }
 
-)sh";
+`;
 
 
 // SQL Example
-static const char* sql_string = R"sql(
+const sql_string = /*sql*/ `
 -- This is a basic SQL document
 SELECT users.id, orders.product, orders.price
 FROM users
@@ -147,11 +147,11 @@ INNER JOIN orders
   ON users.id = orders.id
 WHERE orders.price > 100 OR orders.product = 'Table'
   
-)sql";
+`;
 
 
 // TOML Example
-static const char* toml_string = R"toml(
+const toml_string = /*toml*/ `
 # Basic TOML document
 
 url = "http://example.com"
@@ -161,11 +161,11 @@ name = "Sample Document"
 name = "Foobar"
 id = 1234
 active = true
-)toml";
+`;
 
 
 // XML Example
-static const char* xml_string = R"xml(
+const xml_string = /*xml*/ `
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Basic XML document -->
 <user active="true" id="1234">
@@ -175,11 +175,11 @@ static const char* xml_string = R"xml(
   Unparsed string data
   ]]>
 </user>
-)xml";
+`;
 
 
 // YAML Example
-static const char* yaml_string = R"yaml(
+const yaml_string = /*yaml*/ `
 # This is a basic YAML document
 users: &id1234
   - foobar: 
@@ -192,11 +192,11 @@ users: &id1234
   description string
 
   
-)yaml";
+`;
 
 
 // C Example
-static const char* c_string = R"c(
+const c_string = /*c*/ `
 /* Basic C document - with notable differences from C++ */
 int template = 3;
 int static_assert = 4;
@@ -208,11 +208,8 @@ int a, b;
   return a + b;
 }
 
-)c";
+`;
 
 
 
-int main(const char* argv, int argc)
-{
-    return 0;
-}
+    

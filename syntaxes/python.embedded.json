@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "injectionSelector": "L:source.python",
+  "injectionSelector": "L:source.python -string -comment",
   "scopeName": "source.python.embedded.codeblock",
   "patterns": [
     {

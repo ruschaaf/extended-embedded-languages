@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "injectionSelector": "L:source.yaml -string -comment",
-  "scopeName": "source.yaml.embedded.codeblock",
+  "scopeName": "source.javascript.embedded.codeblock",
   "patterns": [
     {
       "include": "#block-scalar-with-embedding"

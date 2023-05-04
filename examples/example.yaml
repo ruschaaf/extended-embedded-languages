@@ -87,7 +87,7 @@ examples:
     }
 
   # JSONC Example
-  sample_json: | #json
+  sample_jsonc: | #jsonc
     // This is a JSONC (json-with-comments) file
     {
         "a": "b",

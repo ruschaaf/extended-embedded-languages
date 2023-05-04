@@ -6,7 +6,7 @@ HTML,html,html,text.html.derivative,html,"<!DOCTYPE,<html,<!--html",<html>,
 INI,ini,ini,source.ini,ini,;ini,;ini,
 Javascript,javascript,js,source.js,"js,javascript",//js,//js,
 JSON,json,json,source.json,json,,,"JSON doesn't support comments, which makes it hard to embed into host languages that use comments to determine the embedded language"
-JSONC,jsonc,jsonc,source.jsonc,json,//jsonc,//jsonc,JSONC is a variant of JSON that supports comments
+JSONC,jsonc,jsonc,source.jsonc,jsonc,//jsonc,//jsonc,JSONC is a variant of JSON that supports comments
 Python,python,py,source.python,"py,python",#py,#py,
 Shell,shell,sh,source.shell,"sh,bash,shell,shellscript","#sh,#bash,#shell,#!/bin/sh,#!/bin/bash,#!/usr/bin/env bash",#sh,
 SQL,sql,sql,source.sql,sql,--sql,--sql,
