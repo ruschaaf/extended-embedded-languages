@@ -1,0 +1,14 @@
+import foo from 'bar'
+
+// These strings all contain example embedded languages using the 
+// javascript template string syntax
+
+<% snippets.forEach(function(snippet){ %>
+// <%= snippet.name %> Example
+const <%= snippet.ids[0] %>_string = /*<%= snippet.ids[0] %>*/ `
+<%-snippet.code%>
+`;
+
+<% }); %>
+
+    
