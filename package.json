@@ -54,7 +54,7 @@
           "meta.embedded.string.raw.hlsl.cpp": "hlsl",
           "meta.embedded.string.raw.glsl.cpp": "glsl",
           "meta.embedded.string.raw.metal.cpp": "metal",
-          "meta.embedded.string.raw.wsgl.cpp": "wsgl"
+          "meta.embedded.string.raw.wgsl.cpp": "wgsl"
         }
       },
       {
@@ -82,7 +82,7 @@
           "meta.embedded.string.raw.hlsl.python": "hlsl",
           "meta.embedded.string.raw.glsl.python": "glsl",
           "meta.embedded.string.raw.metal.python": "metal",
-          "meta.embedded.string.raw.wsgl.python": "wsgl"
+          "meta.embedded.string.raw.wgsl.python": "wgsl"
         }
       },
       {
@@ -110,7 +110,7 @@
           "meta.embedded.string.raw.hlsl.yaml": "hlsl",
           "meta.embedded.string.raw.glsl.yaml": "glsl",
           "meta.embedded.string.raw.metal.yaml": "metal",
-          "meta.embedded.string.raw.wsgl.yaml": "wsgl"
+          "meta.embedded.string.raw.wgsl.yaml": "wgsl"
         }
       },
       {
@@ -138,7 +138,7 @@
           "meta.embedded.string.raw.hlsl.javascript": "hlsl",
           "meta.embedded.string.raw.glsl.javascript": "glsl",
           "meta.embedded.string.raw.metal.javascript": "metal",
-          "meta.embedded.string.raw.wsgl.javascript": "wsgl"
+          "meta.embedded.string.raw.wgsl.javascript": "wgsl"
         }
       }
     ]

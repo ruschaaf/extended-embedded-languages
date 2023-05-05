@@ -1,7 +1,10 @@
 #include <iostream>
 
-// These strings all contain example embedded languages using the 
-// C++ raw string syntax
+// Usage:
+// In C++ we use raw strings with a tag to indicate the embedded language.
+// The tag must begin with the embedded languages' ID (see docs)
+
+// These are examples of all the embedded languages 
 
 
 // Batch Example
@@ -259,14 +262,58 @@ vertex VertexOutput vertexShader(const device packed_float3* vertex_buffer [[buf
 )metal";
 
 
-// WSGL Example
-static const char* wsgl_string = R"wsgl(
+// WGSL Example
+static const char* wgsl_string = R"wgsl(
+// A simple WGSL shader
+struct VertexOutput {
+    [[builtin(position)]] position : vec4<f32>;
+};
 
-)wsgl";
-
-
-
-int main(const char* argv, int argc)
-{
-    return 0;
+[[stage(vertex)]]
+fn main(input: VertexInput) -> VertexOutput {
+    var output: VertexOutput;
+    output.position = uniforms.model_view_proj * vec4<f32>(input.position, 1.0);
+    return output;
 }
+
+)wgsl";
+
+
+
+
+//////////////////////////////////////////////////////////////////////
+// Test cases - these should all be HIGHLIGHTED
+R"sql(SELECT foo FROM bar;)sql";
+
+R"sql(
+    SELECT foo FROM bar;
+)sql";
+
+R"sql:abc(
+    SELECT foo FROM bar
+)sql:abc";
+
+u8R"sql(SELECT foo FROM bar;)sql";
+LR"sql(SELECT foo FROM bar;)sql";
+UR"sql(SELECT foo FROM bar;)sql";
+
+#define x R"sql(SELECT foo FROM bar;)sql";
+
+
+//////////////////////////////////////////////////////////////////////
+// Test cases - these should all be UNHIGHLIGHTED
+
+//R"sql(SELECT foo FROM bar;)sql";
+/*
+    R"sql(SELECT foo FROM bar;)sql";
+*/
+
+"SELECT foo FROM bar"
+
+R"outer( 
+    R"sql(SELECT foo FROM bar;)sql";
+)outer";
+
+#if 0
+#error R"sql(SELECT foo FROM bar;)sql"
+#endif

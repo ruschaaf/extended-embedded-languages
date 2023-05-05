@@ -251,8 +251,19 @@ vertex VertexOutput vertexShader(const device packed_float3* vertex_buffer [[buf
 """
 
 
-# WSGL Example
-wsgl_string = """//wsgl
+# WGSL Example
+wgsl_string = """//wgsl
+// A simple WGSL shader
+struct VertexOutput {
+    [[builtin(position)]] position : vec4<f32>;
+};
+
+[[stage(vertex)]]
+fn main(input: VertexInput) -> VertexOutput {
+    var output: VertexOutput;
+    output.position = uniforms.model_view_proj * vec4<f32>(input.position, 1.0);
+    return output;
+}
 
 """
 
