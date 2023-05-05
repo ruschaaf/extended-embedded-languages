@@ -14,7 +14,7 @@
         {
           "comment": "Batch-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
-          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:bat))\\b\\s*\\n?",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
           "beginCaptures": {
             "1": {
               "name": "keyword.control.flow.block-scalar.literal.yaml"
@@ -49,7 +49,7 @@
         {
           "comment": "C++-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
-          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:cpp|c\\+\\+))\\b\\s*\\n?",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
           "beginCaptures": {
             "1": {
               "name": "keyword.control.flow.block-scalar.literal.yaml"
@@ -84,7 +84,7 @@
         {
           "comment": "CSS-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
-          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:css))\\b\\s*\\n?",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
           "beginCaptures": {
             "1": {
               "name": "keyword.control.flow.block-scalar.literal.yaml"
@@ -119,7 +119,7 @@
         {
           "comment": "HTML-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
-          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:html))\\b\\s*\\n?",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
           "beginCaptures": {
             "1": {
               "name": "keyword.control.flow.block-scalar.literal.yaml"
@@ -154,7 +154,7 @@
         {
           "comment": "INI-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
-          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:ini))\\b\\s*\\n?",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
           "beginCaptures": {
             "1": {
               "name": "keyword.control.flow.block-scalar.literal.yaml"
@@ -189,7 +189,7 @@
         {
           "comment": "Javascript-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
-          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:js|javascript))\\b\\s*\\n?",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
           "beginCaptures": {
             "1": {
               "name": "keyword.control.flow.block-scalar.literal.yaml"
@@ -224,7 +224,7 @@
         {
           "comment": "JSON-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
-          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:json))\\b\\s*\\n?",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
           "beginCaptures": {
             "1": {
               "name": "keyword.control.flow.block-scalar.literal.yaml"
@@ -259,7 +259,7 @@
         {
           "comment": "JSONC-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
-          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:jsonc))\\b\\s*\\n?",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
           "beginCaptures": {
             "1": {
               "name": "keyword.control.flow.block-scalar.literal.yaml"
@@ -294,7 +294,7 @@
         {
           "comment": "Python-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
-          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:py|python))\\b\\s*\\n?",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
           "beginCaptures": {
             "1": {
               "name": "keyword.control.flow.block-scalar.literal.yaml"
@@ -329,7 +329,7 @@
         {
           "comment": "Shell-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
-          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:sh|bash|shell|shellscript))\\b\\s*\\n?",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
           "beginCaptures": {
             "1": {
               "name": "keyword.control.flow.block-scalar.literal.yaml"
@@ -364,7 +364,7 @@
         {
           "comment": "SQL-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
-          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:sql))\\b\\s*\\n?",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
           "beginCaptures": {
             "1": {
               "name": "keyword.control.flow.block-scalar.literal.yaml"
@@ -399,7 +399,7 @@
         {
           "comment": "TOML-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
-          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:toml))\\b\\s*\\n?",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
           "beginCaptures": {
             "1": {
               "name": "keyword.control.flow.block-scalar.literal.yaml"
@@ -434,7 +434,7 @@
         {
           "comment": "XML-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
-          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:xml))\\b\\s*\\n?",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
           "beginCaptures": {
             "1": {
               "name": "keyword.control.flow.block-scalar.literal.yaml"
@@ -469,7 +469,7 @@
         {
           "comment": "YAML-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
-          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:yaml))\\b\\s*\\n?",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
           "beginCaptures": {
             "1": {
               "name": "keyword.control.flow.block-scalar.literal.yaml"
@@ -504,7 +504,7 @@
         {
           "comment": "C-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
-          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:c))\\b\\s*\\n?",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
           "beginCaptures": {
             "1": {
               "name": "keyword.control.flow.block-scalar.literal.yaml"
@@ -533,6 +533,146 @@
                 }
               ],
               "name": "meta.embedded.string.raw.c.yaml"
+            }
+          ]
+        },
+        {
+          "comment": "HLSL-formatted block scalar strings",
+          "name": "string.quoted.multi.embedded.yaml",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.flow.block-scalar.literal.yaml"
+            },
+            "2": {
+              "name": "keyword.control.flow.block-scalar.folded.yaml"
+            },
+            "3": {
+              "name": "constant.numeric.indentation-indicator.yaml"
+            },
+            "4": {
+              "name": "storage.modifier.chomping-indicator.yaml"
+            },
+            "5": {
+              "name": "meta.encoding.yaml"
+            }
+          },
+          "end": "^(?=\\S)|(?!\\G)",
+          "patterns": [
+            {
+              "begin": "^([ ]+)(?! )",
+              "end": "^(?!\\1|\\s*$)",
+              "patterns": [
+                {
+                  "include": "source.hlsl"
+                }
+              ],
+              "name": "meta.embedded.string.raw.hlsl.yaml"
+            }
+          ]
+        },
+        {
+          "comment": "GLSL-formatted block scalar strings",
+          "name": "string.quoted.multi.embedded.yaml",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.flow.block-scalar.literal.yaml"
+            },
+            "2": {
+              "name": "keyword.control.flow.block-scalar.folded.yaml"
+            },
+            "3": {
+              "name": "constant.numeric.indentation-indicator.yaml"
+            },
+            "4": {
+              "name": "storage.modifier.chomping-indicator.yaml"
+            },
+            "5": {
+              "name": "meta.encoding.yaml"
+            }
+          },
+          "end": "^(?=\\S)|(?!\\G)",
+          "patterns": [
+            {
+              "begin": "^([ ]+)(?! )",
+              "end": "^(?!\\1|\\s*$)",
+              "patterns": [
+                {
+                  "include": "source.glsl"
+                }
+              ],
+              "name": "meta.embedded.string.raw.glsl.yaml"
+            }
+          ]
+        },
+        {
+          "comment": "Metal-formatted block scalar strings",
+          "name": "string.quoted.multi.embedded.yaml",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.flow.block-scalar.literal.yaml"
+            },
+            "2": {
+              "name": "keyword.control.flow.block-scalar.folded.yaml"
+            },
+            "3": {
+              "name": "constant.numeric.indentation-indicator.yaml"
+            },
+            "4": {
+              "name": "storage.modifier.chomping-indicator.yaml"
+            },
+            "5": {
+              "name": "meta.encoding.yaml"
+            }
+          },
+          "end": "^(?=\\S)|(?!\\G)",
+          "patterns": [
+            {
+              "begin": "^([ ]+)(?! )",
+              "end": "^(?!\\1|\\s*$)",
+              "patterns": [
+                {
+                  "include": "source.metal"
+                }
+              ],
+              "name": "meta.embedded.string.raw.metal.yaml"
+            }
+          ]
+        },
+        {
+          "comment": "WSGL-formatted block scalar strings",
+          "name": "string.quoted.multi.embedded.yaml",
+          "begin": "(?:(\\|)|(>))([1-9])?([-+])?\\s*(#(?i:undefined))\\b\\s*\\n?",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.flow.block-scalar.literal.yaml"
+            },
+            "2": {
+              "name": "keyword.control.flow.block-scalar.folded.yaml"
+            },
+            "3": {
+              "name": "constant.numeric.indentation-indicator.yaml"
+            },
+            "4": {
+              "name": "storage.modifier.chomping-indicator.yaml"
+            },
+            "5": {
+              "name": "meta.encoding.yaml"
+            }
+          },
+          "end": "^(?=\\S)|(?!\\G)",
+          "patterns": [
+            {
+              "begin": "^([ ]+)(?! )",
+              "end": "^(?!\\1|\\s*$)",
+              "patterns": [
+                {
+                  "include": "source.wsgl"
+                }
+              ],
+              "name": "meta.embedded.string.raw.wsgl.yaml"
             }
           ]
         }

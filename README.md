@@ -84,17 +84,22 @@ signal which language you are using.
 | C          | c                            | `/*c*/`                                    |
 | C++        | cpp, c++                     | `//cpp`, `//c++`                           |
 | CSS        | css                          | `/*css*/`                                  |
+| GLSL | glsl | `//glsl` |
+| HLSL | hlsl | `//hlsl` |
 | HTML       | html                         | `<!DOCTYPE`, `<html`, `<!--html`           |
 | Ini        | ini                          | `;ini`                                     |
 | Javascript | js, javascript               | `//js`                                     |
 | JSON       | json                         | (1)                                        |
 | JSONC      | jsonc                        | `//jsonc`                                  |
+| Metal shading language | metal | `//metal` |
 | Python     | py, python                   | `#py`                                      |
 | Shell      | sh, bash, shell, shellscript | `#sh`, `#bash`, `#shell`, `#!/bin/sh`, ... |
 | SQL        | sql                          | `--sql`                                    |
 | TOML       | toml                         | `#toml`                                    |
+| WGSL | wgsl | `//wgsl` |
 | XML        | xml                          | `<?xml`, `<? xml`, `<!--xml`               |
 | YAML       | yaml                         | `#yaml`                                    |
+
 
 * (1): JSON does not support comments, so there is no way to indicate a
   string is a JSON document within the string. 

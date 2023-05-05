@@ -14,7 +14,7 @@
         {
           "comment": "Batch-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:rem|@rem|::bat)\\b)",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
           "end": "(\\2)",
           "contentName": "meta.embedded.string.raw.bat.python",
           "patterns": [
@@ -39,7 +39,7 @@
         {
           "comment": "C++-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i://cpp|//c\\+\\+)\\b)",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
           "end": "(\\2)",
           "contentName": "meta.embedded.string.raw.cpp.python",
           "patterns": [
@@ -64,7 +64,7 @@
         {
           "comment": "CSS-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:/\\*css)\\b)",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
           "end": "(\\2)",
           "contentName": "meta.embedded.string.raw.css.python",
           "patterns": [
@@ -89,7 +89,7 @@
         {
           "comment": "HTML-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:<!DOCTYPE|<html|<!--html)\\b)",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
           "end": "(\\2)",
           "contentName": "meta.embedded.string.raw.html.python",
           "patterns": [
@@ -114,7 +114,7 @@
         {
           "comment": "INI-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:;ini)\\b)",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
           "end": "(\\2)",
           "contentName": "meta.embedded.string.raw.ini.python",
           "patterns": [
@@ -139,7 +139,7 @@
         {
           "comment": "Javascript-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i://js)\\b)",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
           "end": "(\\2)",
           "contentName": "meta.embedded.string.raw.javascript.python",
           "patterns": [
@@ -164,7 +164,7 @@
         {
           "comment": "JSONC-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i://jsonc)\\b)",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
           "end": "(\\2)",
           "contentName": "meta.embedded.string.raw.jsonc.python",
           "patterns": [
@@ -189,7 +189,7 @@
         {
           "comment": "Python-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:#py)\\b)",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
           "end": "(\\2)",
           "contentName": "meta.embedded.string.raw.python.python",
           "patterns": [
@@ -214,7 +214,7 @@
         {
           "comment": "Shell-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:#sh|#bash|#shell|#!/bin/sh|#!/bin/bash|#!/usr/bin/env bash)\\b)",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
           "end": "(\\2)",
           "contentName": "meta.embedded.string.raw.shell.python",
           "patterns": [
@@ -239,7 +239,7 @@
         {
           "comment": "SQL-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:--sql)\\b)",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
           "end": "(\\2)",
           "contentName": "meta.embedded.string.raw.sql.python",
           "patterns": [
@@ -264,7 +264,7 @@
         {
           "comment": "TOML-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:#toml)\\b)",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
           "end": "(\\2)",
           "contentName": "meta.embedded.string.raw.toml.python",
           "patterns": [
@@ -289,7 +289,7 @@
         {
           "comment": "XML-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:<\\?xml|<\\? xml|<!--xml)\\b)",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
           "end": "(\\2)",
           "contentName": "meta.embedded.string.raw.xml.python",
           "patterns": [
@@ -314,7 +314,7 @@
         {
           "comment": "YAML-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:#yaml)\\b)",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
           "end": "(\\2)",
           "contentName": "meta.embedded.string.raw.yaml.python",
           "patterns": [
@@ -339,12 +339,112 @@
         {
           "comment": "C-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:/\\*c)\\b)",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
           "end": "(\\2)",
           "contentName": "meta.embedded.string.raw.c.python",
           "patterns": [
             {
               "include": "source.c"
+            }
+          ],
+          "beginCaptures": {
+            "1": {
+              "name": "storage.type.string.python"
+            },
+            "2": {
+              "name": "punctuation.definition.string.begin.python"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.end.python"
+            }
+          }
+        },
+        {
+          "comment": "HLSL-formatted triple-quoted strings",
+          "name": "string.quoted.multi.embedded.python",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
+          "end": "(\\2)",
+          "contentName": "meta.embedded.string.raw.hlsl.python",
+          "patterns": [
+            {
+              "include": "source.hlsl"
+            }
+          ],
+          "beginCaptures": {
+            "1": {
+              "name": "storage.type.string.python"
+            },
+            "2": {
+              "name": "punctuation.definition.string.begin.python"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.end.python"
+            }
+          }
+        },
+        {
+          "comment": "GLSL-formatted triple-quoted strings",
+          "name": "string.quoted.multi.embedded.python",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
+          "end": "(\\2)",
+          "contentName": "meta.embedded.string.raw.glsl.python",
+          "patterns": [
+            {
+              "include": "source.glsl"
+            }
+          ],
+          "beginCaptures": {
+            "1": {
+              "name": "storage.type.string.python"
+            },
+            "2": {
+              "name": "punctuation.definition.string.begin.python"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.end.python"
+            }
+          }
+        },
+        {
+          "comment": "Metal-formatted triple-quoted strings",
+          "name": "string.quoted.multi.embedded.python",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
+          "end": "(\\2)",
+          "contentName": "meta.embedded.string.raw.metal.python",
+          "patterns": [
+            {
+              "include": "source.metal"
+            }
+          ],
+          "beginCaptures": {
+            "1": {
+              "name": "storage.type.string.python"
+            },
+            "2": {
+              "name": "punctuation.definition.string.begin.python"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.end.python"
+            }
+          }
+        },
+        {
+          "comment": "WSGL-formatted triple-quoted strings",
+          "name": "string.quoted.multi.embedded.python",
+          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:undefined)\\b)",
+          "end": "(\\2)",
+          "contentName": "meta.embedded.string.raw.wsgl.python",
+          "patterns": [
+            {
+              "include": "source.wsgl"
             }
           ],
           "beginCaptures": {

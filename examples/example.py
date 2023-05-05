@@ -203,5 +203,59 @@ int a, b;
 """
 
 
+# HLSL Example
+hlsl_string = """//hlsl
+// A simple HLSL shader
+struct VertexInput {
+    float3 position : POSITION;
+};
+
+VertexOutput main(VertexInput input) {
+    VertexOutput output;
+    output.position = mul(float4(input.position, 1.0), model_view_proj);
+    return output;
+}
+
+"""
+
+
+# GLSL Example
+glsl_string = """//glsl
+// A simple GLSL shader
+uniform mat4 model_view_proj;
+
+in vec3 position;
+
+void main() {
+    gl_Position = model_view_proj * vec4(position, 1.0);
+}
+
+"""
+
+
+# Metal Example
+metal_string = """//metal
+// A simple Metal shader
+struct VertexOutput {
+    float4 position [[position]];
+};
+
+vertex VertexOutput vertexShader(const device packed_float3* vertex_buffer [[buffer(0)]],
+                                 constant packed_float4x4& model_view_proj [[buffer(1)]],
+                                 uint vid [[vertex_id]]) {
+    VertexOutput output;
+    float3 position = vertex_buffer[vid];
+    output.position = model_view_proj * float4(position, 1.0);
+    return output;
+}
+"""
+
+
+# WSGL Example
+wsgl_string = """//wsgl
+
+"""
+
+
 if __name__ == "__main__":
     print("Hello world!");
