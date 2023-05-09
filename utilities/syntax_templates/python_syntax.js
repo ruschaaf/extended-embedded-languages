@@ -23,7 +23,7 @@ DO NOT HAND EDIT IT - changes will be lost.`,
         // https://www.apeth.com/nonblog/stories/textmatebundle.html
         'injectionSelector': 'L:source.python -string -comment',
         'scopeName': `${hostSpec.embedded_scope}`,
-        'patterns': [{'include': '#triple_quoted_strings'}],
+        'patterns': [{ 'include': '#triple_quoted_strings' }],
         'repository': {
             'triple_quoted_strings': {
                 'comment': 'These patterns all match Python triple-quoted strings and select one language.' +
@@ -44,13 +44,13 @@ DO NOT HAND EDIT IT - changes will be lost.`,
                     'begin': String.raw`(\b[uU]|[rR][fF]?|[fF][rR]?)?('''|""")(?=(?i:${lang.comment_choice_re})\b)`,
                     'end': String.raw`(\2)`,
                     'contentName': `meta.embedded.string.raw.${lang.vsname}.python  ${lang.root_scope}`,
-                    'patterns': [{'include': `${lang.root_scope}`}],
+                    'patterns': [{ 'include': `${lang.root_scope}` }],
                     'beginCaptures': {
-                        '1': {'name': 'storage.type.string.python'},
-                        '2': {'name': 'punctuation.definition.string.begin.python'},
+                        '1': { 'name': 'storage.type.string.python' },
+                        '2': { 'name': 'punctuation.definition.string.begin.python' },
                     },
                     'endCaptures': {
-                        '1': {'name': 'punctuation.definition.string.end.python'},
+                        '1': { 'name': 'punctuation.definition.string.end.python' },
                     },
                 }
         );

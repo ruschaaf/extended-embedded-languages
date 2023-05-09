@@ -4,11 +4,11 @@
 
 import fs from 'fs';
 import path from 'path';
-import {readEmbeddedSpecs} from './embedded_language_specs.js';
-import {buildPythonSyntax} from './syntax_templates/python_syntax.js';
-import {buildCppSyntax} from './syntax_templates/cpp_syntax.js';
-import {buildYamlSyntax} from './syntax_templates/yaml_syntax.js';
-import {buildJavascriptSyntax} from './syntax_templates/javascript_syntax.js';
+import { readEmbeddedSpecs } from './embedded_language_specs.js';
+import { buildPythonSyntax } from './syntax_templates/python_syntax.js';
+import { buildCppSyntax } from './syntax_templates/cpp_syntax.js';
+import { buildYamlSyntax } from './syntax_templates/yaml_syntax.js';
+import { buildJavascriptSyntax } from './syntax_templates/javascript_syntax.js';
 
 /**
  * Escapes any characters in a string so that the string can be

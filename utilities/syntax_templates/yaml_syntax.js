@@ -13,7 +13,7 @@ export function buildYamlSyntax(hostSpec, embeddedSpecs) {
 DO NOT HAND EDIT IT - changes will be lost.`,
         'injectionSelector': 'L:source.yaml -string -comment',
         'scopeName': `${hostSpec.embedded_scope}`,
-        'patterns': [{'include': '#block-scalar-with-embedding'}],
+        'patterns': [{ 'include': '#block-scalar-with-embedding' }],
         'repository': {
             'block-scalar-with-embedding': {
                 'comment': 'These patterns all match YAML block scalar strings and select one language.' +
@@ -31,18 +31,18 @@ DO NOT HAND EDIT IT - changes will be lost.`,
 (?:(\|)|(>)) ([1-9])? ([-+])? \s* 
 ( \# (?i:${lang.id_choice_re}) ) \b \s* \n?`,
                     'beginCaptures': {
-                        '1': {'name': 'keyword.control.flow.block-scalar.literal.yaml'},
-                        '2': {'name': 'keyword.control.flow.block-scalar.folded.yaml'},
-                        '3': {'name': 'constant.numeric.indentation-indicator.yaml'},
-                        '4': {'name': 'storage.modifier.chomping-indicator.yaml'},
-                        '5': {'name': `meta.encoding.yaml`},
+                        '1': { 'name': 'keyword.control.flow.block-scalar.literal.yaml' },
+                        '2': { 'name': 'keyword.control.flow.block-scalar.folded.yaml' },
+                        '3': { 'name': 'constant.numeric.indentation-indicator.yaml' },
+                        '4': { 'name': 'storage.modifier.chomping-indicator.yaml' },
+                        '5': { 'name': `meta.encoding.yaml` },
                     },
                     'end': String.raw`^(?=\S)|(?!\G)`,
                     'patterns': [
                         {
                             'begin': '^([ ]+)(?! )',
                             'end': '^(?!\\1|\\s*$)',
-                            'patterns': [{'include': `${lang.root_scope}`}],
+                            'patterns': [{ 'include': `${lang.root_scope}` }],
                             'name': `meta.embedded.string.raw.${lang.vsname}.yaml ${lang.root_scope}`,
                         },
                     ],

@@ -32,6 +32,7 @@ module.exports = {
             requireParamDescription: false,
             requireReturnDescription: false,
         }],
+        'object-curly-spacing': ['error', 'always'],
         'indent': [
             'error', 4, {
                 'CallExpression': {

@@ -8,14 +8,14 @@
 import fs from 'fs';
 import ejs from 'ejs';
 import path from 'path';
-import {readEmbeddedSpecs} from './embedded_language_specs.js';
+import { readEmbeddedSpecs } from './embedded_language_specs.js';
 
 const hostLanguages = [
-    {template: 'cpp.ejs', output: 'example.cpp'},
-    {template: 'python.ejs', output: 'example.py'},
-    {template: 'yaml.ejs', output: 'example.yaml'},
-    {template: 'javascript.ejs', output: 'example.js',
-        escapes: [['`', '\\`'], ['$', '\\$']]},
+    { template: 'cpp.ejs', output: 'example.cpp' },
+    { template: 'python.ejs', output: 'example.py' },
+    { template: 'yaml.ejs', output: 'example.yaml' },
+    { template: 'javascript.ejs', output: 'example.js',
+        escapes: [['`', '\\`'], ['$', '\\$']] },
 ];
 
 /**
@@ -76,7 +76,7 @@ function main() {
         const template = ejs.compile(fs.readFileSync(templatePath, 'utf-8'));
         fs.writeFileSync(
                 path.join('..', 'examples', hostLang.output),
-                template({snippets: embeddedLanguageSpecs}));
+                template({ snippets: embeddedLanguageSpecs }));
     });
 }
 
