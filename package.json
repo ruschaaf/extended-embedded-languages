@@ -114,9 +114,9 @@
         }
       },
       {
-        "scopeName": "source.javascript.embedded.codeblock",
+        "scopeName": "source.js.embedded.codeblock",
         "injectTo": [
-          "source.javascript"
+          "source.js"
         ],
         "path": "./syntaxes/javscript.embedded.json",
         "embeddedLanguages": {

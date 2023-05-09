@@ -77,10 +77,11 @@ last_file = "example.txt"
 // Javascript Example
 const js_string = /*js*/ `
 // This is a basic javascript file
-var url = "http://example.com"
+const url = 'http://example.com';
 
-function print_url(path) {
-    console.log("The URL is", url + "/" + path);
+/* eslint-disable require-jsdoc */
+export function printUrl(path) {
+    console.log('The URL is', url + '/' + path);
 }
 
 

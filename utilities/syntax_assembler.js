@@ -38,7 +38,7 @@ function generateAllSyntaxes(hostSpecs, embeddedSpecs) {
     packageJson.contributes.grammars = [];
 
     hostSpecs.forEach((spec) => {
-    // Generate the syntax file
+        // Generate the syntax file
         const syntaxPath = path.join('..', 'syntaxes', spec.file);
         const syntax = spec.syntax_builder(spec, embeddedSpecs);
         fs.writeFileSync(syntaxPath, JSON.stringify(syntax, null, 2));
@@ -98,10 +98,10 @@ function main() {
         },
         {
             file: 'javscript.embedded.json',
-            root_scope: 'source.javascript',
+            root_scope: 'source.js',
             syntax_builder: buildJavascriptSyntax,
             vsname: 'javascript',
-            embedded_scope: 'source.javascript.embedded.codeblock',
+            embedded_scope: 'source.js.embedded.codeblock',
         },
     ];
 
@@ -109,8 +109,8 @@ function main() {
 
     // Build some useful text fragments for the syntax templates
     embeddedLanguageSpecs.forEach((lang) => {
-    // This is a Regex set of language alternatives - e.g.
-    // `cpp|c\+\+|cxx`
+        // This is a Regex set of language alternatives - e.g.
+        // `cpp|c\+\+|cxx`
         const escapedLangIds = lang.ids.map((s) => regexpEscape(s));
         lang.id_choice_re = escapedLangIds.join('|');
 

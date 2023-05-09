@@ -80,10 +80,11 @@ last_file = "example.txt"
 // Javascript Example
 static const char* js_string = R"js(
 // This is a basic javascript file
-var url = "http://example.com"
+const url = 'http://example.com';
 
-function print_url(path) {
-    console.log("The URL is", url + "/" + path);
+/* eslint-disable require-jsdoc */
+export function printUrl(path) {
+    console.log('The URL is', url + '/' + path);
 }
 
 
@@ -283,19 +284,19 @@ fn main(input: VertexInput) -> VertexOutput {
 
 //////////////////////////////////////////////////////////////////////
 // Test cases - these should all be HIGHLIGHTED
-R"sql(SELECT foo FROM bar;)sql";
+auto s1 = R"sql(SELECT foo FROM bar;)sql";
 
-R"sql(
+auto s2 = R"sql(
     SELECT foo FROM bar;
 )sql";
 
-R"sql:abc(
+auto s3 = R"sql:abc(
     SELECT foo FROM bar
 )sql:abc";
 
-u8R"sql(SELECT foo FROM bar;)sql";
-LR"sql(SELECT foo FROM bar;)sql";
-UR"sql(SELECT foo FROM bar;)sql";
+auto s4 = u8R"sql(SELECT foo FROM bar;)sql";
+auto s5 = LR"sql(SELECT foo FROM bar;)sql";
+auto s6 = UR"sql(SELECT foo FROM bar;)sql";
 
 #define x R"sql(SELECT foo FROM bar;)sql";
 
@@ -308,9 +309,9 @@ UR"sql(SELECT foo FROM bar;)sql";
     R"sql(SELECT foo FROM bar;)sql";
 */
 
-"SELECT foo FROM bar"
+auto s7 = "SELECT foo FROM bar";
 
-R"outer( 
+auto s8 = R"outer( 
     R"sql(SELECT foo FROM bar;)sql";
 )outer";
 
