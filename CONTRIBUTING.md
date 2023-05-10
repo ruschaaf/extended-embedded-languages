@@ -2,6 +2,22 @@
 
 Thank you for your interest in contributing to this extension. In this doc you will find some notes on how to add support for additional languages
 
+
+This plugin extends the TextMate syntax highlighting definitions of
+several **host** languages in order to look for **embedded**
+sub-languages within strings. It does not contain any of its own syntax
+highlighting rules, instead it typically replaces one single rule in the
+host language which defines a multiline string, and looks for specific
+indicators regarding which embedded language to use when highlighting
+the string.
+
+Within the embedded language block, your editor will behave as if it is
+editing the embedded language. For example if you are editing SQL within
+a C++ document, the VSCode "Toggle Line Comment" command will prefix
+lines with `--` not `//`. Code folding will use the natural structure of
+the embedded language block too - collapsing `<tags>` in an XML
+string, or `{` braces in a C string
+
 ## Utilities
 
 There are two utilities within the `utilities` folder you will need, both of these are 
@@ -72,3 +88,17 @@ Once there you can open the example scripts to make sure they are doing the righ
 regular expression parsing you can look at the markup that the TextMate parser is generating by 
 using the `Developer: Inspect Editor Tokens and Scopes` 
 
+## Useful Links
+
+Useful links:
+TextMate / Oniguruma regular expression language: 
+https://macromates.com/manual/en/regular_expressions
+
+TextMate language rules:
+https://macromates.com/manual/en/language_grammars
+
+Notes on grammar injection:
+https://github.com/microsoft/vscode/issues/161177
+
+Notes on writing a textmate grammar:
+https://www.apeth.com/nonblog/stories/textmatebundle.html

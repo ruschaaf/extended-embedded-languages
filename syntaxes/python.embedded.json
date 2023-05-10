@@ -15,9 +15,9 @@
         {
           "comment": "Batch-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:rem|@rem|::bat)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:rem|@rem|::bat) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.bat.python  source.batchfile",
+          "contentName": "meta.embedded.string.raw.bat.python source.batchfile",
           "patterns": [
             {
               "include": "source.batchfile"
@@ -40,9 +40,9 @@
         {
           "comment": "C++-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i://cpp|//c\\+\\+)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://cpp|//c\\+\\+) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.cpp.python  source.cpp",
+          "contentName": "meta.embedded.string.raw.cpp.python source.cpp",
           "patterns": [
             {
               "include": "source.cpp"
@@ -65,9 +65,9 @@
         {
           "comment": "CSS-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:/\\*css)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:/\\*css) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.css.python  source.css",
+          "contentName": "meta.embedded.string.raw.css.python source.css",
           "patterns": [
             {
               "include": "source.css"
@@ -90,9 +90,9 @@
         {
           "comment": "HTML-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:<!DOCTYPE|<html|<!--html)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:<!DOCTYPE|<html|<!--html) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.html.python  text.html.derivative",
+          "contentName": "meta.embedded.string.raw.html.python text.html.derivative",
           "patterns": [
             {
               "include": "text.html.derivative"
@@ -115,9 +115,9 @@
         {
           "comment": "INI-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:;ini)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:;ini) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.ini.python  source.ini",
+          "contentName": "meta.embedded.string.raw.ini.python source.ini",
           "patterns": [
             {
               "include": "source.ini"
@@ -140,9 +140,9 @@
         {
           "comment": "Javascript-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i://js)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://js) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.javascript.python  source.js",
+          "contentName": "meta.embedded.string.raw.javascript.python source.js",
           "patterns": [
             {
               "include": "source.js"
@@ -165,9 +165,9 @@
         {
           "comment": "JSONC-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i://jsonc)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://jsonc) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.jsonc.python  source.jsonc",
+          "contentName": "meta.embedded.string.raw.jsonc.python source.jsonc",
           "patterns": [
             {
               "include": "source.jsonc"
@@ -190,9 +190,9 @@
         {
           "comment": "Python-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:#py)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:\\#py) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.python.python  source.python",
+          "contentName": "meta.embedded.string.raw.python.python source.python",
           "patterns": [
             {
               "include": "source.python"
@@ -215,9 +215,9 @@
         {
           "comment": "Shell-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:#sh|#bash|#shell|#!/bin/sh|#!/bin/bash|#!/usr/bin/env bash)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:\\#sh|\\#bash|\\#shell|\\#!/bin/sh|\\#!/bin/bash|\\#!/usr/bin/env/sbash) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.shell.python  source.shell",
+          "contentName": "meta.embedded.string.raw.shell.python source.shell",
           "patterns": [
             {
               "include": "source.shell"
@@ -240,9 +240,9 @@
         {
           "comment": "SQL-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:--sql)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:--sql) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.sql.python  source.sql",
+          "contentName": "meta.embedded.string.raw.sql.python source.sql",
           "patterns": [
             {
               "include": "source.sql"
@@ -265,9 +265,9 @@
         {
           "comment": "TOML-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:#toml)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:\\#toml) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.toml.python  source.toml",
+          "contentName": "meta.embedded.string.raw.toml.python source.toml",
           "patterns": [
             {
               "include": "source.toml"
@@ -290,9 +290,9 @@
         {
           "comment": "XML-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:<\\?xml|<\\? xml|<!--xml)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:<\\?xml|<\\?/sxml|<!--xml) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.xml.python  text.xml",
+          "contentName": "meta.embedded.string.raw.xml.python text.xml",
           "patterns": [
             {
               "include": "text.xml"
@@ -315,9 +315,9 @@
         {
           "comment": "YAML-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:#yaml)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:\\#yaml) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.yaml.python  source.yaml",
+          "contentName": "meta.embedded.string.raw.yaml.python source.yaml",
           "patterns": [
             {
               "include": "source.yaml"
@@ -340,9 +340,9 @@
         {
           "comment": "C-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i:/\\*c)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:/\\*c) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.c.python  source.c",
+          "contentName": "meta.embedded.string.raw.c.python source.c",
           "patterns": [
             {
               "include": "source.c"
@@ -365,9 +365,9 @@
         {
           "comment": "HLSL-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i://hlsl)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://hlsl) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.hlsl.python  source.hlsl",
+          "contentName": "meta.embedded.string.raw.hlsl.python source.hlsl",
           "patterns": [
             {
               "include": "source.hlsl"
@@ -390,9 +390,9 @@
         {
           "comment": "GLSL-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i://glsl)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://glsl) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.glsl.python  source.glsl",
+          "contentName": "meta.embedded.string.raw.glsl.python source.glsl",
           "patterns": [
             {
               "include": "source.glsl"
@@ -415,9 +415,9 @@
         {
           "comment": "Metal-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i://metal)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://metal) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.metal.python  source.metal",
+          "contentName": "meta.embedded.string.raw.metal.python source.metal",
           "patterns": [
             {
               "include": "source.metal"
@@ -440,9 +440,9 @@
         {
           "comment": "WGSL-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
-          "begin": "(\\b[uU]|[rR][fF]?|[fF][rR]?)?('''|\"\"\")(?=(?i://wgsl)\\b)",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://wgsl) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.string.raw.wgsl.python  source.wgsl",
+          "contentName": "meta.embedded.string.raw.wgsl.python source.wgsl",
           "patterns": [
             {
               "include": "source.wgsl"

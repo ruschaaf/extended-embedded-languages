@@ -19,7 +19,61 @@ import { buildJavascriptSyntax } from './syntax_templates/javascript_syntax.js';
  * input string
  */
 function regexpEscape(str) {
-    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Escape meaningful characters
+    const s = str.replace(/[.*+?^${}()#|[\]\\]/g, '\\$&');
+    // Convert spaces into '\s'
+    return s.replace(/\s+/g, '/s');
+}
+
+/**
+ * Generates all snippet files, given an array of host language
+ * specifications and an array of embedded langauge specifications
+ * Also updates package.json to point to these generated snippets
+ * @param {*} hostSpecs
+ * @param {*} embeddedSpecs
+ */
+function generateAllSnippets(hostSpecs, embeddedSpecs) {
+    // Update the package.json to add all our embedded language snippets
+    const packagePath = path.join('..', 'package.json');
+    const packageJson = JSON.parse(fs.readFileSync(packagePath));
+
+    packageJson.contributes.snippets = [];
+
+    hostSpecs.forEach((spec) => {
+        // Generate the snippet file
+        const snippetPath = path.join('..', 'snippets', `${spec.vsname}.code-snippets`);
+
+        const embeddedSnippets = embeddedSpecs.map((embedded) => {
+            const snippetStart = (spec.snippet_start
+                .replace('<ID>', embedded.ids[0])
+                .replace('<COMMENT>', embedded.example_comment));
+            const snippetEnd = (spec.snippet_end
+                .replace('<ID>', embedded.ids[0])
+                .replace('<COMMENT>', embedded.example_comment));
+            return [
+                `${embedded.name} code block`,
+                {
+                    scope: spec.vsname,
+                    prefix: embedded.ids[0],
+                    body: [
+                        snippetStart,
+                        '\t$0',
+                        snippetEnd,
+                    ],
+                },
+            ];
+        }
+        );
+        console.log(`Writing ${snippetPath}`);
+        fs.writeFileSync(snippetPath, JSON.stringify(Object.fromEntries(embeddedSnippets), null, 2));
+
+        packageJson.contributes.snippets.push({
+            'language': spec.vsname,
+            'path': path.join('snippets', `${spec.vsname}.code-snippets`),
+        });
+    });
+
+    fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
 }
 
 /**
@@ -46,19 +100,18 @@ function generateAllSyntaxes(hostSpecs, embeddedSpecs) {
         console.log(`Generating ${syntaxPath}`);
 
         // Update the embeddings in the package.json file
-        const embeddedings = {};
-        embeddedSpecs.forEach((embedded) => {
-            const key = `meta.embedded.string.raw.${embedded.vsname}.${spec.vsname}`;
-            embeddedings[key] = embedded.vsname;
-        });
+        const embeddingsArray = embeddedSpecs.map((embedded) => [
+            `meta.embedded.string.raw.${embedded.vsname}.${spec.vsname}`, // key
+            embedded.vsname, // value
+        ]);
 
         packageJson.contributes.grammars.push({
-            scopeName: spec.embedded_scope,
-            injectTo: [spec.root_scope],
+            'scopeName': spec.embedded_scope,
+            'injectTo': [spec.root_scope],
             // Not using path.join for the path here because separator
             // characters should be '/' regardless of platform
-            path: './syntaxes/' + spec.file,
-            embeddedLanguages: embeddedings,
+            'path': './syntaxes/' + spec.file,
+            'embeddedLanguages': Object.fromEntries(embeddingsArray),
         });
 
         console.log(`Done generating ${syntaxPath}`);
@@ -81,6 +134,8 @@ function main() {
             syntax_builder: buildCppSyntax,
             vsname: 'cpp',
             embedded_scope: 'source.cpp.embedded.codeblock',
+            snippet_start: 'R"<ID>(',
+            snippet_end: ')<ID>"',
         },
         {
             file: 'python.embedded.json',
@@ -88,6 +143,8 @@ function main() {
             syntax_builder: buildPythonSyntax,
             vsname: 'python',
             embedded_scope: 'source.python.embedded.codeblock',
+            snippet_start: '"""<COMMENT>',
+            snippet_end: '"""',
         },
         {
             file: 'yaml.embedded.json',
@@ -95,6 +152,8 @@ function main() {
             syntax_builder: buildYamlSyntax,
             vsname: 'yaml',
             embedded_scope: 'source.yaml.embedded.codeblock',
+            snippet_start: '| #<ID>',
+            snippet_end: '',
         },
         {
             file: 'javscript.embedded.json',
@@ -102,6 +161,8 @@ function main() {
             syntax_builder: buildJavascriptSyntax,
             vsname: 'javascript',
             embedded_scope: 'source.js.embedded.codeblock',
+            snippet_start: '/*<ID>*/ `',
+            snippet_end: '`',
         },
     ];
 
@@ -121,6 +182,9 @@ function main() {
     });
 
     generateAllSyntaxes(hostLanguageSpecs, embeddedLanguageSpecs);
+
+    // EXPERIMENTAL - disabled for now.
+    generateAllSnippets(hostLanguageSpecs, embeddedLanguageSpecs);
 }
 
 main();

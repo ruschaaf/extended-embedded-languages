@@ -1,4 +1,4 @@
+.DS_Store
+*.vsix
 */node_modules
 */package-lock.json
-*.vsix
-.DS_Store

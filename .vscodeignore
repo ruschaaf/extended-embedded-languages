@@ -1,7 +1,10 @@
-.vscode/**
-.vscode-test/**
-.gitignore
-**/node_modules
-vsc-extension-quickstart.md
-*.vsix
 .DS_Store
+.gitignore
+.vscode-test/**
+.vscode/**
+*.vsix
+**/node_modules
+images/*.svg
+utilities/**
+vsc-extension-quickstart.md
+

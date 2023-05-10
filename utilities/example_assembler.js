@@ -38,11 +38,14 @@ function applyEscapes(hostLang, code) {
     if (!hostLang.escapes) {
         return code;
     }
-    let escapedCode = code;
-    hostLang.escapes.forEach((escape) => {
-        escapedCode = escapedCode.replaceAll(escape[0], escape[1]);
-    });
-    return escapedCode;
+    // Apply each replacement in turn to the code. Note that you'll
+    // need to be careful about the order of replacements. I.e. if you
+    // replace '$' with '\$' and '\' with '\\' you don't want to end
+    // up with '\\$'.
+    return hostLang.escapes.reduce(
+            (str, [from, to]) => str.replaceAll(from, to),
+            code
+    );
 }
 
 /**

@@ -17,8 +17,9 @@
       "patterns": [
         {
           "comment": "Batch formatted template strings",
-          "begin": "(?x) (/\\*(?i:bat)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:bat)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.bat.javascript source.batchfile",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -34,7 +35,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -54,8 +54,9 @@
         },
         {
           "comment": "C++ formatted template strings",
-          "begin": "(?x) (/\\*(?i:cpp|c\\+\\+)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:cpp|c\\+\\+)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.cpp.javascript source.cpp",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -71,7 +72,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -91,8 +91,9 @@
         },
         {
           "comment": "CSS formatted template strings",
-          "begin": "(?x) (/\\*(?i:css)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:css)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.css.javascript source.css",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -108,7 +109,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -128,8 +128,9 @@
         },
         {
           "comment": "HTML formatted template strings",
-          "begin": "(?x) (/\\*(?i:html)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:html)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.html.javascript text.html.derivative",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -145,7 +146,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -165,8 +165,9 @@
         },
         {
           "comment": "INI formatted template strings",
-          "begin": "(?x) (/\\*(?i:ini)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:ini)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.ini.javascript source.ini",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -182,7 +183,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -202,8 +202,9 @@
         },
         {
           "comment": "Javascript formatted template strings",
-          "begin": "(?x) (/\\*(?i:js|javascript)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:js|javascript)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.javascript.javascript source.js",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -219,7 +220,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -239,8 +239,9 @@
         },
         {
           "comment": "JSON formatted template strings",
-          "begin": "(?x) (/\\*(?i:json)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:json)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.json.javascript source.json",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -256,7 +257,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -276,8 +276,9 @@
         },
         {
           "comment": "JSONC formatted template strings",
-          "begin": "(?x) (/\\*(?i:jsonc)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:jsonc)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.jsonc.javascript source.jsonc",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -293,7 +294,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -313,8 +313,9 @@
         },
         {
           "comment": "Python formatted template strings",
-          "begin": "(?x) (/\\*(?i:py|python)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:py|python)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.python.javascript source.python",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -330,7 +331,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -350,8 +350,9 @@
         },
         {
           "comment": "Shell formatted template strings",
-          "begin": "(?x) (/\\*(?i:sh|bash|shell|shellscript)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:sh|bash|shell|shellscript)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.shell.javascript source.shell",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -367,7 +368,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -387,8 +387,9 @@
         },
         {
           "comment": "SQL formatted template strings",
-          "begin": "(?x) (/\\*(?i:sql)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:sql)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.sql.javascript source.sql",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -404,7 +405,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -424,8 +424,9 @@
         },
         {
           "comment": "TOML formatted template strings",
-          "begin": "(?x) (/\\*(?i:toml)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:toml)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.toml.javascript source.toml",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -441,7 +442,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -461,8 +461,9 @@
         },
         {
           "comment": "XML formatted template strings",
-          "begin": "(?x) (/\\*(?i:xml)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:xml)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.xml.javascript text.xml",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -478,7 +479,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -498,8 +498,9 @@
         },
         {
           "comment": "YAML formatted template strings",
-          "begin": "(?x) (/\\*(?i:yaml)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:yaml)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.yaml.javascript source.yaml",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -515,7 +516,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -535,8 +535,9 @@
         },
         {
           "comment": "C formatted template strings",
-          "begin": "(?x) (/\\*(?i:c)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:c)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.c.javascript source.c",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -552,7 +553,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -572,8 +572,9 @@
         },
         {
           "comment": "HLSL formatted template strings",
-          "begin": "(?x) (/\\*(?i:hlsl)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:hlsl)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.hlsl.javascript source.hlsl",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -589,7 +590,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -609,8 +609,9 @@
         },
         {
           "comment": "GLSL formatted template strings",
-          "begin": "(?x) (/\\*(?i:glsl)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:glsl)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.glsl.javascript source.glsl",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -626,7 +627,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -646,8 +646,9 @@
         },
         {
           "comment": "Metal formatted template strings",
-          "begin": "(?x) (/\\*(?i:metal)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:metal)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.metal.javascript source.metal",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -663,7 +664,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -683,8 +683,9 @@
         },
         {
           "comment": "WGSL formatted template strings",
-          "begin": "(?x) (/\\*(?i:wgsl)\\*/) \\s* ([_\\$[:alpha:]][_\\$[:alnum:]]*)? (\\`)",
+          "begin": "(?x)\n(/\\*(?i:wgsl)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.string.raw.wgsl.javascript source.wgsl",
+          "end": "`",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -700,7 +701,6 @@
               "name": "string.template.js punctuation.definition.string.template.begin.js"
             }
           },
-          "end": "`",
           "endCaptures": {
             "0": {
               "name": "string.template.js punctuation.definition.string.template.end.js"
@@ -725,7 +725,7 @@
       "patterns": [
         {
           "comment": "Batch formatted template strings",
-          "begin": "(?x) (?i:bat) (\\`)",
+          "begin": "(?x)\n(?i:bat)\n(\\`)",
           "contentName": "meta.embedded.string.raw.bat.javascript source.batchfile",
           "beginCaptures": {
             "1": {
@@ -755,7 +755,7 @@
         },
         {
           "comment": "C++ formatted template strings",
-          "begin": "(?x) (?i:cpp|c\\+\\+) (\\`)",
+          "begin": "(?x)\n(?i:cpp|c\\+\\+)\n(\\`)",
           "contentName": "meta.embedded.string.raw.cpp.javascript source.cpp",
           "beginCaptures": {
             "1": {
@@ -785,7 +785,7 @@
         },
         {
           "comment": "CSS formatted template strings",
-          "begin": "(?x) (?i:css) (\\`)",
+          "begin": "(?x)\n(?i:css)\n(\\`)",
           "contentName": "meta.embedded.string.raw.css.javascript source.css",
           "beginCaptures": {
             "1": {
@@ -815,7 +815,7 @@
         },
         {
           "comment": "HTML formatted template strings",
-          "begin": "(?x) (?i:html) (\\`)",
+          "begin": "(?x)\n(?i:html)\n(\\`)",
           "contentName": "meta.embedded.string.raw.html.javascript text.html.derivative",
           "beginCaptures": {
             "1": {
@@ -845,7 +845,7 @@
         },
         {
           "comment": "INI formatted template strings",
-          "begin": "(?x) (?i:ini) (\\`)",
+          "begin": "(?x)\n(?i:ini)\n(\\`)",
           "contentName": "meta.embedded.string.raw.ini.javascript source.ini",
           "beginCaptures": {
             "1": {
@@ -875,7 +875,7 @@
         },
         {
           "comment": "Javascript formatted template strings",
-          "begin": "(?x) (?i:js|javascript) (\\`)",
+          "begin": "(?x)\n(?i:js|javascript)\n(\\`)",
           "contentName": "meta.embedded.string.raw.javascript.javascript source.js",
           "beginCaptures": {
             "1": {
@@ -905,7 +905,7 @@
         },
         {
           "comment": "JSON formatted template strings",
-          "begin": "(?x) (?i:json) (\\`)",
+          "begin": "(?x)\n(?i:json)\n(\\`)",
           "contentName": "meta.embedded.string.raw.json.javascript source.json",
           "beginCaptures": {
             "1": {
@@ -935,7 +935,7 @@
         },
         {
           "comment": "JSONC formatted template strings",
-          "begin": "(?x) (?i:jsonc) (\\`)",
+          "begin": "(?x)\n(?i:jsonc)\n(\\`)",
           "contentName": "meta.embedded.string.raw.jsonc.javascript source.jsonc",
           "beginCaptures": {
             "1": {
@@ -965,7 +965,7 @@
         },
         {
           "comment": "Python formatted template strings",
-          "begin": "(?x) (?i:py|python) (\\`)",
+          "begin": "(?x)\n(?i:py|python)\n(\\`)",
           "contentName": "meta.embedded.string.raw.python.javascript source.python",
           "beginCaptures": {
             "1": {
@@ -995,7 +995,7 @@
         },
         {
           "comment": "Shell formatted template strings",
-          "begin": "(?x) (?i:sh|bash|shell|shellscript) (\\`)",
+          "begin": "(?x)\n(?i:sh|bash|shell|shellscript)\n(\\`)",
           "contentName": "meta.embedded.string.raw.shell.javascript source.shell",
           "beginCaptures": {
             "1": {
@@ -1025,7 +1025,7 @@
         },
         {
           "comment": "SQL formatted template strings",
-          "begin": "(?x) (?i:sql) (\\`)",
+          "begin": "(?x)\n(?i:sql)\n(\\`)",
           "contentName": "meta.embedded.string.raw.sql.javascript source.sql",
           "beginCaptures": {
             "1": {
@@ -1055,7 +1055,7 @@
         },
         {
           "comment": "TOML formatted template strings",
-          "begin": "(?x) (?i:toml) (\\`)",
+          "begin": "(?x)\n(?i:toml)\n(\\`)",
           "contentName": "meta.embedded.string.raw.toml.javascript source.toml",
           "beginCaptures": {
             "1": {
@@ -1085,7 +1085,7 @@
         },
         {
           "comment": "XML formatted template strings",
-          "begin": "(?x) (?i:xml) (\\`)",
+          "begin": "(?x)\n(?i:xml)\n(\\`)",
           "contentName": "meta.embedded.string.raw.xml.javascript text.xml",
           "beginCaptures": {
             "1": {
@@ -1115,7 +1115,7 @@
         },
         {
           "comment": "YAML formatted template strings",
-          "begin": "(?x) (?i:yaml) (\\`)",
+          "begin": "(?x)\n(?i:yaml)\n(\\`)",
           "contentName": "meta.embedded.string.raw.yaml.javascript source.yaml",
           "beginCaptures": {
             "1": {
@@ -1145,7 +1145,7 @@
         },
         {
           "comment": "C formatted template strings",
-          "begin": "(?x) (?i:c) (\\`)",
+          "begin": "(?x)\n(?i:c)\n(\\`)",
           "contentName": "meta.embedded.string.raw.c.javascript source.c",
           "beginCaptures": {
             "1": {
@@ -1175,7 +1175,7 @@
         },
         {
           "comment": "HLSL formatted template strings",
-          "begin": "(?x) (?i:hlsl) (\\`)",
+          "begin": "(?x)\n(?i:hlsl)\n(\\`)",
           "contentName": "meta.embedded.string.raw.hlsl.javascript source.hlsl",
           "beginCaptures": {
             "1": {
@@ -1205,7 +1205,7 @@
         },
         {
           "comment": "GLSL formatted template strings",
-          "begin": "(?x) (?i:glsl) (\\`)",
+          "begin": "(?x)\n(?i:glsl)\n(\\`)",
           "contentName": "meta.embedded.string.raw.glsl.javascript source.glsl",
           "beginCaptures": {
             "1": {
@@ -1235,7 +1235,7 @@
         },
         {
           "comment": "Metal formatted template strings",
-          "begin": "(?x) (?i:metal) (\\`)",
+          "begin": "(?x)\n(?i:metal)\n(\\`)",
           "contentName": "meta.embedded.string.raw.metal.javascript source.metal",
           "beginCaptures": {
             "1": {
@@ -1265,7 +1265,7 @@
         },
         {
           "comment": "WGSL formatted template strings",
-          "begin": "(?x) (?i:wgsl) (\\`)",
+          "begin": "(?x)\n(?i:wgsl)\n(\\`)",
           "contentName": "meta.embedded.string.raw.wgsl.javascript source.wgsl",
           "beginCaptures": {
             "1": {

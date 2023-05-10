@@ -14,7 +14,7 @@
       "patterns": [
         {
           "comment": "Batch-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:bat) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:bat) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.bat.cpp source.batchfile",
           "patterns": [
@@ -45,7 +45,7 @@
         },
         {
           "comment": "C++-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:cpp|c\\+\\+) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:cpp|c\\+\\+) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.cpp.cpp source.cpp",
           "patterns": [
@@ -76,7 +76,7 @@
         },
         {
           "comment": "CSS-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:css) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:css) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.css.cpp source.css",
           "patterns": [
@@ -107,7 +107,7 @@
         },
         {
           "comment": "HTML-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:html) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:html) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.html.cpp text.html.derivative",
           "patterns": [
@@ -138,7 +138,7 @@
         },
         {
           "comment": "INI-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:ini) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:ini) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.ini.cpp source.ini",
           "patterns": [
@@ -169,7 +169,7 @@
         },
         {
           "comment": "Javascript-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:js|javascript) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:js|javascript) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.javascript.cpp source.js",
           "patterns": [
@@ -200,7 +200,7 @@
         },
         {
           "comment": "JSON-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:json) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:json) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.json.cpp source.json",
           "patterns": [
@@ -231,7 +231,7 @@
         },
         {
           "comment": "JSONC-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:jsonc) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:jsonc) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.jsonc.cpp source.jsonc",
           "patterns": [
@@ -262,7 +262,7 @@
         },
         {
           "comment": "Python-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:py|python) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:py|python) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.python.cpp source.python",
           "patterns": [
@@ -293,7 +293,7 @@
         },
         {
           "comment": "Shell-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:sh|bash|shell|shellscript) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:sh|bash|shell|shellscript) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.shell.cpp source.shell",
           "patterns": [
@@ -324,7 +324,7 @@
         },
         {
           "comment": "SQL-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:sql) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:sql) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.sql.cpp source.sql",
           "patterns": [
@@ -355,7 +355,7 @@
         },
         {
           "comment": "TOML-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:toml) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:toml) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.toml.cpp source.toml",
           "patterns": [
@@ -386,7 +386,7 @@
         },
         {
           "comment": "XML-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:xml) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:xml) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.xml.cpp text.xml",
           "patterns": [
@@ -417,7 +417,7 @@
         },
         {
           "comment": "YAML-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:yaml) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:yaml) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.yaml.cpp source.yaml",
           "patterns": [
@@ -448,7 +448,7 @@
         },
         {
           "comment": "C-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:c) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:c) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.c.cpp source.c",
           "patterns": [
@@ -479,7 +479,7 @@
         },
         {
           "comment": "HLSL-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:hlsl) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:hlsl) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.hlsl.cpp source.hlsl",
           "patterns": [
@@ -510,7 +510,7 @@
         },
         {
           "comment": "GLSL-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:glsl) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:glsl) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.glsl.cpp source.glsl",
           "patterns": [
@@ -541,7 +541,7 @@
         },
         {
           "comment": "Metal-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:metal) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:metal) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.metal.cpp source.metal",
           "patterns": [
@@ -572,7 +572,7 @@
         },
         {
           "comment": "WGSL-formatted raw strings",
-          "begin": "(?x) \\b ( (?:u|U|L|u8)? R ) \" ( (?i:wgsl) \\b [^\\(]* ) \\(",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:wgsl) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
           "contentName": "meta.embedded.string.raw.wgsl.cpp source.wgsl",
           "patterns": [

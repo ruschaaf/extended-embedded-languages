@@ -4,6 +4,16 @@ All notable changes to the "extended-embedded-languages" extension will be docum
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## [v0.0.2]
+
+New host language: Javascript
+
+New embedded languages: hlsl, glsl, wgsl, Metal
+
+Refactored code and added ESLint for linting
+
+Regexp improvements for better matching
+
+## [v0.0.1]
 
 - Initial release

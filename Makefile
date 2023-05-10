@@ -11,6 +11,7 @@ fix:
 	cd utilities ; eslint --fix .
 
 setup:
+	sudo npm install -g @vscode/vsce
 	cd utilities ; npm install
 
 examples:
@@ -18,5 +19,8 @@ examples:
 
 syntax:
 	cd utilities ; node ./syntax_assembler.js
+
+package:
+	vsce package
 
 
