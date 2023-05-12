@@ -76,27 +76,34 @@ the embedded language type directly, and shows what the first
 characters of the _embedded_ language string needs to be to signal
 which language you are using.
 
-| Name                   | ID                           | Comment                                    |
-|------------------------|------------------------------|--------------------------------------------|
-| Batch                  | bat                          | `REM`, `@REM`, `::bat`                     |
-| C                      | c                            | `/*c*/`                                    |
-| C++                    | cpp, c++                     | `//cpp`, `//c++`                           |
-| CSS                    | css                          | `/*css*/`                                  |
-| GLSL                   | glsl                         | `//glsl`                                   |
-| HLSL                   | hlsl                         | `//hlsl`                                   |
-| HTML                   | html                         | `<!DOCTYPE`, `<html`, `<!--html`           |
-| Ini                    | ini                          | `;ini`                                     |
-| Javascript             | js, javascript               | `//js`                                     |
-| JSON                   | json                         | [^1]                                       |
-| JSONC                  | jsonc                        | `//jsonc`                                  |
-| Metal shading language | metal                        | `//metal`                                  |
-| Python                 | py, python                   | `#py`                                      |
+| Name                   | ID                           | Comment                                        |
+| ---------------------- | ---------------------------- | ---------------------------------------------- |
+| Batch                  | bat                          | `REM`, `@REM`, `::bat`                         |
+| C                      | c                            | `/*c*/`                                        |
+| C++                    | cpp, c++                     | `//cpp`, `//c++`                               |
+| CSS                    | css                          | `/*css*/`                                      |
+| GLSL                   | glsl                         | `//glsl`                                       |
+| GraphQL                | graphql, gql                 | `#graphql`, `#gql`                             |
+| Graphviz               | graphviz, dot                | `//graphviz`, `//dot`                          |
+| HLSL                   | hlsl                         | `//hlsl`                                       |
+| HTML                   | html                         | `<!DOCTYPE`, `<html`, `<!--html`               |
+| Ini                    | ini                          | `;ini`                                         |
+| Javascript             | js, javascript               | `//js`                                         |
+| JSON                   | json                         | [^1]                                           |
+| JSONC                  | jsonc                        | `//jsonc`                                      |
+| LaTeX                  | latex                        | `%latex`                                       |
+| Lua                    | lua                          | `--lua`                                        |
+| Makefile               | makefile, make               | `#make`, `#makefile`, `#!/usr/bin/make`        |
+| Metal shading language | metal                        | `//metal`                                      |
+| Python                 | py, python                   | `#py`                                          |
 | Shell                  | sh, bash, shell, shellscript | `#sh`, `#bash`, `#shell`, <br>`#!/bin/sh`, ... |
-| SQL                    | sql                          | `--sql`                                    |
-| TOML                   | toml                         | `#toml`                                    |
-| WGSL                   | wgsl                         | `//wgsl`                                   |
-| XML                    | xml                          | `<?xml`, `<? xml`, `<!--xml`               |
-| YAML                   | yaml                         | `#yaml`                                    |
+| SQL                    | sql                          | `--sql`                                        |
+| TeX                    | text                         | `%tex`                                         |
+| TOML                   | toml                         | `#toml`                                        |
+| TypeScript             | typescript, ts               | `//typescript`, `//ts`                         |
+| WGSL                   | wgsl                         | `//wgsl`                                       |
+| XML                    | xml                          | `<?xml`, `<? xml`, `<!--xml`                   |
+| YAML                   | yaml                         | `#yaml`                                        |
 
 
 [^1]: JSON does not support comments, so there is no way to indicate a
