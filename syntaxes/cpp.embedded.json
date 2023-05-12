@@ -16,7 +16,7 @@
           "comment": "Batch-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:bat) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.bat.cpp source.batchfile",
+          "contentName": "meta.embedded.block.bat.cpp source.batchfile",
           "patterns": [
             {
               "include": "source.batchfile"
@@ -47,7 +47,7 @@
           "comment": "C++-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:cpp|c\\+\\+) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.cpp.cpp source.cpp",
+          "contentName": "meta.embedded.block.cpp.cpp source.cpp",
           "patterns": [
             {
               "include": "source.cpp"
@@ -78,7 +78,7 @@
           "comment": "CSS-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:css) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.css.cpp source.css",
+          "contentName": "meta.embedded.block.css.cpp source.css",
           "patterns": [
             {
               "include": "source.css"
@@ -109,7 +109,7 @@
           "comment": "HTML-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:html) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.html.cpp text.html.derivative",
+          "contentName": "meta.embedded.block.html.cpp text.html.derivative",
           "patterns": [
             {
               "include": "text.html.derivative"
@@ -140,7 +140,7 @@
           "comment": "INI-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:ini) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.ini.cpp source.ini",
+          "contentName": "meta.embedded.block.ini.cpp source.ini",
           "patterns": [
             {
               "include": "source.ini"
@@ -171,7 +171,7 @@
           "comment": "Javascript-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:js|javascript) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.javascript.cpp source.js",
+          "contentName": "meta.embedded.block.javascript.cpp source.js",
           "patterns": [
             {
               "include": "source.js"
@@ -202,7 +202,7 @@
           "comment": "JSON-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:json) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.json.cpp source.json",
+          "contentName": "meta.embedded.block.json.cpp source.json",
           "patterns": [
             {
               "include": "source.json"
@@ -233,10 +233,10 @@
           "comment": "JSONC-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:jsonc) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.jsonc.cpp source.jsonc",
+          "contentName": "meta.embedded.block.jsonc.cpp source.json.comments",
           "patterns": [
             {
-              "include": "source.jsonc"
+              "include": "source.json.comments"
             }
           ],
           "name": "string.quoted.double.raw.embedded.cpp",
@@ -264,7 +264,7 @@
           "comment": "Python-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:py|python) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.python.cpp source.python",
+          "contentName": "meta.embedded.block.python.cpp source.python",
           "patterns": [
             {
               "include": "source.python"
@@ -295,7 +295,7 @@
           "comment": "Shell-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:sh|bash|shell|shellscript) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.shell.cpp source.shell",
+          "contentName": "meta.embedded.block.shell.cpp source.shell",
           "patterns": [
             {
               "include": "source.shell"
@@ -326,7 +326,7 @@
           "comment": "SQL-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:sql) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.sql.cpp source.sql",
+          "contentName": "meta.embedded.block.sql.cpp source.sql",
           "patterns": [
             {
               "include": "source.sql"
@@ -357,7 +357,7 @@
           "comment": "TOML-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:toml) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.toml.cpp source.toml",
+          "contentName": "meta.embedded.block.toml.cpp source.toml",
           "patterns": [
             {
               "include": "source.toml"
@@ -388,7 +388,7 @@
           "comment": "XML-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:xml) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.xml.cpp text.xml",
+          "contentName": "meta.embedded.block.xml.cpp text.xml",
           "patterns": [
             {
               "include": "text.xml"
@@ -419,7 +419,7 @@
           "comment": "YAML-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:yaml) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.yaml.cpp source.yaml",
+          "contentName": "meta.embedded.block.yaml.cpp source.yaml",
           "patterns": [
             {
               "include": "source.yaml"
@@ -450,7 +450,7 @@
           "comment": "C-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:c) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.c.cpp source.c",
+          "contentName": "meta.embedded.block.c.cpp source.c",
           "patterns": [
             {
               "include": "source.c"
@@ -481,7 +481,7 @@
           "comment": "HLSL-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:hlsl) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.hlsl.cpp source.hlsl",
+          "contentName": "meta.embedded.block.hlsl.cpp source.hlsl",
           "patterns": [
             {
               "include": "source.hlsl"
@@ -512,7 +512,7 @@
           "comment": "GLSL-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:glsl) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.glsl.cpp source.glsl",
+          "contentName": "meta.embedded.block.glsl.cpp source.glsl",
           "patterns": [
             {
               "include": "source.glsl"
@@ -543,7 +543,7 @@
           "comment": "Metal-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:metal) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.metal.cpp source.metal",
+          "contentName": "meta.embedded.block.metal.cpp source.metal",
           "patterns": [
             {
               "include": "source.metal"
@@ -574,10 +574,227 @@
           "comment": "WGSL-formatted raw strings",
           "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:wgsl) \\b [^\\(]* ) \n\\(",
           "end": "\\)(\\2)\"",
-          "contentName": "meta.embedded.string.raw.wgsl.cpp source.wgsl",
+          "contentName": "meta.embedded.block.wgsl.cpp source.wgsl",
           "patterns": [
             {
               "include": "source.wgsl"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "Lua-formatted raw strings",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:lua) \\b [^\\(]* ) \n\\(",
+          "end": "\\)(\\2)\"",
+          "contentName": "meta.embedded.block.lua.cpp source.lua",
+          "patterns": [
+            {
+              "include": "source.lua"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "Makefile-formatted raw strings",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:make|makefile) \\b [^\\(]* ) \n\\(",
+          "end": "\\)(\\2)\"",
+          "contentName": "meta.embedded.block.makefile.cpp source.makefile",
+          "patterns": [
+            {
+              "include": "source.makefile"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "GraphQL-formatted raw strings",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:graphql|gql) \\b [^\\(]* ) \n\\(",
+          "end": "\\)(\\2)\"",
+          "contentName": "meta.embedded.block.graphql.cpp source.graphql",
+          "patterns": [
+            {
+              "include": "source.graphql"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "TypeScript-formatted raw strings",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:typescript|ts) \\b [^\\(]* ) \n\\(",
+          "end": "\\)(\\2)\"",
+          "contentName": "meta.embedded.block.typescript.cpp source.ts",
+          "patterns": [
+            {
+              "include": "source.ts"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "LaTeX-formatted raw strings",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:latex) \\b [^\\(]* ) \n\\(",
+          "end": "\\)(\\2)\"",
+          "contentName": "meta.embedded.block.latex.cpp text.tex.latex",
+          "patterns": [
+            {
+              "include": "text.tex.latex"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "TeX-formatted raw strings",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:tex) \\b [^\\(]* ) \n\\(",
+          "end": "\\)(\\2)\"",
+          "contentName": "meta.embedded.block.tex.cpp text.tex",
+          "patterns": [
+            {
+              "include": "text.tex"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "Graphviz-formatted raw strings",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:graphviz|dot) \\b [^\\(]* ) \n\\(",
+          "end": "\\)(\\2)\"",
+          "contentName": "meta.embedded.block.dot.cpp source.dot",
+          "patterns": [
+            {
+              "include": "source.dot"
             }
           ],
           "name": "string.quoted.double.raw.embedded.cpp",

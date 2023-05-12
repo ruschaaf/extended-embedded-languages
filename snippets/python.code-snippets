@@ -1,0 +1,236 @@
+{
+  "Batch code block": {
+    "scope": "python",
+    "prefix": "bat",
+    "body": [
+      "\"\"\"REM",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "C++ code block": {
+    "scope": "python",
+    "prefix": "cpp",
+    "body": [
+      "\"\"\"//cpp",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "CSS code block": {
+    "scope": "python",
+    "prefix": "css",
+    "body": [
+      "\"\"\"/*css*/",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "HTML code block": {
+    "scope": "python",
+    "prefix": "html",
+    "body": [
+      "\"\"\"<html>",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "INI code block": {
+    "scope": "python",
+    "prefix": "ini",
+    "body": [
+      "\"\"\";ini",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "Javascript code block": {
+    "scope": "python",
+    "prefix": "js",
+    "body": [
+      "\"\"\"//js",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "JSON code block": {
+    "scope": "python",
+    "prefix": "json",
+    "body": [
+      "\"\"\"",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "JSONC code block": {
+    "scope": "python",
+    "prefix": "jsonc",
+    "body": [
+      "\"\"\"//jsonc",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "Python code block": {
+    "scope": "python",
+    "prefix": "py",
+    "body": [
+      "\"\"\"#py",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "Shell code block": {
+    "scope": "python",
+    "prefix": "sh",
+    "body": [
+      "\"\"\"#sh",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "SQL code block": {
+    "scope": "python",
+    "prefix": "sql",
+    "body": [
+      "\"\"\"--sql",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "TOML code block": {
+    "scope": "python",
+    "prefix": "toml",
+    "body": [
+      "\"\"\"#toml",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "XML code block": {
+    "scope": "python",
+    "prefix": "xml",
+    "body": [
+      "\"\"\"<?xml?>",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "YAML code block": {
+    "scope": "python",
+    "prefix": "yaml",
+    "body": [
+      "\"\"\"#yaml",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "C code block": {
+    "scope": "python",
+    "prefix": "c",
+    "body": [
+      "\"\"\"/*c*/",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "HLSL code block": {
+    "scope": "python",
+    "prefix": "hlsl",
+    "body": [
+      "\"\"\"//hlsl",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "GLSL code block": {
+    "scope": "python",
+    "prefix": "glsl",
+    "body": [
+      "\"\"\"//glsl",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "Metal code block": {
+    "scope": "python",
+    "prefix": "metal",
+    "body": [
+      "\"\"\"//metal",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "WGSL code block": {
+    "scope": "python",
+    "prefix": "wgsl",
+    "body": [
+      "\"\"\"//wgsl",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "Lua code block": {
+    "scope": "python",
+    "prefix": "lua",
+    "body": [
+      "\"\"\"--lua",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "Makefile code block": {
+    "scope": "python",
+    "prefix": "make",
+    "body": [
+      "\"\"\"#makefile",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "GraphQL code block": {
+    "scope": "python",
+    "prefix": "graphql",
+    "body": [
+      "\"\"\"#graphql",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "TypeScript code block": {
+    "scope": "python",
+    "prefix": "typescript",
+    "body": [
+      "\"\"\"//typescript",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "LaTeX code block": {
+    "scope": "python",
+    "prefix": "latex",
+    "body": [
+      "\"\"\"%latex",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "TeX code block": {
+    "scope": "python",
+    "prefix": "tex",
+    "body": [
+      "\"\"\"%tex",
+      "\t$0",
+      "\"\"\""
+    ]
+  },
+  "Graphviz code block": {
+    "scope": "python",
+    "prefix": "graphviz",
+    "body": [
+      "\"\"\"//graphviz,digraph",
+      "\t$0",
+      "\"\"\""
+    ]
+  }
+}

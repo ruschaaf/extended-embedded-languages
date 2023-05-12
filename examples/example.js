@@ -277,5 +277,86 @@ fn main(input: VertexInput) -> VertexOutput {
 `;
 
 
+// Lua Example
+const lua_string = /*lua*/ `
+-- This is a basic Lua script
+local number = 3
+if number >= 100:
+    print("Too large: " .. number)
+else
+    print("OK")
+    
+`;
+
+
+// Makefile Example
+const make_string = /*make*/ `
+# Makefile example
+*.o : *.c
+    gcc -c \$< -o \$@
+
+program: main.o utils.o
+    gcc \$< -o program
+`;
+
+
+// GraphQL Example
+const graphql_string = /*graphql*/ `
+# Basic GraphQL query
+query {
+  book(id: "123") {
+    title
+    author
+    publicationYear
+  }
+}
+
+`;
+
+
+// TypeScript Example
+const typescript_string = /*typescript*/ `
+// Simple TypeScript example
+function addNumbers(a: number, b: number): number {
+    return a + b;
+}
+const result = addNumbers(5, 10);
+
+`;
+
+
+// LaTeX Example
+const latex_string = /*latex*/ `
+% Basic LaTeX document
+\documentclass{article}
+\begin{document}
+Hello, \LaTeX!
+\end{document}
+
+`;
+
+
+// TeX Example
+const tex_string = /*tex*/ `
+% Basic TeX document
+\input plain
+
+Hello, \TeX!
+
+\bye
+`;
+
+
+// Graphviz Example
+const graphviz_string = /*graphviz*/ `
+// Graphviz example
+digraph G {
+  A -> B -> C -> D;
+  B -> D;
+}
+
+`;
+
+
 
     

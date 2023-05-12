@@ -240,4 +240,71 @@ examples:
     }
     
 
+  # Lua Example
+  sample_lua: | #lua
+    -- This is a basic Lua script
+    local number = 3
+    if number >= 100:
+        print("Too large: " .. number)
+    else
+        print("OK")
+        
+
+  # Makefile Example
+  sample_make: | #make
+    # Makefile example
+    *.o : *.c
+        gcc -c $< -o $@
+    
+    program: main.o utils.o
+        gcc $< -o program
+
+  # GraphQL Example
+  sample_graphql: | #graphql
+    # Basic GraphQL query
+    query {
+      book(id: "123") {
+        title
+        author
+        publicationYear
+      }
+    }
+    
+
+  # TypeScript Example
+  sample_typescript: | #typescript
+    // Simple TypeScript example
+    function addNumbers(a: number, b: number): number {
+        return a + b;
+    }
+    const result = addNumbers(5, 10);
+    
+
+  # LaTeX Example
+  sample_latex: | #latex
+    % Basic LaTeX document
+    \documentclass{article}
+    \begin{document}
+    Hello, \LaTeX!
+    \end{document}
+    
+
+  # TeX Example
+  sample_tex: | #tex
+    % Basic TeX document
+    \input plain
+    
+    Hello, \TeX!
+    
+    \bye
+
+  # Graphviz Example
+  sample_graphviz: | #graphviz
+    // Graphviz example
+    digraph G {
+      A -> B -> C -> D;
+      B -> D;
+    }
+    
+
 

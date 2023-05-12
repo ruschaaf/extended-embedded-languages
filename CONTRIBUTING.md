@@ -42,10 +42,10 @@ Embedded languages are relatively simple to add.
     * `extension` - The standard file extension used for these files (used when generating example code)
     * `root_scope` - The root TextMate scope for this language. Find this by either using the "Inspect...Scopes" command described below or looking at the `package.json` file for the extension that adds that language parser (many of these are available at https://github.com/microsoft/vscode/tree/main/extensions)
     * `ids` - These are a comma seperated list of identifiers that can identify this language. These are used when you can use the _host_ language to specify the embedded language. For example in C++ we look for `"R<id>(` to delimit the embedded string
-    * `comments` - These are a comma separated list of comment strings that can be used in the _embedded_ language to identify the language. These can be just prefixes, so for example we use `/*css` for CSS strings, but the actual text in the embedded langauge can be something like `/*css snippet*/`. Some care needs to be taken here and in the host language definition to ensure that prefixes don't conflict (e.g. the regexps in the host language need to make sure `/*c` for the C language doesn't match for a CSS string that starts with `/*css`)
+    * `comments` - These are a comma separated list of comment strings that can be used in the _embedded_ language to identify the language. These can be just prefixes, so for example we use `/*css` for CSS strings, but the actual text in the embedded langauge can be something like `/*css for front page*/`. Some care needs to be taken here and in the host language definition to ensure that prefixes don't conflict (e.g. the regexps in the host language need to make sure `/*c` for the C language doesn't match for a CSS string that starts with `/*css`)
     * `example_comment` - The comment string to use when generating examples
-2. Add a new language snippet
-    * Add a new file to `utilities/example_snippets` that contains a few lines of the new language. These should show a few different syntax types
+2. Add a new language sample
+    * Add a new file to `utilities/embedded_samples` that contains a few lines of the new language. These should show a few different syntax types
 3. Update the table in `README.md` with the new embedded language
 4. Generate new examples and syntax definitions - in the `utilities` folder run `example_assembler.js` and `syntax_assembler.js`
 

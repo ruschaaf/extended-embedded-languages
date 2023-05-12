@@ -18,7 +18,7 @@ export function buildJavascriptSyntax(hostSpec, embeddedSpecs) {
 \s*
 ([_\$[:alpha:]][_\$[:alnum:]]*)?
 (\`)`,
-            'contentName': `meta.embedded.string.raw.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
+            'contentName': `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
             'end': '`',
             'beginCaptures': {
                 '1': { 'patterns': [{ 'include': `${hostSpec.root_scope}#comment` }] },
@@ -46,7 +46,7 @@ export function buildJavascriptSyntax(hostSpec, embeddedSpecs) {
             'begin': String.raw`(?x)
 (?i:${lang.id_choice_re})
 (\`)`,
-            'contentName': `meta.embedded.string.raw.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
+            'contentName': `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
             'beginCaptures': {
                 '1': { 'name': 'entity.name.function.tagged-template.js' },
                 '2': { 'name': 'string.template.js punctuation.definition.string.template.begin.js' },

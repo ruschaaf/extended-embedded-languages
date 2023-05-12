@@ -18,7 +18,7 @@
         {
           "comment": "Batch formatted template strings",
           "begin": "(?x)\n(/\\*(?i:bat)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.bat.javascript source.batchfile",
+          "contentName": "meta.embedded.block.bat.javascript source.batchfile",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -55,7 +55,7 @@
         {
           "comment": "C++ formatted template strings",
           "begin": "(?x)\n(/\\*(?i:cpp|c\\+\\+)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.cpp.javascript source.cpp",
+          "contentName": "meta.embedded.block.cpp.javascript source.cpp",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -92,7 +92,7 @@
         {
           "comment": "CSS formatted template strings",
           "begin": "(?x)\n(/\\*(?i:css)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.css.javascript source.css",
+          "contentName": "meta.embedded.block.css.javascript source.css",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -129,7 +129,7 @@
         {
           "comment": "HTML formatted template strings",
           "begin": "(?x)\n(/\\*(?i:html)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.html.javascript text.html.derivative",
+          "contentName": "meta.embedded.block.html.javascript text.html.derivative",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -166,7 +166,7 @@
         {
           "comment": "INI formatted template strings",
           "begin": "(?x)\n(/\\*(?i:ini)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.ini.javascript source.ini",
+          "contentName": "meta.embedded.block.ini.javascript source.ini",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -203,7 +203,7 @@
         {
           "comment": "Javascript formatted template strings",
           "begin": "(?x)\n(/\\*(?i:js|javascript)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.javascript.javascript source.js",
+          "contentName": "meta.embedded.block.javascript.javascript source.js",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -240,7 +240,7 @@
         {
           "comment": "JSON formatted template strings",
           "begin": "(?x)\n(/\\*(?i:json)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.json.javascript source.json",
+          "contentName": "meta.embedded.block.json.javascript source.json",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -277,7 +277,7 @@
         {
           "comment": "JSONC formatted template strings",
           "begin": "(?x)\n(/\\*(?i:jsonc)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.jsonc.javascript source.jsonc",
+          "contentName": "meta.embedded.block.jsonc.javascript source.json.comments",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -307,14 +307,14 @@
               "include": "#string-character-escape"
             },
             {
-              "include": "source.jsonc"
+              "include": "source.json.comments"
             }
           ]
         },
         {
           "comment": "Python formatted template strings",
           "begin": "(?x)\n(/\\*(?i:py|python)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.python.javascript source.python",
+          "contentName": "meta.embedded.block.python.javascript source.python",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -351,7 +351,7 @@
         {
           "comment": "Shell formatted template strings",
           "begin": "(?x)\n(/\\*(?i:sh|bash|shell|shellscript)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.shell.javascript source.shell",
+          "contentName": "meta.embedded.block.shell.javascript source.shell",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -388,7 +388,7 @@
         {
           "comment": "SQL formatted template strings",
           "begin": "(?x)\n(/\\*(?i:sql)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.sql.javascript source.sql",
+          "contentName": "meta.embedded.block.sql.javascript source.sql",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -425,7 +425,7 @@
         {
           "comment": "TOML formatted template strings",
           "begin": "(?x)\n(/\\*(?i:toml)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.toml.javascript source.toml",
+          "contentName": "meta.embedded.block.toml.javascript source.toml",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -462,7 +462,7 @@
         {
           "comment": "XML formatted template strings",
           "begin": "(?x)\n(/\\*(?i:xml)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.xml.javascript text.xml",
+          "contentName": "meta.embedded.block.xml.javascript text.xml",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -499,7 +499,7 @@
         {
           "comment": "YAML formatted template strings",
           "begin": "(?x)\n(/\\*(?i:yaml)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.yaml.javascript source.yaml",
+          "contentName": "meta.embedded.block.yaml.javascript source.yaml",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -536,7 +536,7 @@
         {
           "comment": "C formatted template strings",
           "begin": "(?x)\n(/\\*(?i:c)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.c.javascript source.c",
+          "contentName": "meta.embedded.block.c.javascript source.c",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -573,7 +573,7 @@
         {
           "comment": "HLSL formatted template strings",
           "begin": "(?x)\n(/\\*(?i:hlsl)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.hlsl.javascript source.hlsl",
+          "contentName": "meta.embedded.block.hlsl.javascript source.hlsl",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -610,7 +610,7 @@
         {
           "comment": "GLSL formatted template strings",
           "begin": "(?x)\n(/\\*(?i:glsl)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.glsl.javascript source.glsl",
+          "contentName": "meta.embedded.block.glsl.javascript source.glsl",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -647,7 +647,7 @@
         {
           "comment": "Metal formatted template strings",
           "begin": "(?x)\n(/\\*(?i:metal)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.metal.javascript source.metal",
+          "contentName": "meta.embedded.block.metal.javascript source.metal",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -684,7 +684,7 @@
         {
           "comment": "WGSL formatted template strings",
           "begin": "(?x)\n(/\\*(?i:wgsl)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.string.raw.wgsl.javascript source.wgsl",
+          "contentName": "meta.embedded.block.wgsl.javascript source.wgsl",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -717,6 +717,265 @@
               "include": "source.wgsl"
             }
           ]
+        },
+        {
+          "comment": "Lua formatted template strings",
+          "begin": "(?x)\n(/\\*(?i:lua)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
+          "contentName": "meta.embedded.block.lua.javascript source.lua",
+          "end": "`",
+          "beginCaptures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "source.js#comment"
+                }
+              ]
+            },
+            "2": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "3": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "source.lua"
+            }
+          ]
+        },
+        {
+          "comment": "Makefile formatted template strings",
+          "begin": "(?x)\n(/\\*(?i:make|makefile)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
+          "contentName": "meta.embedded.block.makefile.javascript source.makefile",
+          "end": "`",
+          "beginCaptures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "source.js#comment"
+                }
+              ]
+            },
+            "2": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "3": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "source.makefile"
+            }
+          ]
+        },
+        {
+          "comment": "GraphQL formatted template strings",
+          "begin": "(?x)\n(/\\*(?i:graphql|gql)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
+          "contentName": "meta.embedded.block.graphql.javascript source.graphql",
+          "end": "`",
+          "beginCaptures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "source.js#comment"
+                }
+              ]
+            },
+            "2": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "3": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "source.graphql"
+            }
+          ]
+        },
+        {
+          "comment": "TypeScript formatted template strings",
+          "begin": "(?x)\n(/\\*(?i:typescript|ts)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
+          "contentName": "meta.embedded.block.typescript.javascript source.ts",
+          "end": "`",
+          "beginCaptures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "source.js#comment"
+                }
+              ]
+            },
+            "2": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "3": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "source.ts"
+            }
+          ]
+        },
+        {
+          "comment": "LaTeX formatted template strings",
+          "begin": "(?x)\n(/\\*(?i:latex)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
+          "contentName": "meta.embedded.block.latex.javascript text.tex.latex",
+          "end": "`",
+          "beginCaptures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "source.js#comment"
+                }
+              ]
+            },
+            "2": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "3": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "text.tex.latex"
+            }
+          ]
+        },
+        {
+          "comment": "TeX formatted template strings",
+          "begin": "(?x)\n(/\\*(?i:tex)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
+          "contentName": "meta.embedded.block.tex.javascript text.tex",
+          "end": "`",
+          "beginCaptures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "source.js#comment"
+                }
+              ]
+            },
+            "2": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "3": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "text.tex"
+            }
+          ]
+        },
+        {
+          "comment": "Graphviz formatted template strings",
+          "begin": "(?x)\n(/\\*(?i:graphviz|dot)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
+          "contentName": "meta.embedded.block.dot.javascript source.dot",
+          "end": "`",
+          "beginCaptures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "source.js#comment"
+                }
+              ]
+            },
+            "2": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "3": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "source.dot"
+            }
+          ]
         }
       ]
     },
@@ -726,7 +985,7 @@
         {
           "comment": "Batch formatted template strings",
           "begin": "(?x)\n(?i:bat)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.bat.javascript source.batchfile",
+          "contentName": "meta.embedded.block.bat.javascript source.batchfile",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -756,7 +1015,7 @@
         {
           "comment": "C++ formatted template strings",
           "begin": "(?x)\n(?i:cpp|c\\+\\+)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.cpp.javascript source.cpp",
+          "contentName": "meta.embedded.block.cpp.javascript source.cpp",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -786,7 +1045,7 @@
         {
           "comment": "CSS formatted template strings",
           "begin": "(?x)\n(?i:css)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.css.javascript source.css",
+          "contentName": "meta.embedded.block.css.javascript source.css",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -816,7 +1075,7 @@
         {
           "comment": "HTML formatted template strings",
           "begin": "(?x)\n(?i:html)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.html.javascript text.html.derivative",
+          "contentName": "meta.embedded.block.html.javascript text.html.derivative",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -846,7 +1105,7 @@
         {
           "comment": "INI formatted template strings",
           "begin": "(?x)\n(?i:ini)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.ini.javascript source.ini",
+          "contentName": "meta.embedded.block.ini.javascript source.ini",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -876,7 +1135,7 @@
         {
           "comment": "Javascript formatted template strings",
           "begin": "(?x)\n(?i:js|javascript)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.javascript.javascript source.js",
+          "contentName": "meta.embedded.block.javascript.javascript source.js",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -906,7 +1165,7 @@
         {
           "comment": "JSON formatted template strings",
           "begin": "(?x)\n(?i:json)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.json.javascript source.json",
+          "contentName": "meta.embedded.block.json.javascript source.json",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -936,7 +1195,7 @@
         {
           "comment": "JSONC formatted template strings",
           "begin": "(?x)\n(?i:jsonc)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.jsonc.javascript source.jsonc",
+          "contentName": "meta.embedded.block.jsonc.javascript source.json.comments",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -959,14 +1218,14 @@
               "include": "#string-character-escape"
             },
             {
-              "include": "source.jsonc"
+              "include": "source.json.comments"
             }
           ]
         },
         {
           "comment": "Python formatted template strings",
           "begin": "(?x)\n(?i:py|python)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.python.javascript source.python",
+          "contentName": "meta.embedded.block.python.javascript source.python",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -996,7 +1255,7 @@
         {
           "comment": "Shell formatted template strings",
           "begin": "(?x)\n(?i:sh|bash|shell|shellscript)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.shell.javascript source.shell",
+          "contentName": "meta.embedded.block.shell.javascript source.shell",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -1026,7 +1285,7 @@
         {
           "comment": "SQL formatted template strings",
           "begin": "(?x)\n(?i:sql)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.sql.javascript source.sql",
+          "contentName": "meta.embedded.block.sql.javascript source.sql",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -1056,7 +1315,7 @@
         {
           "comment": "TOML formatted template strings",
           "begin": "(?x)\n(?i:toml)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.toml.javascript source.toml",
+          "contentName": "meta.embedded.block.toml.javascript source.toml",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -1086,7 +1345,7 @@
         {
           "comment": "XML formatted template strings",
           "begin": "(?x)\n(?i:xml)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.xml.javascript text.xml",
+          "contentName": "meta.embedded.block.xml.javascript text.xml",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -1116,7 +1375,7 @@
         {
           "comment": "YAML formatted template strings",
           "begin": "(?x)\n(?i:yaml)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.yaml.javascript source.yaml",
+          "contentName": "meta.embedded.block.yaml.javascript source.yaml",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -1146,7 +1405,7 @@
         {
           "comment": "C formatted template strings",
           "begin": "(?x)\n(?i:c)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.c.javascript source.c",
+          "contentName": "meta.embedded.block.c.javascript source.c",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -1176,7 +1435,7 @@
         {
           "comment": "HLSL formatted template strings",
           "begin": "(?x)\n(?i:hlsl)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.hlsl.javascript source.hlsl",
+          "contentName": "meta.embedded.block.hlsl.javascript source.hlsl",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -1206,7 +1465,7 @@
         {
           "comment": "GLSL formatted template strings",
           "begin": "(?x)\n(?i:glsl)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.glsl.javascript source.glsl",
+          "contentName": "meta.embedded.block.glsl.javascript source.glsl",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -1236,7 +1495,7 @@
         {
           "comment": "Metal formatted template strings",
           "begin": "(?x)\n(?i:metal)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.metal.javascript source.metal",
+          "contentName": "meta.embedded.block.metal.javascript source.metal",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -1266,7 +1525,7 @@
         {
           "comment": "WGSL formatted template strings",
           "begin": "(?x)\n(?i:wgsl)\n(\\`)",
-          "contentName": "meta.embedded.string.raw.wgsl.javascript source.wgsl",
+          "contentName": "meta.embedded.block.wgsl.javascript source.wgsl",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"
@@ -1290,6 +1549,216 @@
             },
             {
               "include": "source.wgsl"
+            }
+          ]
+        },
+        {
+          "comment": "Lua formatted template strings",
+          "begin": "(?x)\n(?i:lua)\n(\\`)",
+          "contentName": "meta.embedded.block.lua.javascript source.lua",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "2": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "end": "`",
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "source.lua"
+            }
+          ]
+        },
+        {
+          "comment": "Makefile formatted template strings",
+          "begin": "(?x)\n(?i:make|makefile)\n(\\`)",
+          "contentName": "meta.embedded.block.makefile.javascript source.makefile",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "2": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "end": "`",
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "source.makefile"
+            }
+          ]
+        },
+        {
+          "comment": "GraphQL formatted template strings",
+          "begin": "(?x)\n(?i:graphql|gql)\n(\\`)",
+          "contentName": "meta.embedded.block.graphql.javascript source.graphql",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "2": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "end": "`",
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "source.graphql"
+            }
+          ]
+        },
+        {
+          "comment": "TypeScript formatted template strings",
+          "begin": "(?x)\n(?i:typescript|ts)\n(\\`)",
+          "contentName": "meta.embedded.block.typescript.javascript source.ts",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "2": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "end": "`",
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "source.ts"
+            }
+          ]
+        },
+        {
+          "comment": "LaTeX formatted template strings",
+          "begin": "(?x)\n(?i:latex)\n(\\`)",
+          "contentName": "meta.embedded.block.latex.javascript text.tex.latex",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "2": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "end": "`",
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "text.tex.latex"
+            }
+          ]
+        },
+        {
+          "comment": "TeX formatted template strings",
+          "begin": "(?x)\n(?i:tex)\n(\\`)",
+          "contentName": "meta.embedded.block.tex.javascript text.tex",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "2": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "end": "`",
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "text.tex"
+            }
+          ]
+        },
+        {
+          "comment": "Graphviz formatted template strings",
+          "begin": "(?x)\n(?i:graphviz|dot)\n(\\`)",
+          "contentName": "meta.embedded.block.dot.javascript source.dot",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "2": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "end": "`",
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "source.dot"
             }
           ]
         }

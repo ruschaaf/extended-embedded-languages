@@ -36,7 +36,7 @@ module.exports = {
         'indent': [
             'error', 4, {
                 'CallExpression': {
-                    'arguments': 2,
+                    'arguments': 1,
                 },
                 'FunctionDeclaration': {
                     'body': 1,

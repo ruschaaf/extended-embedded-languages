@@ -10,12 +10,17 @@ import ejs from 'ejs';
 import path from 'path';
 import { readEmbeddedSpecs } from './embedded_language_specs.js';
 
+const EXAMPLE_HOST_TEMPLATE_DIR = 'example_host_templates';
+const EXAMPLE_OUTPUT_DIR = path.join('..', 'examples');
+
 const hostLanguages = [
     { template: 'cpp.ejs', output: 'example.cpp' },
     { template: 'python.ejs', output: 'example.py' },
     { template: 'yaml.ejs', output: 'example.yaml' },
-    { template: 'javascript.ejs', output: 'example.js',
-        escapes: [['`', '\\`'], ['$', '\\$']] },
+    {
+        template: 'javascript.ejs', output: 'example.js',
+        escapes: [['`', '\\`'], ['$', '\\$']],
+    },
 ];
 
 /**
@@ -43,8 +48,8 @@ function applyEscapes(hostLang, code) {
     // replace '$' with '\$' and '\' with '\\' you don't want to end
     // up with '\\$'.
     return hostLang.escapes.reduce(
-            (str, [from, to]) => str.replaceAll(from, to),
-            code
+        (str, [from, to]) => str.replaceAll(from, to),
+        code
     );
 }
 
@@ -70,16 +75,17 @@ function main() {
     // For each of the host languages, write out a file containing all
     // the examples.
     hostLanguages.forEach((hostLang) => {
-    // Apply any escapes needed for the host language to the embedded snippet
+        // Apply any escapes needed for the host language to the
+        // embedded snippet
         embeddedLanguageSpecs.forEach((embedLang) => {
             embedLang.code = applyEscapes(hostLang, embedLang.raw_code);
         });
 
-        const templatePath = path.join('example_host_templates', hostLang.template);
+        const templatePath = path.join(EXAMPLE_HOST_TEMPLATE_DIR, hostLang.template);
         const template = ejs.compile(fs.readFileSync(templatePath, 'utf-8'));
         fs.writeFileSync(
-                path.join('..', 'examples', hostLang.output),
-                template({ snippets: embeddedLanguageSpecs }));
+            path.join(EXAMPLE_OUTPUT_DIR, hostLang.output),
+            template({ snippets: embeddedLanguageSpecs }));
     });
 }
 

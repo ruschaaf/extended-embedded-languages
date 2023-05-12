@@ -1,0 +1,236 @@
+{
+  "Batch code block": {
+    "scope": "yaml",
+    "prefix": "bat",
+    "body": [
+      "| #bat",
+      "\t$0",
+      ""
+    ]
+  },
+  "C++ code block": {
+    "scope": "yaml",
+    "prefix": "cpp",
+    "body": [
+      "| #cpp",
+      "\t$0",
+      ""
+    ]
+  },
+  "CSS code block": {
+    "scope": "yaml",
+    "prefix": "css",
+    "body": [
+      "| #css",
+      "\t$0",
+      ""
+    ]
+  },
+  "HTML code block": {
+    "scope": "yaml",
+    "prefix": "html",
+    "body": [
+      "| #html",
+      "\t$0",
+      ""
+    ]
+  },
+  "INI code block": {
+    "scope": "yaml",
+    "prefix": "ini",
+    "body": [
+      "| #ini",
+      "\t$0",
+      ""
+    ]
+  },
+  "Javascript code block": {
+    "scope": "yaml",
+    "prefix": "js",
+    "body": [
+      "| #js",
+      "\t$0",
+      ""
+    ]
+  },
+  "JSON code block": {
+    "scope": "yaml",
+    "prefix": "json",
+    "body": [
+      "| #json",
+      "\t$0",
+      ""
+    ]
+  },
+  "JSONC code block": {
+    "scope": "yaml",
+    "prefix": "jsonc",
+    "body": [
+      "| #jsonc",
+      "\t$0",
+      ""
+    ]
+  },
+  "Python code block": {
+    "scope": "yaml",
+    "prefix": "py",
+    "body": [
+      "| #py",
+      "\t$0",
+      ""
+    ]
+  },
+  "Shell code block": {
+    "scope": "yaml",
+    "prefix": "sh",
+    "body": [
+      "| #sh",
+      "\t$0",
+      ""
+    ]
+  },
+  "SQL code block": {
+    "scope": "yaml",
+    "prefix": "sql",
+    "body": [
+      "| #sql",
+      "\t$0",
+      ""
+    ]
+  },
+  "TOML code block": {
+    "scope": "yaml",
+    "prefix": "toml",
+    "body": [
+      "| #toml",
+      "\t$0",
+      ""
+    ]
+  },
+  "XML code block": {
+    "scope": "yaml",
+    "prefix": "xml",
+    "body": [
+      "| #xml",
+      "\t$0",
+      ""
+    ]
+  },
+  "YAML code block": {
+    "scope": "yaml",
+    "prefix": "yaml",
+    "body": [
+      "| #yaml",
+      "\t$0",
+      ""
+    ]
+  },
+  "C code block": {
+    "scope": "yaml",
+    "prefix": "c",
+    "body": [
+      "| #c",
+      "\t$0",
+      ""
+    ]
+  },
+  "HLSL code block": {
+    "scope": "yaml",
+    "prefix": "hlsl",
+    "body": [
+      "| #hlsl",
+      "\t$0",
+      ""
+    ]
+  },
+  "GLSL code block": {
+    "scope": "yaml",
+    "prefix": "glsl",
+    "body": [
+      "| #glsl",
+      "\t$0",
+      ""
+    ]
+  },
+  "Metal code block": {
+    "scope": "yaml",
+    "prefix": "metal",
+    "body": [
+      "| #metal",
+      "\t$0",
+      ""
+    ]
+  },
+  "WGSL code block": {
+    "scope": "yaml",
+    "prefix": "wgsl",
+    "body": [
+      "| #wgsl",
+      "\t$0",
+      ""
+    ]
+  },
+  "Lua code block": {
+    "scope": "yaml",
+    "prefix": "lua",
+    "body": [
+      "| #lua",
+      "\t$0",
+      ""
+    ]
+  },
+  "Makefile code block": {
+    "scope": "yaml",
+    "prefix": "make",
+    "body": [
+      "| #make",
+      "\t$0",
+      ""
+    ]
+  },
+  "GraphQL code block": {
+    "scope": "yaml",
+    "prefix": "graphql",
+    "body": [
+      "| #graphql",
+      "\t$0",
+      ""
+    ]
+  },
+  "TypeScript code block": {
+    "scope": "yaml",
+    "prefix": "typescript",
+    "body": [
+      "| #typescript",
+      "\t$0",
+      ""
+    ]
+  },
+  "LaTeX code block": {
+    "scope": "yaml",
+    "prefix": "latex",
+    "body": [
+      "| #latex",
+      "\t$0",
+      ""
+    ]
+  },
+  "TeX code block": {
+    "scope": "yaml",
+    "prefix": "tex",
+    "body": [
+      "| #tex",
+      "\t$0",
+      ""
+    ]
+  },
+  "Graphviz code block": {
+    "scope": "yaml",
+    "prefix": "graphviz",
+    "body": [
+      "| #graphviz",
+      "\t$0",
+      ""
+    ]
+  }
+}

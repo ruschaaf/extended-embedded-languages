@@ -1,0 +1,236 @@
+{
+  "Batch code block": {
+    "scope": "cpp",
+    "prefix": "bat",
+    "body": [
+      "R\"bat(",
+      "\t$0",
+      ")bat\""
+    ]
+  },
+  "C++ code block": {
+    "scope": "cpp",
+    "prefix": "cpp",
+    "body": [
+      "R\"cpp(",
+      "\t$0",
+      ")cpp\""
+    ]
+  },
+  "CSS code block": {
+    "scope": "cpp",
+    "prefix": "css",
+    "body": [
+      "R\"css(",
+      "\t$0",
+      ")css\""
+    ]
+  },
+  "HTML code block": {
+    "scope": "cpp",
+    "prefix": "html",
+    "body": [
+      "R\"html(",
+      "\t$0",
+      ")html\""
+    ]
+  },
+  "INI code block": {
+    "scope": "cpp",
+    "prefix": "ini",
+    "body": [
+      "R\"ini(",
+      "\t$0",
+      ")ini\""
+    ]
+  },
+  "Javascript code block": {
+    "scope": "cpp",
+    "prefix": "js",
+    "body": [
+      "R\"js(",
+      "\t$0",
+      ")js\""
+    ]
+  },
+  "JSON code block": {
+    "scope": "cpp",
+    "prefix": "json",
+    "body": [
+      "R\"json(",
+      "\t$0",
+      ")json\""
+    ]
+  },
+  "JSONC code block": {
+    "scope": "cpp",
+    "prefix": "jsonc",
+    "body": [
+      "R\"jsonc(",
+      "\t$0",
+      ")jsonc\""
+    ]
+  },
+  "Python code block": {
+    "scope": "cpp",
+    "prefix": "py",
+    "body": [
+      "R\"py(",
+      "\t$0",
+      ")py\""
+    ]
+  },
+  "Shell code block": {
+    "scope": "cpp",
+    "prefix": "sh",
+    "body": [
+      "R\"sh(",
+      "\t$0",
+      ")sh\""
+    ]
+  },
+  "SQL code block": {
+    "scope": "cpp",
+    "prefix": "sql",
+    "body": [
+      "R\"sql(",
+      "\t$0",
+      ")sql\""
+    ]
+  },
+  "TOML code block": {
+    "scope": "cpp",
+    "prefix": "toml",
+    "body": [
+      "R\"toml(",
+      "\t$0",
+      ")toml\""
+    ]
+  },
+  "XML code block": {
+    "scope": "cpp",
+    "prefix": "xml",
+    "body": [
+      "R\"xml(",
+      "\t$0",
+      ")xml\""
+    ]
+  },
+  "YAML code block": {
+    "scope": "cpp",
+    "prefix": "yaml",
+    "body": [
+      "R\"yaml(",
+      "\t$0",
+      ")yaml\""
+    ]
+  },
+  "C code block": {
+    "scope": "cpp",
+    "prefix": "c",
+    "body": [
+      "R\"c(",
+      "\t$0",
+      ")c\""
+    ]
+  },
+  "HLSL code block": {
+    "scope": "cpp",
+    "prefix": "hlsl",
+    "body": [
+      "R\"hlsl(",
+      "\t$0",
+      ")hlsl\""
+    ]
+  },
+  "GLSL code block": {
+    "scope": "cpp",
+    "prefix": "glsl",
+    "body": [
+      "R\"glsl(",
+      "\t$0",
+      ")glsl\""
+    ]
+  },
+  "Metal code block": {
+    "scope": "cpp",
+    "prefix": "metal",
+    "body": [
+      "R\"metal(",
+      "\t$0",
+      ")metal\""
+    ]
+  },
+  "WGSL code block": {
+    "scope": "cpp",
+    "prefix": "wgsl",
+    "body": [
+      "R\"wgsl(",
+      "\t$0",
+      ")wgsl\""
+    ]
+  },
+  "Lua code block": {
+    "scope": "cpp",
+    "prefix": "lua",
+    "body": [
+      "R\"lua(",
+      "\t$0",
+      ")lua\""
+    ]
+  },
+  "Makefile code block": {
+    "scope": "cpp",
+    "prefix": "make",
+    "body": [
+      "R\"make(",
+      "\t$0",
+      ")make\""
+    ]
+  },
+  "GraphQL code block": {
+    "scope": "cpp",
+    "prefix": "graphql",
+    "body": [
+      "R\"graphql(",
+      "\t$0",
+      ")graphql\""
+    ]
+  },
+  "TypeScript code block": {
+    "scope": "cpp",
+    "prefix": "typescript",
+    "body": [
+      "R\"typescript(",
+      "\t$0",
+      ")typescript\""
+    ]
+  },
+  "LaTeX code block": {
+    "scope": "cpp",
+    "prefix": "latex",
+    "body": [
+      "R\"latex(",
+      "\t$0",
+      ")latex\""
+    ]
+  },
+  "TeX code block": {
+    "scope": "cpp",
+    "prefix": "tex",
+    "body": [
+      "R\"tex(",
+      "\t$0",
+      ")tex\""
+    ]
+  },
+  "Graphviz code block": {
+    "scope": "cpp",
+    "prefix": "graphviz",
+    "body": [
+      "R\"graphviz(",
+      "\t$0",
+      ")graphviz\""
+    ]
+  }
+}

@@ -6,7 +6,7 @@ HTML,html,html,text.html.derivative,html,"<!DOCTYPE,<html,<!--html",<html>,
 INI,ini,ini,source.ini,ini,;ini,;ini,
 Javascript,javascript,js,source.js,"js,javascript",//js,//js,
 JSON,json,json,source.json,json,,,"JSON doesn't support comments, which makes it hard to embed into host languages that use comments to determine the embedded language"
-JSONC,jsonc,jsonc,source.jsonc,jsonc,//jsonc,//jsonc,JSONC is a variant of JSON that supports comments
+JSONC,jsonc,jsonc,source.json.comments,jsonc,//jsonc,//jsonc,JSONC is a variant of JSON that supports comments
 Python,python,py,source.python,"py,python",#py,#py,
 Shell,shell,sh,source.shell,"sh,bash,shell,shellscript","#sh,#bash,#shell,#!/bin/sh,#!/bin/bash,#!/usr/bin/env bash",#sh,
 SQL,sql,sql,source.sql,sql,--sql,--sql,
@@ -18,3 +18,12 @@ HLSL,hlsl,hlsl,source.hlsl,hlsl,//hlsl,//hlsl,
 GLSL,glsl,glsl,source.glsl,glsl,//glsl,//glsl,
 Metal,metal,metal,source.metal,metal,//metal,//metal,
 WGSL,wgsl,wgsl,source.wgsl,wgsl,//wgsl,//wgsl,
+Lua,lua,lua,source.lua,lua,--lua,--lua,
+Makefile,makefile,makefile,source.makefile,"make,makefile","#make,#makefile,#!/usr/bin/make",#makefile,
+GraphQL,graphql,gql,source.graphql,"graphql,gql","#graphql,#gql",#graphql,
+TypeScript,typescript,ts,source.ts,"typescript,ts","//ts,//typescript",//typescript,
+#CSV,csv,csv,text.csv,csv,,,CSV doesn't work yet. The most popular syntax highlighter (Rainbow CSV) has some kind of regex that consumes past the normal end-of-string flag
+LaTeX,latex,latex,text.tex.latex,latex,%latex,%latex,
+TeX,tex,tex,text.tex,tex,%tex,%tex,
+Graphviz,dot,dot,source.dot,"graphviz,dot","//graphviz,//dot","//graphviz,digraph",
+#Mermaid,mermaid,mmd,source.mermaid,"mermaid,mmd","%%mermaid,%%mmd","%%mermaid",Mermaid doesn't work yet. The most popular syntax highlighter (Mermaid Markdown Syntax Highligher) uses a rule that expects the code block to end in ``` and the TextMate parser overruns the normal end-of-codeblock markers looking for that.

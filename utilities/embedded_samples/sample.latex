@@ -1,0 +1,5 @@
+% Basic LaTeX document
+\documentclass{article}
+\begin{document}
+Hello, \LaTeX!
+\end{document}

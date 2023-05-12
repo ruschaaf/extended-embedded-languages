@@ -19,7 +19,7 @@ export function buildCppSyntax(hostSpec, embeddedSpecs) {
 ( (?i:${lang.id_choice_re}) \b [^\(]* ) 
 \(`,
             'end': String.raw`\)(\2)"`,
-            'contentName': `meta.embedded.string.raw.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
+            'contentName': `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
             'patterns': [{ 'include': `${lang.root_scope}` }],
             'name': 'string.quoted.double.raw.embedded.cpp',
             'beginCaptures': {

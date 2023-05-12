@@ -269,5 +269,86 @@ fn main(input: VertexInput) -> VertexOutput {
 """
 
 
+# Lua Example
+lua_string = """--lua
+-- This is a basic Lua script
+local number = 3
+if number >= 100:
+    print("Too large: " .. number)
+else
+    print("OK")
+    
+"""
+
+
+# Makefile Example
+make_string = """#makefile
+# Makefile example
+*.o : *.c
+    gcc -c $< -o $@
+
+program: main.o utils.o
+    gcc $< -o program
+"""
+
+
+# GraphQL Example
+graphql_string = """#graphql
+# Basic GraphQL query
+query {
+  book(id: "123") {
+    title
+    author
+    publicationYear
+  }
+}
+
+"""
+
+
+# TypeScript Example
+typescript_string = """//typescript
+// Simple TypeScript example
+function addNumbers(a: number, b: number): number {
+    return a + b;
+}
+const result = addNumbers(5, 10);
+
+"""
+
+
+# LaTeX Example
+latex_string = """%latex
+% Basic LaTeX document
+\documentclass{article}
+\begin{document}
+Hello, \LaTeX!
+\end{document}
+
+"""
+
+
+# TeX Example
+tex_string = """%tex
+% Basic TeX document
+\input plain
+
+Hello, \TeX!
+
+\bye
+"""
+
+
+# Graphviz Example
+graphviz_string = """//graphviz,digraph
+// Graphviz example
+digraph G {
+  A -> B -> C -> D;
+  B -> D;
+}
+
+"""
+
+
 if __name__ == "__main__":
     print("Hello world!");

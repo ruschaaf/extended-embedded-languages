@@ -29,7 +29,7 @@ export function buildYamlSyntax(hostSpec, embeddedSpecs) {
                 'begin': String.raw`^([ ]+)(?! )`,
                 'end': String.raw`^(?!\1|\s*$)`,
                 'patterns': [{ 'include': `${embedded.root_scope}` }],
-                'name': `meta.embedded.string.raw.${embedded.vsname}.${hostSpec.vsname} ${embedded.root_scope}`,
+                'name': `meta.embedded.block.${embedded.vsname}.${hostSpec.vsname} ${embedded.root_scope}`,
             },
         ],
     }));

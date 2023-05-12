@@ -19,7 +19,7 @@ export function buildPythonSyntax(hostSpec, embeddedSpecs) {
 ('''|""")
 (?= (?i:${embedded.comment_choice_re}) \b )`,
             'end': String.raw`(\2)`,
-            'contentName': `meta.embedded.string.raw.${embedded.vsname}.${hostSpec.vsname} ${embedded.root_scope}`,
+            'contentName': `meta.embedded.block.${embedded.vsname}.${hostSpec.vsname} ${embedded.root_scope}`,
             'patterns': [{ 'include': `${embedded.root_scope}` }],
             'beginCaptures': {
                 '1': { 'name': 'storage.type.string.python' },

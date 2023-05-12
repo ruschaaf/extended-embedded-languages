@@ -5,8 +5,8 @@ import { parse } from 'csv-parse/sync';
 
 const LANG_SPEC_CSV = 'embedded_language_specs.csv';
 
-const SNIPPET_PATH = 'example_embedded_snippets';
-const SNIPPET_NAME = 'snippet';
+const SAMPLE_PATH = 'embedded_samples';
+const SAMPLE_NAME = 'sample';
 
 /**
  * @typedef {Object} EmbeddedSpec
@@ -14,7 +14,7 @@ const SNIPPET_NAME = 'snippet';
  * @property {string} vsname - ID that visual studio uses for this
  * language
  * @property {string} extension - Standard file extension for this
- * language (used when searching for example snippets)}
+ * language (used when searching for example samples)}
  * @property {string} root_scope - The root TextMate scope for this
  * language
  * @property {string[]} ids - Array of IDs that can be used to specify
@@ -36,12 +36,12 @@ const SNIPPET_NAME = 'snippet';
  */
 export function readEmbeddedSpecs(withExamples) {
     const contents = fs.readFileSync(LANG_SPEC_CSV);
-    const csvObjects = parse(contents, {
+    let csvObjects = parse(contents, {
         columns: true,
     });
 
     csvObjects.forEach((lang) => {
-    // Fix up some of the list data types
+        // Fix up some of the list data types
         if (lang.ids) {
             lang.ids = lang.ids.split(',');
         } else {
@@ -55,13 +55,17 @@ export function readEmbeddedSpecs(withExamples) {
 
         // See if we need to read sample snippets as well
         if (withExamples) {
-            const snippetPath = path.join(
-                    SNIPPET_PATH, `${SNIPPET_NAME}.${lang.extension}`);
-            if (fs.existsSync(snippetPath)) {
-                lang.raw_code = fs.readFileSync(snippetPath, 'utf-8');
+            const samplePath = path.join(
+                SAMPLE_PATH, `${SAMPLE_NAME}.${lang.extension}`);
+            if (fs.existsSync(samplePath)) {
+                lang.raw_code = fs.readFileSync(samplePath, 'utf-8');
             }
         }
     });
+
+    // Remove any "commented out" lines of the CSV - ones where the name
+    // begins with '#'
+    csvObjects = csvObjects.filter((obj) => obj.name[0] != '#');
 
     return csvObjects;
 }

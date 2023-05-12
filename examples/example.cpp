@@ -7,6 +7,7 @@
 // These are examples of all the embedded languages 
 
 
+//////////////////////////////////////////////////////////////////////
 // Batch Example
 static const char* bat_string = R"bat(
 REM this is a basic BAT file
@@ -17,6 +18,7 @@ echo "Hello %WORLD%!"
 )bat";
 
 
+//////////////////////////////////////////////////////////////////////
 // C++ Example
 static const char* cpp_string = R"cpp(
 // This is a basic C++ document
@@ -32,6 +34,7 @@ int main(int argc, char* argv) {
 )cpp";
 
 
+//////////////////////////////////////////////////////////////////////
 // CSS Example
 static const char* css_string = R"css(
 /* This is basic CSS document */
@@ -47,6 +50,7 @@ h1 {
 )css";
 
 
+//////////////////////////////////////////////////////////////////////
 // HTML Example
 static const char* html_string = R"html(
 <!DOCTYPE html>
@@ -64,6 +68,7 @@ static const char* html_string = R"html(
 )html";
 
 
+//////////////////////////////////////////////////////////////////////
 // INI Example
 static const char* ini_string = R"ini(
 ; This is a basic INI file
@@ -77,6 +82,7 @@ last_file = "example.txt"
 )ini";
 
 
+//////////////////////////////////////////////////////////////////////
 // Javascript Example
 static const char* js_string = R"js(
 // This is a basic javascript file
@@ -91,6 +97,7 @@ export function printUrl(path) {
 )js";
 
 
+//////////////////////////////////////////////////////////////////////
 // JSON Example
 static const char* json_string = R"json(
 {
@@ -103,6 +110,7 @@ static const char* json_string = R"json(
 )json";
 
 
+//////////////////////////////////////////////////////////////////////
 // JSONC Example
 static const char* jsonc_string = R"jsonc(
 // This is a JSONC (json-with-comments) file
@@ -116,6 +124,7 @@ static const char* jsonc_string = R"jsonc(
 )jsonc";
 
 
+//////////////////////////////////////////////////////////////////////
 // Python Example
 static const char* py_string = R"py(
 # This is a basic python file
@@ -128,6 +137,7 @@ def test():
 )py";
 
 
+//////////////////////////////////////////////////////////////////////
 // Shell Example
 static const char* sh_string = R"sh(
 # This is a basic shell script
@@ -142,6 +152,7 @@ print_host() {
 )sh";
 
 
+//////////////////////////////////////////////////////////////////////
 // SQL Example
 static const char* sql_string = R"sql(
 -- This is a basic SQL document
@@ -154,6 +165,7 @@ WHERE orders.price > 100 OR orders.product = 'Table'
 )sql";
 
 
+//////////////////////////////////////////////////////////////////////
 // TOML Example
 static const char* toml_string = R"toml(
 # Basic TOML document
@@ -168,6 +180,7 @@ active = true
 )toml";
 
 
+//////////////////////////////////////////////////////////////////////
 // XML Example
 static const char* xml_string = R"xml(
 <?xml version="1.0" encoding="UTF-8"?>
@@ -182,6 +195,7 @@ static const char* xml_string = R"xml(
 )xml";
 
 
+//////////////////////////////////////////////////////////////////////
 // YAML Example
 static const char* yaml_string = R"yaml(
 # This is a basic YAML document
@@ -199,6 +213,7 @@ users: &id1234
 )yaml";
 
 
+//////////////////////////////////////////////////////////////////////
 // C Example
 static const char* c_string = R"c(
 /* Basic C document - with notable differences from C++ */
@@ -215,6 +230,7 @@ int a, b;
 )c";
 
 
+//////////////////////////////////////////////////////////////////////
 // HLSL Example
 static const char* hlsl_string = R"hlsl(
 // A simple HLSL shader
@@ -231,6 +247,7 @@ VertexOutput main(VertexInput input) {
 )hlsl";
 
 
+//////////////////////////////////////////////////////////////////////
 // GLSL Example
 static const char* glsl_string = R"glsl(
 // A simple GLSL shader
@@ -245,6 +262,7 @@ void main() {
 )glsl";
 
 
+//////////////////////////////////////////////////////////////////////
 // Metal Example
 static const char* metal_string = R"metal(
 // A simple Metal shader
@@ -263,6 +281,7 @@ vertex VertexOutput vertexShader(const device packed_float3* vertex_buffer [[buf
 )metal";
 
 
+//////////////////////////////////////////////////////////////////////
 // WGSL Example
 static const char* wgsl_string = R"wgsl(
 // A simple WGSL shader
@@ -278,6 +297,94 @@ fn main(input: VertexInput) -> VertexOutput {
 }
 
 )wgsl";
+
+
+//////////////////////////////////////////////////////////////////////
+// Lua Example
+static const char* lua_string = R"lua(
+-- This is a basic Lua script
+local number = 3
+if number >= 100:
+    print("Too large: " .. number)
+else
+    print("OK")
+    
+)lua";
+
+
+//////////////////////////////////////////////////////////////////////
+// Makefile Example
+static const char* make_string = R"make(
+# Makefile example
+*.o : *.c
+    gcc -c $< -o $@
+
+program: main.o utils.o
+    gcc $< -o program
+)make";
+
+
+//////////////////////////////////////////////////////////////////////
+// GraphQL Example
+static const char* graphql_string = R"graphql(
+# Basic GraphQL query
+query {
+  book(id: "123") {
+    title
+    author
+    publicationYear
+  }
+}
+
+)graphql";
+
+
+//////////////////////////////////////////////////////////////////////
+// TypeScript Example
+static const char* typescript_string = R"typescript(
+// Simple TypeScript example
+function addNumbers(a: number, b: number): number {
+    return a + b;
+}
+const result = addNumbers(5, 10);
+
+)typescript";
+
+
+//////////////////////////////////////////////////////////////////////
+// LaTeX Example
+static const char* latex_string = R"latex(
+% Basic LaTeX document
+\documentclass{article}
+\begin{document}
+Hello, \LaTeX!
+\end{document}
+
+)latex";
+
+
+//////////////////////////////////////////////////////////////////////
+// TeX Example
+static const char* tex_string = R"tex(
+% Basic TeX document
+\input plain
+
+Hello, \TeX!
+
+\bye
+)tex";
+
+
+//////////////////////////////////////////////////////////////////////
+// Graphviz Example
+static const char* graphviz_string = R"graphviz(
+// Graphviz example
+digraph G {
+  A -> B -> C -> D;
+  B -> D;
+}
+
+)graphviz";
 
 
 
