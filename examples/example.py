@@ -5,6 +5,21 @@ import os, sys
 # strings we use a comment at the start of the embedded text to 
 # indicate which language to use
 
+######################################################################
+## Documentation Examples:
+
+s = r"""--sql
+SELECT * FROM events WHERE user_id = 1234;
+"""
+
+s = """//cpp
+template<typename T> void run_obj(const T& t) { t.run(); }
+"
+
+######################################################################
+## Embedded Examples:
+
+
 
 
 # Batch Example
@@ -350,5 +365,17 @@ digraph G {
 """
 
 
+######################################################################
+## Test Code:
+
+
+
+######################################################################
+## Regular Python Code:
+## (To make sure nested langauges aren't leaking)
+
+from os import path
+
 if __name__ == "__main__":
     print("Hello world!");
+

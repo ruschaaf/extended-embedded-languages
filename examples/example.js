@@ -3,6 +3,30 @@ import foo from 'bar'
 // These strings all contain example embedded languages using the 
 // javascript template string syntax
 
+//////////////////////////////////////////////////////////////////////
+// Documentation Examples:
+
+// Tagged template identity function
+const sql = (strings, ...values) => String.raw({raw: strings}, ...values);
+
+const s1 = /*sql*/  `
+SELECT user_name FROM users WHERE id = 1234
+`;
+
+// ` and $ need to be escaped within template strings
+const s2 = /*py*/ `
+print(f" \`hello world', from \${__name__}"); 
+`;
+
+// Tagged template, requires a sql() function
+const s3 = sql`
+SELECT user_name FROM users WHERE id = 1234
+`;
+
+//////////////////////////////////////////////////////////////////////
+// Embedded Examples:
+
+
 
 // Batch Example
 const bat_string = /*bat*/ `

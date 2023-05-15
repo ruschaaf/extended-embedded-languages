@@ -46,6 +46,30 @@ the string as well:
 
 ![cpp_example.png](images/cpp_example.png)
 
+### Host language - Javascript
+
+Javascript template strings delimited by backticks (e.g. `` `...text...` ``) can be multiline. This extension supports two different ways to specify the language in a multiline template string.
+
+As an inline comment before the beginning of the string:
+```javascript
+const s = /*lang_id*/ `
+code goes here
+`;
+```
+
+Or as a _tagged template_, this style expects there to be a function with the name of the language which can process the string (see the [tagged template documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates) for 
+examples and for an identity template which just returns the input string)
+```javascript
+const s = lang_id`
+code goes here
+`;
+```
+
+
+
+![js_example.png](images/js_example.png)
+
+
 ### Host language - Python
 
 Python multiline strings do not have custom terminators the way C++,

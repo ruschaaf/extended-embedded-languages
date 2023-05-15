@@ -4,6 +4,25 @@
 // In C++ we use raw strings with a tag to indicate the embedded language.
 // The tag must begin with the embedded languages' ID (see docs)
 
+//////////////////////////////////////////////////////////////////////
+// Documentation Examples:
+
+auto s1 = R"json(
+  {"a": "b", "c": [1,2,3]}
+)json";
+
+auto s2 = R"sql(
+    SELECT * FROM USERS
+    WHERE id = 1234;
+)sql";
+
+auto s3 = R"py(
+    if __name__ == "__main__":
+        print("hello world!")
+)py";
+
+//////////////////////////////////////////////////////////////////////
+// Embedded Examples:
 // These are examples of all the embedded languages 
 
 
@@ -425,3 +444,9 @@ auto s8 = R"outer(
 #if 0
 #error R"sql(SELECT foo FROM bar;)sql"
 #endif
+
+//////////////////////////////////////////////////////////////////////
+// Regular C++ code - to make sure embedded languages aren't leaking
+
+#define FOOBAR(...) __VA_ARGS__
+template<typename T> void run_obj(const T& t) { t.run(); }

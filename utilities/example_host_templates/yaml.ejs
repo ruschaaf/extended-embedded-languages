@@ -1,7 +1,23 @@
 # These strings all contain examples of other languages embedded into
 # YAML. 
 
-examples:
+
+######################################################################
+## Documentation Examples:
+doc_examples:
+
+  test_code: | #cpp
+    int main() { return 0; }
+
+  db_insert_cmd: | #sql
+    INSERT INTO users
+    VALUES (1, "foo", 3);
+
+
+######################################################################
+## Embedded Examples:
+
+embedded_examples:
 # There may be another way to signal which language to use in yaml,
 # but for now we will use a comment after the block marker
 <% snippets.forEach(function(snippet) { %>
@@ -10,3 +26,17 @@ examples:
     <%-snippet.code.replaceAll("\n", "\n    ")%>
 <% }); %>
 
+
+######################################################################
+## Test Code:
+
+
+######################################################################
+## Regular YAML Code:
+normal_yaml:
+  plain_str: this is a plain string
+  qstr: "A quoted string"
+  block: |
+    An indented block of ordinary text
+  x: 1234
+  y: 128.0.0.1
