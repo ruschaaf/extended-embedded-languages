@@ -112,7 +112,12 @@ function generateAllSyntaxes(hostSpecs, embeddedSpecs) {
 
         console.log(`Generating ${syntaxPath}`);
 
-        // Update the embeddings in the package.json file
+        // Update the embeddings in the package.json file. This tells
+        // VSCode that when it sees a TextMate scope named
+        // 'meta.embedded.block.foo.bar' that it should
+        // behave as if it is editing language 'foo'. The
+        // 'meta.embedded' part here is significant to VSCode, but the
+        // rest of the scope name is arbitrary.
         const embeddingsArray = embeddedSpecs.map((embedded) => [
             `meta.embedded.block.${embedded.vsname}.${spec.vsname}`, // key
             embedded.vsname, // value
@@ -145,6 +150,9 @@ function main() {
             syntax_builder: buildCppSyntax,
             vsname: 'cpp',
             embedded_scope: 'source.cpp.embedded.codeblock',
+            // <ID> or <COMMENT> here will be replaced by the embedded
+            // language's first ID or the example comment string
+            // respectively
             snippet_start: 'R"<ID>(',
             snippet_end: ')<ID>"',
         },

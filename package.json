@@ -3,15 +3,14 @@
   "displayName": "Extended Embedded Languages",
   "publisher": "ruschaaf",
   "icon": "images/EEL_icon_256.png",
-  "description": "Extends several languages to support syntax highlighting for other languages embedded within strings (for example snippets of SQL within Python code)",
+  "description": "Adds syntax highlighting within multiline strings, for C++, Python, Javascript and YAML",
   "version": "1.0.0",
   "license": "MIT",
   "engines": {
     "vscode": "^1.8.0"
   },
   "categories": [
-    "Programming Languages",
-    "Language Packs"
+    "Programming Languages"
   ],
   "keywords": [
     "syntax highlighting",
@@ -173,23 +172,6 @@
         }
       }
     ],
-    "snippets": [
-      {
-        "language": "cpp",
-        "path": "snippets/cpp.code-snippets"
-      },
-      {
-        "language": "python",
-        "path": "snippets/python.code-snippets"
-      },
-      {
-        "language": "yaml",
-        "path": "snippets/yaml.code-snippets"
-      },
-      {
-        "language": "javascript",
-        "path": "snippets/javascript.code-snippets"
-      }
-    ]
+    "snippets": []
   }
 }

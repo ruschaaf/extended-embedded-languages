@@ -21,6 +21,9 @@ syntax:
 	cd utilities ; node ./syntax_assembler.js
 
 package:
-	vsce package
+	vsce package --githubBranch trunk
+
+publish:
+	vsce publish --githubBranch trunk
 
 
