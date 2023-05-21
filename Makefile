@@ -2,7 +2,7 @@
 
 .PHONY: examples all lint fix setup
 
-all: examples syntax
+all: lint examples syntax
 
 lint:
 	cd utilities ; eslint .

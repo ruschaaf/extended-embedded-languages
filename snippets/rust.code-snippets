@@ -1,0 +1,236 @@
+{
+  "Batch code block": {
+    "scope": "rust",
+    "prefix": "bat",
+    "body": [
+      "/*bat*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "C++ code block": {
+    "scope": "rust",
+    "prefix": "cpp",
+    "body": [
+      "/*cpp*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "CSS code block": {
+    "scope": "rust",
+    "prefix": "css",
+    "body": [
+      "/*css*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "HTML code block": {
+    "scope": "rust",
+    "prefix": "html",
+    "body": [
+      "/*html*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "INI code block": {
+    "scope": "rust",
+    "prefix": "ini",
+    "body": [
+      "/*ini*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "Javascript code block": {
+    "scope": "rust",
+    "prefix": "js",
+    "body": [
+      "/*js*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "JSON code block": {
+    "scope": "rust",
+    "prefix": "json",
+    "body": [
+      "/*json*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "JSONC code block": {
+    "scope": "rust",
+    "prefix": "jsonc",
+    "body": [
+      "/*jsonc*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "Python code block": {
+    "scope": "rust",
+    "prefix": "py",
+    "body": [
+      "/*py*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "Shell code block": {
+    "scope": "rust",
+    "prefix": "sh",
+    "body": [
+      "/*sh*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "SQL code block": {
+    "scope": "rust",
+    "prefix": "sql",
+    "body": [
+      "/*sql*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "TOML code block": {
+    "scope": "rust",
+    "prefix": "toml",
+    "body": [
+      "/*toml*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "XML code block": {
+    "scope": "rust",
+    "prefix": "xml",
+    "body": [
+      "/*xml*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "YAML code block": {
+    "scope": "rust",
+    "prefix": "yaml",
+    "body": [
+      "/*yaml*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "C code block": {
+    "scope": "rust",
+    "prefix": "c",
+    "body": [
+      "/*c*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "HLSL code block": {
+    "scope": "rust",
+    "prefix": "hlsl",
+    "body": [
+      "/*hlsl*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "GLSL code block": {
+    "scope": "rust",
+    "prefix": "glsl",
+    "body": [
+      "/*glsl*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "Metal code block": {
+    "scope": "rust",
+    "prefix": "metal",
+    "body": [
+      "/*metal*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "WGSL code block": {
+    "scope": "rust",
+    "prefix": "wgsl",
+    "body": [
+      "/*wgsl*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "Lua code block": {
+    "scope": "rust",
+    "prefix": "lua",
+    "body": [
+      "/*lua*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "Makefile code block": {
+    "scope": "rust",
+    "prefix": "make",
+    "body": [
+      "/*make*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "GraphQL code block": {
+    "scope": "rust",
+    "prefix": "graphql",
+    "body": [
+      "/*graphql*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "TypeScript code block": {
+    "scope": "rust",
+    "prefix": "typescript",
+    "body": [
+      "/*typescript*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "LaTeX code block": {
+    "scope": "rust",
+    "prefix": "latex",
+    "body": [
+      "/*latex*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "TeX code block": {
+    "scope": "rust",
+    "prefix": "tex",
+    "body": [
+      "/*tex*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "Graphviz code block": {
+    "scope": "rust",
+    "prefix": "graphviz",
+    "body": [
+      "/*graphviz*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  }
+}

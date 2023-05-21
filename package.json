@@ -3,7 +3,7 @@
   "displayName": "Extended Embedded Languages",
   "publisher": "ruschaaf",
   "icon": "images/EEL_icon_256.png",
-  "description": "Adds syntax highlighting within multiline strings, for C++, Python, Javascript and YAML",
+  "description": "Adds syntax highlighting within multi-line strings, for C++, Python, Javascript, Rust, and YAML. Dozens of languages can be used within the strings such as SQL, HTML, CSS, GLSL, WSGL, LaTeX, JSON, YAML, and more.",
   "version": "1.0.0",
   "license": "MIT",
   "engines": {
@@ -169,6 +169,41 @@
           "meta.embedded.block.latex.javascript": "latex",
           "meta.embedded.block.tex.javascript": "tex",
           "meta.embedded.block.dot.javascript": "dot"
+        }
+      },
+      {
+        "scopeName": "source.rust.embedded.codeblock",
+        "injectTo": [
+          "source.rust"
+        ],
+        "path": "syntaxes/rust.embedded.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.bat.rust": "bat",
+          "meta.embedded.block.cpp.rust": "cpp",
+          "meta.embedded.block.css.rust": "css",
+          "meta.embedded.block.html.rust": "html",
+          "meta.embedded.block.ini.rust": "ini",
+          "meta.embedded.block.javascript.rust": "javascript",
+          "meta.embedded.block.json.rust": "json",
+          "meta.embedded.block.jsonc.rust": "jsonc",
+          "meta.embedded.block.python.rust": "python",
+          "meta.embedded.block.shell.rust": "shell",
+          "meta.embedded.block.sql.rust": "sql",
+          "meta.embedded.block.toml.rust": "toml",
+          "meta.embedded.block.xml.rust": "xml",
+          "meta.embedded.block.yaml.rust": "yaml",
+          "meta.embedded.block.c.rust": "c",
+          "meta.embedded.block.hlsl.rust": "hlsl",
+          "meta.embedded.block.glsl.rust": "glsl",
+          "meta.embedded.block.metal.rust": "metal",
+          "meta.embedded.block.wgsl.rust": "wgsl",
+          "meta.embedded.block.lua.rust": "lua",
+          "meta.embedded.block.makefile.rust": "makefile",
+          "meta.embedded.block.graphql.rust": "graphql",
+          "meta.embedded.block.typescript.rust": "typescript",
+          "meta.embedded.block.latex.rust": "latex",
+          "meta.embedded.block.tex.rust": "tex",
+          "meta.embedded.block.dot.rust": "dot"
         }
       }
     ],

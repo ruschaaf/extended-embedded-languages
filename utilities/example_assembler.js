@@ -21,6 +21,7 @@ const hostLanguages = [
         template: 'javascript.ejs', output: 'example.js',
         escapes: [['`', '\\`'], ['$', '\\$']],
     },
+    { template: 'rust.ejs', output: 'example.rs' },
 ];
 
 /**

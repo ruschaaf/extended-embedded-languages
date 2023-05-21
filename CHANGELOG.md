@@ -4,6 +4,9 @@ All notable changes to the "extended-embedded-languages" extension will be docum
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [v1.1.0]
+Added Rust as a host language
+
 ## [v1.0.0]
 
 Added embedded languages: Lua, Makefile, GraphQL, TypeScript, LaTeX,

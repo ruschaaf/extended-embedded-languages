@@ -1,22 +1,24 @@
 # Contributing
 
-Thank you for your interest in contributing to this extension. In this doc you will find some notes on how to add support for additional languages
+Thank you for your interest in contributing to this extension. In this
+doc you will find some notes on how to add support for additional
+languages
 
 
 This plugin extends the TextMate syntax highlighting definitions of
 several **host** languages in order to look for **embedded**
-sub-languages within strings. It does not contain any of its own syntax
-highlighting rules, instead it typically replaces one single rule in the
-host language which defines a multiline string, and looks for specific
-indicators regarding which embedded language to use when highlighting
-the string.
+sub-languages within strings. It does not contain any of its own
+syntax highlighting rules, instead it typically replaces one single
+rule in the host language which defines a multiline string, and looks
+for specific indicators regarding which embedded language to use when
+highlighting the string.
 
-Within the embedded language block, your editor will behave as if it is
-editing the embedded language. For example if you are editing SQL within
-a C++ document, the VSCode "Toggle Line Comment" command will prefix
-lines with `--` not `//`. Code folding will use the natural structure of
-the embedded language block too - collapsing `<tags>` in an XML
-string, or `{` braces in a C string
+Within the embedded language block, your editor will behave as if it
+is editing the embedded language. For example if you are editing SQL
+within a C++ document, the VSCode "Toggle Line Comment" command will
+prefix lines with `--` not `//`. Code folding will use the natural
+structure of the embedded language block too - collapsing `<tags>` in
+an XML string, or `{` braces in a C string
 
 ## Utilities
 
@@ -34,6 +36,23 @@ line arguments, or run through node:
 ```sh
 node syntax_assembler.js
 ```
+
+### Makefile
+
+Several utilities can be triggered through the root directory's
+Makefile:
+
+* `make install` - installs required node modules for development
+
+* `make all` - Runs `syntax_assembler.js` and `example_assembler.js`
+
+* `make package` - Creates a .vsix package for testing
+
+* `make lint` - Runs ESLint on all javascript files
+
+* `make fix` - Runs ESLint and fixes auto-fixable problems
+
+
 
 ## Adding an Embedded Language
 
@@ -115,7 +134,7 @@ str = R"css(
 
 * If the host langugate supports multiline strings _and_ inline
   comments, put the language ID in a comment before the multiline
-  string
+  string.
 ```js
 // Javascript
 str = /*css*/`

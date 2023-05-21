@@ -1,39 +1,37 @@
-import os, sys
 
-# These strings all contain examples of other languages embedded into
-# python. Because python doesn't have custom delimiters for multiline 
-# strings we use a comment at the start of the embedded text to 
-# indicate which language to use
+fn main() {
 
-######################################################################
-## Documentation Examples:
+//////////////////////////////////////////////////////////////////////
+// Documentation Examples:
 
-s = r"""--sql
-SELECT * FROM events WHERE user_id = 1234;
-"""
+let s1 = /*json*/ r#"
+{"a": "b", "c": [1,2,3]} 
+"#;
+  
+let s2 = /*sql*/ r"
+    SELECT * FROM USERS 
+    WHERE id = 1234;
+";
 
-s = """//cpp
-template<typename T> void run_obj(const T& t) { t.run(); }
-"""
-
-######################################################################
-## Embedded Examples:
+//////////////////////////////////////////////////////////////////////
+// Embedded Examples:
+// These are examples of all the embedded languages 
 
 
-
-
-# Batch Example
-bat_string = """REM
+//////////////////////////////////////////////////////////////////////
+// Batch Example
+let bat_string = /*bat*/ r#"
 REM this is a basic BAT file
 @echo off
 set WORLD="world"
 echo "Hello %WORLD%!"
 
-"""
+"#;
 
 
-# C++ Example
-cpp_string = """//cpp
+//////////////////////////////////////////////////////////////////////
+// C++ Example
+let cpp_string = /*cpp*/ r#"
 // This is a basic C++ document
 #include <iostream>
 
@@ -44,11 +42,12 @@ int main(int argc, char* argv) {
     return 0;
 }
 
-"""
+"#;
 
 
-# CSS Example
-css_string = """/*css*/
+//////////////////////////////////////////////////////////////////////
+// CSS Example
+let css_string = /*css*/ r#"
 /* This is basic CSS document */
 body {
     font-family: Arial, sans-serif;
@@ -59,11 +58,12 @@ body {
 h1 {
     color: #0066cc;
 }
-"""
+"#;
 
 
-# HTML Example
-html_string = """<html>
+//////////////////////////////////////////////////////////////////////
+// HTML Example
+let html_string = /*html*/ r#"
 <!DOCTYPE html>
 <!-- This is a basic HTML document -->
 <html>
@@ -76,11 +76,12 @@ html_string = """<html>
     HTML with syntax highlighting
 </body>
 </html>
-"""
+"#;
 
 
-# INI Example
-ini_string = """;ini
+//////////////////////////////////////////////////////////////////////
+// INI Example
+let ini_string = /*ini*/ r#"
 ; This is a basic INI file
 [prefs]
 user = example
@@ -89,11 +90,12 @@ theme = dark
 last_file = "example.txt"
 
 
-"""
+"#;
 
 
-# Javascript Example
-js_string = """//js
+//////////////////////////////////////////////////////////////////////
+// Javascript Example
+let js_string = /*js*/ r#"
 // This is a basic javascript file
 const url = 'http://example.com';
 
@@ -103,12 +105,25 @@ export function printUrl(path) {
 }
 
 
-"""
+"#;
 
 
+//////////////////////////////////////////////////////////////////////
+// JSON Example
+let json_string = /*json*/ r#"
+{
+    "comment": "This is a basic JSON file",
+    "a": "b",
+    "c": true,
+    "d": [1,2,3, null],
+    "e": 1.02
+}
+"#;
 
-# JSONC Example
-jsonc_string = """//jsonc
+
+//////////////////////////////////////////////////////////////////////
+// JSONC Example
+let jsonc_string = /*jsonc*/ r#"
 // This is a JSONC (json-with-comments) file
 {
     "a": "b",
@@ -117,11 +132,12 @@ jsonc_string = """//jsonc
     "e": 1.02
 }
 
-"""
+"#;
 
 
-# Python Example
-py_string = """#py
+//////////////////////////////////////////////////////////////////////
+// Python Example
+let py_string = /*py*/ r#"
 # This is a basic python file
 from os import path
 
@@ -129,11 +145,12 @@ def test():
     if path.exists(__name__):
         print("I'm a real file")
 
-"""
+"#;
 
 
-# Shell Example
-sh_string = """#sh
+//////////////////////////////////////////////////////////////////////
+// Shell Example
+let sh_string = /*sh*/ r#"
 # This is a basic shell script
 
 print_host() {
@@ -143,11 +160,12 @@ print_host() {
     fi
 }
 
-"""
+"#;
 
 
-# SQL Example
-sql_string = """--sql
+//////////////////////////////////////////////////////////////////////
+// SQL Example
+let sql_string = /*sql*/ r#"
 -- This is a basic SQL document
 SELECT users.id, orders.product, orders.price
 FROM users
@@ -155,11 +173,12 @@ INNER JOIN orders
   ON users.id = orders.id
 WHERE orders.price > 100 OR orders.product = 'Table'
   
-"""
+"#;
 
 
-# TOML Example
-toml_string = """#toml
+//////////////////////////////////////////////////////////////////////
+// TOML Example
+let toml_string = /*toml*/ r#"
 # Basic TOML document
 
 url = "http://example.com"
@@ -169,11 +188,12 @@ name = "Sample Document"
 name = "Foobar"
 id = 1234
 active = true
-"""
+"#;
 
 
-# XML Example
-xml_string = """<?xml?>
+//////////////////////////////////////////////////////////////////////
+// XML Example
+let xml_string = /*xml*/ r#"
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Basic XML document -->
 <user active="true" id="1234">
@@ -183,11 +203,12 @@ xml_string = """<?xml?>
   Unparsed string data
   ]]>
 </user>
-"""
+"#;
 
 
-# YAML Example
-yaml_string = """#yaml
+//////////////////////////////////////////////////////////////////////
+// YAML Example
+let yaml_string = /*yaml*/ r#"
 # This is a basic YAML document
 users: &id1234
   - foobar: 
@@ -200,11 +221,12 @@ users: &id1234
   description string
 
   
-"""
+"#;
 
 
-# C Example
-c_string = """/*c*/
+//////////////////////////////////////////////////////////////////////
+// C Example
+let c_string = /*c*/ r#"
 /* Basic C document - with notable differences from C++ */
 int template = 3;
 int static_assert = 4;
@@ -216,11 +238,12 @@ int a, b;
   return a + b;
 }
 
-"""
+"#;
 
 
-# HLSL Example
-hlsl_string = """//hlsl
+//////////////////////////////////////////////////////////////////////
+// HLSL Example
+let hlsl_string = /*hlsl*/ r#"
 // A simple HLSL shader
 struct VertexInput {
     float3 position : POSITION;
@@ -232,11 +255,12 @@ VertexOutput main(VertexInput input) {
     return output;
 }
 
-"""
+"#;
 
 
-# GLSL Example
-glsl_string = """//glsl
+//////////////////////////////////////////////////////////////////////
+// GLSL Example
+let glsl_string = /*glsl*/ r#"
 // A simple GLSL shader
 uniform mat4 model_view_proj;
 
@@ -246,11 +270,12 @@ void main() {
     gl_Position = model_view_proj * vec4(position, 1.0);
 }
 
-"""
+"#;
 
 
-# Metal Example
-metal_string = """//metal
+//////////////////////////////////////////////////////////////////////
+// Metal Example
+let metal_string = /*metal*/ r#"
 // A simple Metal shader
 struct VertexOutput {
     float4 position [[position]];
@@ -264,11 +289,12 @@ vertex VertexOutput vertexShader(const device packed_float3* vertex_buffer [[buf
     output.position = model_view_proj * float4(position, 1.0);
     return output;
 }
-"""
+"#;
 
 
-# WGSL Example
-wgsl_string = """//wgsl
+//////////////////////////////////////////////////////////////////////
+// WGSL Example
+let wgsl_string = /*wgsl*/ r#"
 // A simple WGSL shader
 struct VertexOutput {
     [[builtin(position)]] position : vec4<f32>;
@@ -281,11 +307,12 @@ fn main(input: VertexInput) -> VertexOutput {
     return output;
 }
 
-"""
+"#;
 
 
-# Lua Example
-lua_string = """--lua
+//////////////////////////////////////////////////////////////////////
+// Lua Example
+let lua_string = /*lua*/ r#"
 -- This is a basic Lua script
 local number = 3
 if number >= 100:
@@ -293,22 +320,24 @@ if number >= 100:
 else
     print("OK")
     
-"""
+"#;
 
 
-# Makefile Example
-make_string = """#makefile
+//////////////////////////////////////////////////////////////////////
+// Makefile Example
+let make_string = /*make*/ r#"
 # Makefile example
 *.o : *.c
     gcc -c $< -o $@
 
 program: main.o utils.o
     gcc $< -o program
-"""
+"#;
 
 
-# GraphQL Example
-graphql_string = """#graphql
+//////////////////////////////////////////////////////////////////////
+// GraphQL Example
+let graphql_string = /*graphql*/ r#"
 # Basic GraphQL query
 query {
   book(id: "123") {
@@ -318,64 +347,56 @@ query {
   }
 }
 
-"""
+"#;
 
 
-# TypeScript Example
-typescript_string = """//typescript
+//////////////////////////////////////////////////////////////////////
+// TypeScript Example
+let typescript_string = /*typescript*/ r#"
 // Simple TypeScript example
 function addNumbers(a: number, b: number): number {
     return a + b;
 }
 const result = addNumbers(5, 10);
 
-"""
+"#;
 
 
-# LaTeX Example
-latex_string = """%latex
+//////////////////////////////////////////////////////////////////////
+// LaTeX Example
+let latex_string = /*latex*/ r#"
 % Basic LaTeX document
 \documentclass{article}
 \begin{document}
 Hello, \LaTeX!
 \end{document}
 
-"""
+"#;
 
 
-# TeX Example
-tex_string = """%tex
+//////////////////////////////////////////////////////////////////////
+// TeX Example
+let tex_string = /*tex*/ r#"
 % Basic TeX document
 \input plain
 
 Hello, \TeX!
 
 \bye
-"""
+"#;
 
 
-# Graphviz Example
-graphviz_string = """//graphviz,digraph
+//////////////////////////////////////////////////////////////////////
+// Graphviz Example
+let graphviz_string = /*graphviz*/ r#"
 // Graphviz example
 digraph G {
   A -> B -> C -> D;
   B -> D;
 }
 
-"""
-
-
-######################################################################
-## Test Code:
+"#;
 
 
 
-######################################################################
-## Regular Python Code:
-## (To make sure nested langauges aren't leaking)
-
-from os import path
-
-if __name__ == "__main__":
-    print("Hello world!");
-
+}

@@ -9,6 +9,7 @@ import { buildPythonSyntax } from './syntax_templates/python_syntax.js';
 import { buildCppSyntax } from './syntax_templates/cpp_syntax.js';
 import { buildYamlSyntax } from './syntax_templates/yaml_syntax.js';
 import { buildJavascriptSyntax } from './syntax_templates/javascript_syntax.js';
+import { buildRustSyntax } from './syntax_templates/rust_syntax.js';
 
 const PACKAGE_JSON_PATH = path.join('..', 'package.json');
 // These dirs are relative to the PACKAGE_JSON_PATH
@@ -182,6 +183,15 @@ function main() {
             embedded_scope: 'source.js.embedded.codeblock',
             snippet_start: '/*<ID>*/ `',
             snippet_end: '`',
+        },
+        {
+            file: 'rust.embedded.json',
+            root_scope: 'source.rust',
+            syntax_builder: buildRustSyntax,
+            vsname: 'rust',
+            embedded_scope: 'source.rust.embedded.codeblock',
+            snippet_start: '/*<ID>*/ r#"',
+            snippet_end: '"#',
         },
     ];
 

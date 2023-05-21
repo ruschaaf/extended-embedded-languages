@@ -1,6 +1,6 @@
-# extended-embedded-languages
+# Extended Embedded Languages
 
-Adds syntax highlighting to C++, Javascript, Python and YAML for strings containing source code. Many different languages can be embedded.
+Adds syntax highlighting to C++, Javascript, Python, Rust and YAML for strings containing source code. Dozens of languages can be used within the strings such as SQL, HTML, CSS, GLSL, WSGL, LaTeX, JSON, YAML, and more.
 
 ![extension_example](images/extension_usage_anim.gif)
 
@@ -31,7 +31,8 @@ the natural structure of the embedded language block too - collapsing
 `<tags>` in an XML string, or `{` braces in a C string
 
 
-### Host Language - C++
+---
+## Host Language - C++
 
 C++ uses _raw strings_ to specify the language. 
 
@@ -46,7 +47,8 @@ the string as well:
 
 ![cpp_example.png](images/cpp_example.png)
 
-### Host language - Javascript
+---
+## Host language - Javascript
 
 Javascript template strings delimited by backticks (e.g. `` `...text...` ``) can be multiline. This extension supports two different ways to specify the language in a multiline template string.
 
@@ -69,8 +71,8 @@ code goes here
 
 ![js_example.png](images/js_example.png)
 
-
-### Host language - Python
+---
+## Host language - Python
 
 Python multiline strings do not have custom terminators the way C++,
 Perl or other languages do. As such, we rely on _leading comments_ to
@@ -80,7 +82,8 @@ or `"""` which starts a multiline string
 ![py_example.png](images/py_example.png)
 
 
-### Host language - YAML
+---
+## Host language - YAML
 
 YAML has block strings that begin with a `|` or `>` and continue based
 on the indentation level of a block of text. Following the start
@@ -90,15 +93,25 @@ indicates the language
 ![yaml_example.png](images/yaml_example.png)
 
 
-### Embedded Languages
+---
+## Host Language - Rust
 
-The available embedded languages are listed in this table. The "ID"
-column is the IDs you can use in host languages like C++ and YAML
-where you can specify an ID in the _host_ language. The "Comment"
-column is for host languages like Python which have no way to indicate
-the embedded language type directly, and shows what the first
-characters of the _embedded_ language string needs to be to signal
-which language you are using.
+Rust strings are all multiline. But for syntax embedding purposes we
+use the multiline raw strings that begin with `r#"` (where there are
+0-n `#` characters) and end with `"#`
+
+![rust_example.png](images/rust_example.png)
+
+---
+## Embedded Languages
+
+This extension supports a large number of embedded languages, listed
+below. The "ID" column shows the IDs you can use in host languages like
+C++ and YAML where you can specify an ID in the _host_ language. The
+"Comment" column is for host languages like Python which have no way
+to indicate the embedded language type directly, and shows what the
+first characters of the _embedded_ language string needs to be to
+signal which language you are using.
 
 | Name                   | ID                           | Comment                                        |
 | ---------------------- | ---------------------------- | ---------------------------------------------- |
@@ -145,9 +158,16 @@ See CONTRIBUTING.md for adding new languages
 
 ## Known Issues
 
+* Syntax highlighting can leak past the end of the string when there are unclosed blocks (for example a `{` without a matching `}`). 
+This is a limitation of the TextMate grammars that VSCode uses - when an _embedded_ syntax highlighter scans for the end of a text section it can scan past the end of the string. [VSCode issue 20488](https://github.com/microsoft/vscode/issues/20488) has a longer discussion on what is going on.
 
+* Because of this same issue, some languages can't be embedded due to how they are defined. For example the most popular `csv` and `mermaid` highlighters will continue past the end of the string when they are embedded.
 
 ## Release Notes
+
+### 1.1.0
+
+Added Rust as a new host language. Updated documentation
 
 ### 1.0.0
 
