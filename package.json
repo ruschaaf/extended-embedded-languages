@@ -4,7 +4,7 @@
   "publisher": "ruschaaf",
   "icon": "images/EEL_icon_256.png",
   "description": "Adds syntax highlighting within multi-line strings, for C++, Python, Javascript, Rust, and YAML. Dozens of languages can be used within the strings such as SQL, HTML, CSS, GLSL, WSGL, LaTeX, JSON, YAML, and more.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "engines": {
     "vscode": "^1.8.0"
