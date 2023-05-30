@@ -232,5 +232,23 @@
       "\t$0",
       ")graphviz\""
     ]
+  },
+  "ARM Assembly code block": {
+    "scope": "cpp",
+    "prefix": "arm",
+    "body": [
+      "R\"arm(",
+      "\t$0",
+      ")arm\""
+    ]
+  },
+  "x86 / x64 Assembly code block": {
+    "scope": "cpp",
+    "prefix": "x86",
+    "body": [
+      "R\"x86(",
+      "\t$0",
+      ")x86\""
+    ]
   }
 }

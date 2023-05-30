@@ -232,5 +232,23 @@
       "\t$0",
       "\"#"
     ]
+  },
+  "ARM Assembly code block": {
+    "scope": "rust",
+    "prefix": "arm",
+    "body": [
+      "/*arm*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
+  "x86 / x64 Assembly code block": {
+    "scope": "rust",
+    "prefix": "x86",
+    "body": [
+      "/*x86*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
   }
 }

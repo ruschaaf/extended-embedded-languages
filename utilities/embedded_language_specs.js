@@ -38,6 +38,7 @@ export function readEmbeddedSpecs(withExamples) {
     const contents = fs.readFileSync(LANG_SPEC_CSV);
     let csvObjects = parse(contents, {
         columns: true,
+        trim: true,
     });
 
     csvObjects.forEach((lang) => {
@@ -64,7 +65,9 @@ export function readEmbeddedSpecs(withExamples) {
     });
 
     // Remove any "commented out" lines of the CSV - ones where the name
-    // begins with '#'
+    // begins with '#'. We can't use the CSV parser's "comment" option
+    // because it will find those comment characters anywhere within the
+    // line, and they are often valid in other parts of the doc
     csvObjects = csvObjects.filter((obj) => obj.name[0] != '#');
 
     return csvObjects;

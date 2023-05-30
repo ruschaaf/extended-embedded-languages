@@ -398,5 +398,29 @@ digraph G {
 "#;
 
 
+//////////////////////////////////////////////////////////////////////
+// ARM Assembly Example
+let arm_string = /*arm*/ r#"
+@ ARM syntax example
+mov R1, #100
+loop:
+  sub R1, #1
+  bne loop
+
+"#;
+
+
+//////////////////////////////////////////////////////////////////////
+// x86 / x64 Assembly Example
+let x86_string = /*x86*/ r#"
+; x86 assembly sample
+mov cx, 100
+start:
+    dec cx
+    jnz start
+
+"#;
+
+
 
 }

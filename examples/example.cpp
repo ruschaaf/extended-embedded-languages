@@ -406,6 +406,30 @@ digraph G {
 )graphviz";
 
 
+//////////////////////////////////////////////////////////////////////
+// ARM Assembly Example
+static const char* arm_string = R"arm(
+@ ARM syntax example
+mov R1, #100
+loop:
+  sub R1, #1
+  bne loop
+
+)arm";
+
+
+//////////////////////////////////////////////////////////////////////
+// x86 / x64 Assembly Example
+static const char* x86_string = R"x86(
+; x86 assembly sample
+mov cx, 100
+start:
+    dec cx
+    jnz start
+
+)x86";
+
+
 
 
 //////////////////////////////////////////////////////////////////////

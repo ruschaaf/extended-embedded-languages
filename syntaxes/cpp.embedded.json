@@ -817,6 +817,68 @@
               "name": "meta.encoding.cpp"
             }
           }
+        },
+        {
+          "comment": "ARM Assembly-formatted raw strings",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:arm) \\b [^\\(]* ) \n\\(",
+          "end": "\\)(\\2)\"",
+          "contentName": "meta.embedded.block.arm.cpp source.arm",
+          "patterns": [
+            {
+              "include": "source.arm"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
+        },
+        {
+          "comment": "x86 / x64 Assembly-formatted raw strings",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:x86|x86_64|x64) \\b [^\\(]* ) \n\\(",
+          "end": "\\)(\\2)\"",
+          "contentName": "meta.embedded.block.asm-intel-x86-generic.cpp source.asm.x86_64",
+          "patterns": [
+            {
+              "include": "source.asm.x86_64"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
         }
       ]
     }

@@ -63,7 +63,9 @@
           "meta.embedded.block.typescript.cpp": "typescript",
           "meta.embedded.block.latex.cpp": "latex",
           "meta.embedded.block.tex.cpp": "tex",
-          "meta.embedded.block.dot.cpp": "dot"
+          "meta.embedded.block.dot.cpp": "dot",
+          "meta.embedded.block.arm.cpp": "arm",
+          "meta.embedded.block.asm-intel-x86-generic.cpp": "asm-intel-x86-generic"
         }
       },
       {
@@ -98,7 +100,9 @@
           "meta.embedded.block.typescript.python": "typescript",
           "meta.embedded.block.latex.python": "latex",
           "meta.embedded.block.tex.python": "tex",
-          "meta.embedded.block.dot.python": "dot"
+          "meta.embedded.block.dot.python": "dot",
+          "meta.embedded.block.arm.python": "arm",
+          "meta.embedded.block.asm-intel-x86-generic.python": "asm-intel-x86-generic"
         }
       },
       {
@@ -133,7 +137,9 @@
           "meta.embedded.block.typescript.yaml": "typescript",
           "meta.embedded.block.latex.yaml": "latex",
           "meta.embedded.block.tex.yaml": "tex",
-          "meta.embedded.block.dot.yaml": "dot"
+          "meta.embedded.block.dot.yaml": "dot",
+          "meta.embedded.block.arm.yaml": "arm",
+          "meta.embedded.block.asm-intel-x86-generic.yaml": "asm-intel-x86-generic"
         }
       },
       {
@@ -168,7 +174,9 @@
           "meta.embedded.block.typescript.javascript": "typescript",
           "meta.embedded.block.latex.javascript": "latex",
           "meta.embedded.block.tex.javascript": "tex",
-          "meta.embedded.block.dot.javascript": "dot"
+          "meta.embedded.block.dot.javascript": "dot",
+          "meta.embedded.block.arm.javascript": "arm",
+          "meta.embedded.block.asm-intel-x86-generic.javascript": "asm-intel-x86-generic"
         }
       },
       {
@@ -203,7 +211,9 @@
           "meta.embedded.block.typescript.rust": "typescript",
           "meta.embedded.block.latex.rust": "latex",
           "meta.embedded.block.tex.rust": "tex",
-          "meta.embedded.block.dot.rust": "dot"
+          "meta.embedded.block.dot.rust": "dot",
+          "meta.embedded.block.arm.rust": "arm",
+          "meta.embedded.block.asm-intel-x86-generic.rust": "asm-intel-x86-generic"
         }
       }
     ],

@@ -636,6 +636,56 @@
               "name": "punctuation.definition.string.end.python"
             }
           }
+        },
+        {
+          "comment": "ARM Assembly-formatted triple-quoted strings",
+          "name": "string.quoted.multi.embedded.python",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:@arm|;arm) \\b )",
+          "end": "(\\2)",
+          "contentName": "meta.embedded.block.arm.python source.arm",
+          "patterns": [
+            {
+              "include": "source.arm"
+            }
+          ],
+          "beginCaptures": {
+            "1": {
+              "name": "storage.type.string.python"
+            },
+            "2": {
+              "name": "punctuation.definition.string.begin.python"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.end.python"
+            }
+          }
+        },
+        {
+          "comment": "x86 / x64 Assembly-formatted triple-quoted strings",
+          "name": "string.quoted.multi.embedded.python",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:;x86|;x86_64|x64) \\b )",
+          "end": "(\\2)",
+          "contentName": "meta.embedded.block.asm-intel-x86-generic.python source.asm.x86_64",
+          "patterns": [
+            {
+              "include": "source.asm.x86_64"
+            }
+          ],
+          "beginCaptures": {
+            "1": {
+              "name": "storage.type.string.python"
+            },
+            "2": {
+              "name": "punctuation.definition.string.begin.python"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.end.python"
+            }
+          }
         }
       ]
     }

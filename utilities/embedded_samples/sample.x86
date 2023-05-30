@@ -1,0 +1,5 @@
+; x86 assembly sample
+mov cx, 100
+start:
+    dec cx
+    jnz start

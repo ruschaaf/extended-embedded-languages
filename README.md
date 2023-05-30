@@ -115,6 +115,7 @@ signal which language you are using.
 
 | Name                   | ID                           | Comment                                        |
 | ---------------------- | ---------------------------- | ---------------------------------------------- |
+| ARM assembly           | arm                          | `@arm`,`;arm`                                  |
 | Batch                  | bat                          | `REM`, `@REM`, `::bat`                         |
 | C                      | c                            | `/*c*/`                                        |
 | C++                    | cpp, c++                     | `//cpp`, `//c++`                               |
@@ -139,6 +140,7 @@ signal which language you are using.
 | TOML                   | toml                         | `#toml`                                        |
 | TypeScript             | typescript, ts               | `//typescript`, `//ts`                         |
 | WGSL                   | wgsl                         | `//wgsl`                                       |
+| x86 and x64 assembly   | x64, x86_64, x64             | `;x86`, `;x86_64`, `;x64`                      |
 | XML                    | xml                          | `<?xml`, `<? xml`, `<!--xml`                   |
 | YAML                   | yaml                         | `#yaml`                                        |
 

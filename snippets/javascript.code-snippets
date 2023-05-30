@@ -232,5 +232,23 @@
       "\t$0",
       "`"
     ]
+  },
+  "ARM Assembly code block": {
+    "scope": "javascript",
+    "prefix": "arm",
+    "body": [
+      "/*arm*/ `",
+      "\t$0",
+      "`"
+    ]
+  },
+  "x86 / x64 Assembly code block": {
+    "scope": "javascript",
+    "prefix": "x86",
+    "body": [
+      "/*x86*/ `",
+      "\t$0",
+      "`"
+    ]
   }
 }

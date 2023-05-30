@@ -895,6 +895,74 @@
               "name": "punctuation.definition.string.raw.rust"
             }
           }
+        },
+        {
+          "comment": "ARM Assembly-formatted raw strings",
+          "begin": "(/\\*(?i:arm)\\*/)\\s*(b?r)(#*)(\")",
+          "end": "(\")(\\3)",
+          "contentName": "meta.embedded.block.arm.rust source.arm",
+          "patterns": [
+            {
+              "include": "source.arm"
+            }
+          ],
+          "name": "string.quoted.double.rust",
+          "beginCaptures": {
+            "1": {
+              "name": "comment.block.rust"
+            },
+            "2": {
+              "name": "string.quoted.byte.raw.rust"
+            },
+            "3": {
+              "name": "punctuation.definition.string.raw.rust"
+            },
+            "4": {
+              "name": "punctuation.definition.string.rust"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.rust"
+            },
+            "2": {
+              "name": "punctuation.definition.string.raw.rust"
+            }
+          }
+        },
+        {
+          "comment": "x86 / x64 Assembly-formatted raw strings",
+          "begin": "(/\\*(?i:x86|x86_64|x64)\\*/)\\s*(b?r)(#*)(\")",
+          "end": "(\")(\\3)",
+          "contentName": "meta.embedded.block.asm-intel-x86-generic.rust source.asm.x86_64",
+          "patterns": [
+            {
+              "include": "source.asm.x86_64"
+            }
+          ],
+          "name": "string.quoted.double.rust",
+          "beginCaptures": {
+            "1": {
+              "name": "comment.block.rust"
+            },
+            "2": {
+              "name": "string.quoted.byte.raw.rust"
+            },
+            "3": {
+              "name": "punctuation.definition.string.raw.rust"
+            },
+            "4": {
+              "name": "punctuation.definition.string.rust"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.rust"
+            },
+            "2": {
+              "name": "punctuation.definition.string.raw.rust"
+            }
+          }
         }
       ]
     }
