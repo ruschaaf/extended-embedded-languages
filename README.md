@@ -1,6 +1,10 @@
 # Extended Embedded Languages
 
-Adds syntax highlighting to C++, Go, Javascript, Python, Rust and YAML for strings containing source code. Dozens of languages can be used within the strings such as SQL, HTML, CSS, GLSL, WSGL, LaTeX, JSON, YAML, and more.
+Adds syntax highlighting to C++, Go, Javascript, Python, Rust and YAML
+for strings containing source code. Dozens of languages can be used
+within the strings such as markup languages (HTML, LaTeX), query
+languages (SQL, GraphQL), data languages (JSON, YAML), shader
+languages (GLSL, WSGL), scripts (Shell, Bat) and many more.
 
 ![extension_example](images/extension_usage_anim.gif)
 
@@ -171,16 +175,24 @@ See CONTRIBUTING.md for adding new languages
 
 ## Known Issues
 
-* Syntax highlighting can leak past the end of the string when there are unclosed blocks (for example a `{` without a matching `}`). 
-This is a limitation of the TextMate grammars that VSCode uses - when an _embedded_ syntax highlighter scans for the end of a text section it can scan past the end of the string. [VSCode issue 20488](https://github.com/microsoft/vscode/issues/20488) has a longer discussion on what is going on.
+* Syntax highlighting can leak past the end of the string when there
+are unclosed blocks (for example a `{` without a matching `}`). This
+is a limitation of the TextMate grammars that VSCode uses - when an
+_embedded_ syntax highlighter scans for the end of a text section it
+can scan past the end of the string. [VSCode issue
+20488](https://github.com/microsoft/vscode/issues/20488) has a longer
+discussion on what is going on.
 
-* Because of this same issue, some languages can't be embedded due to how they are defined. For example the most popular `csv` and `mermaid` highlighters will continue past the end of the string when they are embedded.
+* Because of this same issue, some languages can't be embedded due to
+  how they are defined. For example the most popular `csv` and
+  `mermaid` highlighters will continue past the end of the string when
+  they are embedded.
 
 ## Release Notes
 
 ### 1.1.0
 
-Added Rust as a new host language. Updated documentation
+Added Rust and Go as new host languages. Updated documentation
 
 ### 1.0.0
 
