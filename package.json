@@ -184,7 +184,7 @@
         "injectTo": [
           "source.js"
         ],
-        "path": "syntaxes/javscript.embedded.json",
+        "path": "syntaxes/javascript.embedded.json",
         "embeddedLanguages": {
           "meta.embedded.block.bat.javascript": "bat",
           "meta.embedded.block.cpp.javascript": "cpp",
@@ -254,31 +254,6 @@
         }
       }
     ],
-    "snippets": [
-      {
-        "language": "cpp",
-        "path": "snippets/../snippets/cpp.code-snippets"
-      },
-      {
-        "language": "go",
-        "path": "snippets/../snippets/go.code-snippets"
-      },
-      {
-        "language": "python",
-        "path": "snippets/../snippets/python.code-snippets"
-      },
-      {
-        "language": "yaml",
-        "path": "snippets/../snippets/yaml.code-snippets"
-      },
-      {
-        "language": "javascript",
-        "path": "snippets/../snippets/javascript.code-snippets"
-      },
-      {
-        "language": "rust",
-        "path": "snippets/../snippets/rust.code-snippets"
-      }
-    ]
+    "snippets": []
   }
 }

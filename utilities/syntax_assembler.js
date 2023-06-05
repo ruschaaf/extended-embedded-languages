@@ -18,6 +18,79 @@ const SNIPPET_DIR = 'snippets';
 const SYNTAX_DIR = 'syntaxes';
 
 /**
+ * A list of all host languages that we support. Each host language
+ * has the following properties:
+ * - file: The name of the syntax file to generate
+ * - root_scope: The root scope of the host language, where we will
+ *     inject the embedded language syntax
+ * - syntax_builder: A function that will generate the syntax file
+ * - vsname: The name of the language as used by VSCode
+ * - embedded_scope: The scope we will use for the embedded language
+ * - snippet_start: The string that will be inserted to start a
+ *     snippet. Note that "<ID>" or "<COMMENT>" will be replaced with
+ *     the appropriate values from the embedded language. For example
+ *     #<ID> will be replaced with #sql and '''<COMMENT> will be
+ *     replaced with '''--sql when SQL is the embedded language.
+ * - snippet_end: The string that will be inserted to end a snippet.
+ */
+const HOST_LANGUAGE_SPECS = [
+    {
+        file: 'cpp.embedded.json',
+        root_scope: 'source.cpp',
+        syntax_builder: buildCppSyntax,
+        vsname: 'cpp',
+        embedded_scope: 'source.cpp.embedded.codeblock',
+        snippet_start: 'R"<ID>(',
+        snippet_end: ')<ID>"',
+    },
+    {
+        file: 'go.embedded.json',
+        root_scope: 'source.go',
+        syntax_builder: buildGoSyntax,
+        vsname: 'go',
+        embedded_scope: 'source.go.embedded.codeblock',
+        snippet_start: '/*<ID>*/ `',
+        snippet_end: '`',
+    },
+    {
+        file: 'python.embedded.json',
+        root_scope: 'source.python',
+        syntax_builder: buildPythonSyntax,
+        vsname: 'python',
+        embedded_scope: 'source.python.embedded.codeblock',
+        snippet_start: '"""<COMMENT>',
+        snippet_end: '"""',
+    },
+    {
+        file: 'yaml.embedded.json',
+        root_scope: 'source.yaml',
+        syntax_builder: buildYamlSyntax,
+        vsname: 'yaml',
+        embedded_scope: 'source.yaml.embedded.codeblock',
+        snippet_start: '| #<ID>',
+        snippet_end: '',
+    },
+    {
+        file: 'javascript.embedded.json',
+        root_scope: 'source.js',
+        syntax_builder: buildJavascriptSyntax,
+        vsname: 'javascript',
+        embedded_scope: 'source.js.embedded.codeblock',
+        snippet_start: '/*<ID>*/ `',
+        snippet_end: '`',
+    },
+    {
+        file: 'rust.embedded.json',
+        root_scope: 'source.rust',
+        syntax_builder: buildRustSyntax,
+        vsname: 'rust',
+        embedded_scope: 'source.rust.embedded.codeblock',
+        snippet_start: '/*<ID>*/ r#"',
+        snippet_end: '"#',
+    },
+];
+
+/**
  * Escapes any characters in a string so that the string can be
  * included in a regular expression. For example '[1.2]' would become
  * '\[1\.2\]'
@@ -38,14 +111,10 @@ function regexpEscape(str) {
  * Also updates package.json to point to these generated snippets
  * @param {*} hostSpecs
  * @param {*} embeddedSpecs
+ * @param {*} registerSnippets
  */
-function generateAllSnippets(hostSpecs, embeddedSpecs) {
-    // Update the package.json to add all our embedded language snippets
+function generateAllSnippets(hostSpecs, embeddedSpecs, registerSnippets = false) {
     const packageDir = path.dirname(PACKAGE_JSON_PATH);
-    const packageJson = JSON.parse(fs.readFileSync(PACKAGE_JSON_PATH));
-
-    packageJson.contributes.snippets = [];
-
     fs.mkdirSync(path.join(packageDir, SNIPPET_DIR), { recursive: true });
 
     hostSpecs.forEach((spec) => {
@@ -76,18 +145,23 @@ function generateAllSnippets(hostSpecs, embeddedSpecs) {
         );
         console.log(`Writing ${snippetPath}`);
         fs.writeFileSync(snippetPath, JSON.stringify(Object.fromEntries(embeddedSnippets), null, 2));
-
-        packageJson.contributes.snippets.push({
-            'language': spec.vsname,
-            'path': `${SNIPPET_DIR}/${snippetPath}`,
-        });
     });
 
-    // Disabled for now - don't write the updated JSON until we are
-    // sure we want to register all these snippets with VSCode
-    // fs.writeFileSync(
-    //     PACKAGE_JSON_PATH,
-    //     JSON.stringify(packageJson, null, 2));
+    // Optionally, update the package.json to register the snippets
+    const packageJson = JSON.parse(fs.readFileSync(PACKAGE_JSON_PATH));
+
+    if (registerSnippets) {
+        packageJson.contributes.snippets = hostSpecs.map((spec) => ({
+            'language': spec.vsname,
+            'path': `${SNIPPET_DIR}/${spec.vsname}.code-snippets`,
+        }));
+    } else {
+        packageJson.contributes.snippets = [];
+    }
+
+    fs.writeFileSync(
+        PACKAGE_JSON_PATH,
+        JSON.stringify(packageJson, null, 2));
 }
 
 /**
@@ -146,66 +220,7 @@ function generateAllSyntaxes(hostSpecs, embeddedSpecs) {
  * language rules when the extension is loaded.
  */
 function main() {
-    const hostLanguageSpecs = [
-        {
-            file: 'cpp.embedded.json',
-            root_scope: 'source.cpp',
-            syntax_builder: buildCppSyntax,
-            vsname: 'cpp',
-            embedded_scope: 'source.cpp.embedded.codeblock',
-            // <ID> or <COMMENT> here will be replaced by the embedded
-            // language's first ID or the example comment string
-            // respectively
-            snippet_start: 'R"<ID>(',
-            snippet_end: ')<ID>"',
-        },
-        {
-            file: 'go.embedded.json',
-            root_scope: 'source.go',
-            syntax_builder: buildGoSyntax,
-            vsname: 'go',
-            embedded_scope: 'source.go.embedded.codeblock',
-            snippet_start: '/*<ID>*/ `',
-            snippet_end: '`',
-        },
-        {
-            file: 'python.embedded.json',
-            root_scope: 'source.python',
-            syntax_builder: buildPythonSyntax,
-            vsname: 'python',
-            embedded_scope: 'source.python.embedded.codeblock',
-            snippet_start: '"""<COMMENT>',
-            snippet_end: '"""',
-        },
-        {
-            file: 'yaml.embedded.json',
-            root_scope: 'source.yaml',
-            syntax_builder: buildYamlSyntax,
-            vsname: 'yaml',
-            embedded_scope: 'source.yaml.embedded.codeblock',
-            snippet_start: '| #<ID>',
-            snippet_end: '',
-        },
-        {
-            file: 'javscript.embedded.json',
-            root_scope: 'source.js',
-            syntax_builder: buildJavascriptSyntax,
-            vsname: 'javascript',
-            embedded_scope: 'source.js.embedded.codeblock',
-            snippet_start: '/*<ID>*/ `',
-            snippet_end: '`',
-        },
-        {
-            file: 'rust.embedded.json',
-            root_scope: 'source.rust',
-            syntax_builder: buildRustSyntax,
-            vsname: 'rust',
-            embedded_scope: 'source.rust.embedded.codeblock',
-            snippet_start: '/*<ID>*/ r#"',
-            snippet_end: '"#',
-        },
-    ];
-
+    const hostLanguageSpecs = HOST_LANGUAGE_SPECS;
     const embeddedLanguageSpecs = readEmbeddedSpecs();
 
     // Build some useful text fragments for the syntax templates
@@ -225,7 +240,7 @@ function main() {
 
     // EXPERIMENTAL - for now we generate the snippet files but don't
     // automatically register them with VSCode.
-    generateAllSnippets(hostLanguageSpecs, embeddedLanguageSpecs);
+    generateAllSnippets(hostLanguageSpecs, embeddedLanguageSpecs, /* registerSnippets */ false);
 }
 
 main();
