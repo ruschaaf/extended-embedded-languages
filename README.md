@@ -190,6 +190,10 @@ discussion on what is going on.
 
 ## Release Notes
 
+### 1.1.1
+
+Updated package description, it was too long
+
 ### 1.1.0
 
 Added Rust and Go as new host languages. Updated documentation

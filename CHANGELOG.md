@@ -4,6 +4,10 @@ All notable changes to the "extended-embedded-languages" extension will be docum
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [v1.1.1]
+
+Updated package description, it was too long
+
 ## [v1.1.0]
 Added Rust and Go as host languages
 
