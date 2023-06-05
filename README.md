@@ -1,6 +1,6 @@
 # Extended Embedded Languages
 
-Adds syntax highlighting to C++, Javascript, Python, Rust and YAML for strings containing source code. Dozens of languages can be used within the strings such as SQL, HTML, CSS, GLSL, WSGL, LaTeX, JSON, YAML, and more.
+Adds syntax highlighting to C++, Go, Javascript, Python, Rust and YAML for strings containing source code. Dozens of languages can be used within the strings such as SQL, HTML, CSS, GLSL, WSGL, LaTeX, JSON, YAML, and more.
 
 ![extension_example](images/extension_usage_anim.gif)
 
@@ -101,6 +101,17 @@ use the multiline raw strings that begin with `r#"` (where there are
 0-n `#` characters) and end with `"#`
 
 ![rust_example.png](images/rust_example.png)
+
+---
+## Host Language - Go
+
+All Go strings are multi-line, but this extension uses _raw strings_ 
+for code blocks. These are strings that are surrounded by backticks
+and can contain quote and backslash characters without the need for 
+escaping them (they can not, however, easily contain backticks). 
+These strings must be prefixed with an inline comment indicating the language ID
+
+![go_example.png](images/go_example.png)
 
 ---
 ## Embedded Languages

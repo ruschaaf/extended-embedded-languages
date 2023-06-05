@@ -1,338 +1,338 @@
 {
   "Batch code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "bat"
     ],
     "description": "Insert a Batch code block string",
     "body": [
-      "/*bat*/ r#\"",
+      "/*bat*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "C++ code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "cpp"
     ],
     "description": "Insert a C++ code block string",
     "body": [
-      "/*cpp*/ r#\"",
+      "/*cpp*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "CSS code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "css"
     ],
     "description": "Insert a CSS code block string",
     "body": [
-      "/*css*/ r#\"",
+      "/*css*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "HTML code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "html"
     ],
     "description": "Insert a HTML code block string",
     "body": [
-      "/*html*/ r#\"",
+      "/*html*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "INI code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "ini"
     ],
     "description": "Insert a INI code block string",
     "body": [
-      "/*ini*/ r#\"",
+      "/*ini*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "Javascript code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "js"
     ],
     "description": "Insert a Javascript code block string",
     "body": [
-      "/*js*/ r#\"",
+      "/*js*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "JSON code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "json"
     ],
     "description": "Insert a JSON code block string",
     "body": [
-      "/*json*/ r#\"",
+      "/*json*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "JSONC code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "jsonc"
     ],
     "description": "Insert a JSONC code block string",
     "body": [
-      "/*jsonc*/ r#\"",
+      "/*jsonc*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "Python code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "py"
     ],
     "description": "Insert a Python code block string",
     "body": [
-      "/*py*/ r#\"",
+      "/*py*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "Shell code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "sh"
     ],
     "description": "Insert a Shell code block string",
     "body": [
-      "/*sh*/ r#\"",
+      "/*sh*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "SQL code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "sql"
     ],
     "description": "Insert a SQL code block string",
     "body": [
-      "/*sql*/ r#\"",
+      "/*sql*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "TOML code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "toml"
     ],
     "description": "Insert a TOML code block string",
     "body": [
-      "/*toml*/ r#\"",
+      "/*toml*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "XML code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "xml"
     ],
     "description": "Insert a XML code block string",
     "body": [
-      "/*xml*/ r#\"",
+      "/*xml*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "YAML code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "yaml"
     ],
     "description": "Insert a YAML code block string",
     "body": [
-      "/*yaml*/ r#\"",
+      "/*yaml*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "C code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "c"
     ],
     "description": "Insert a C code block string",
     "body": [
-      "/*c*/ r#\"",
+      "/*c*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "HLSL code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "hlsl"
     ],
     "description": "Insert a HLSL code block string",
     "body": [
-      "/*hlsl*/ r#\"",
+      "/*hlsl*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "GLSL code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "glsl"
     ],
     "description": "Insert a GLSL code block string",
     "body": [
-      "/*glsl*/ r#\"",
+      "/*glsl*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "Metal code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "metal"
     ],
     "description": "Insert a Metal code block string",
     "body": [
-      "/*metal*/ r#\"",
+      "/*metal*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "WGSL code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "wgsl"
     ],
     "description": "Insert a WGSL code block string",
     "body": [
-      "/*wgsl*/ r#\"",
+      "/*wgsl*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "Lua code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "lua"
     ],
     "description": "Insert a Lua code block string",
     "body": [
-      "/*lua*/ r#\"",
+      "/*lua*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "Makefile code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "make"
     ],
     "description": "Insert a Makefile code block string",
     "body": [
-      "/*make*/ r#\"",
+      "/*make*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "GraphQL code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "graphql"
     ],
     "description": "Insert a GraphQL code block string",
     "body": [
-      "/*graphql*/ r#\"",
+      "/*graphql*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "TypeScript code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "typescript"
     ],
     "description": "Insert a TypeScript code block string",
     "body": [
-      "/*typescript*/ r#\"",
+      "/*typescript*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "LaTeX code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "latex"
     ],
     "description": "Insert a LaTeX code block string",
     "body": [
-      "/*latex*/ r#\"",
+      "/*latex*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "TeX code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "tex"
     ],
     "description": "Insert a TeX code block string",
     "body": [
-      "/*tex*/ r#\"",
+      "/*tex*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "Graphviz code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "graphviz"
     ],
     "description": "Insert a Graphviz code block string",
     "body": [
-      "/*graphviz*/ r#\"",
+      "/*graphviz*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "ARM Assembly code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "arm"
     ],
     "description": "Insert a ARM Assembly code block string",
     "body": [
-      "/*arm*/ r#\"",
+      "/*arm*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   },
   "x86 / x64 Assembly code block (string)": {
-    "scope": "rust",
+    "scope": "go",
     "prefix": [
       "x86"
     ],
     "description": "Insert a x86 / x64 Assembly code block string",
     "body": [
-      "/*x86*/ r#\"",
+      "/*x86*/ `",
       "\t$0",
-      "\"#"
+      "`"
     ]
   }
 }

@@ -1,0 +1,27 @@
+package main
+
+func main() {
+
+//////////////////////////////////////////////////////////////////////
+// Documentation Examples:
+
+  s1 := /*sql*/ `
+    SELECT * FROM users
+    WHERE id = $1
+  `;
+
+  s2 := /* py */ `
+    def hello():
+      print("Hello World")
+  `;
+
+//////////////////////////////////////////////////////////////////////
+// Embedded Examples:
+
+<% snippets.forEach(function(snippet){ %>
+// <%= snippet.name %> Example
+  <%= snippet.ids[0] %>_string := /*<%= snippet.ids[0] %>*/ `
+<%-snippet.code%>
+`;
+<% }); %>
+}

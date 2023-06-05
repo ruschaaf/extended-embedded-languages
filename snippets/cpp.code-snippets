@@ -1,250 +1,334 @@
 {
-  "Batch code block": {
+  "Batch code block (string)": {
     "scope": "cpp",
-    "prefix": "bat",
+    "prefix": [
+      "bat"
+    ],
+    "description": "Insert a Batch code block string",
     "body": [
       "R\"bat(",
       "\t$0",
       ")bat\""
     ]
   },
-  "C++ code block": {
+  "C++ code block (string)": {
     "scope": "cpp",
-    "prefix": "cpp",
+    "prefix": [
+      "cpp"
+    ],
+    "description": "Insert a C++ code block string",
     "body": [
       "R\"cpp(",
       "\t$0",
       ")cpp\""
     ]
   },
-  "CSS code block": {
+  "CSS code block (string)": {
     "scope": "cpp",
-    "prefix": "css",
+    "prefix": [
+      "css"
+    ],
+    "description": "Insert a CSS code block string",
     "body": [
       "R\"css(",
       "\t$0",
       ")css\""
     ]
   },
-  "HTML code block": {
+  "HTML code block (string)": {
     "scope": "cpp",
-    "prefix": "html",
+    "prefix": [
+      "html"
+    ],
+    "description": "Insert a HTML code block string",
     "body": [
       "R\"html(",
       "\t$0",
       ")html\""
     ]
   },
-  "INI code block": {
+  "INI code block (string)": {
     "scope": "cpp",
-    "prefix": "ini",
+    "prefix": [
+      "ini"
+    ],
+    "description": "Insert a INI code block string",
     "body": [
       "R\"ini(",
       "\t$0",
       ")ini\""
     ]
   },
-  "Javascript code block": {
+  "Javascript code block (string)": {
     "scope": "cpp",
-    "prefix": "js",
+    "prefix": [
+      "js"
+    ],
+    "description": "Insert a Javascript code block string",
     "body": [
       "R\"js(",
       "\t$0",
       ")js\""
     ]
   },
-  "JSON code block": {
+  "JSON code block (string)": {
     "scope": "cpp",
-    "prefix": "json",
+    "prefix": [
+      "json"
+    ],
+    "description": "Insert a JSON code block string",
     "body": [
       "R\"json(",
       "\t$0",
       ")json\""
     ]
   },
-  "JSONC code block": {
+  "JSONC code block (string)": {
     "scope": "cpp",
-    "prefix": "jsonc",
+    "prefix": [
+      "jsonc"
+    ],
+    "description": "Insert a JSONC code block string",
     "body": [
       "R\"jsonc(",
       "\t$0",
       ")jsonc\""
     ]
   },
-  "Python code block": {
+  "Python code block (string)": {
     "scope": "cpp",
-    "prefix": "py",
+    "prefix": [
+      "py"
+    ],
+    "description": "Insert a Python code block string",
     "body": [
       "R\"py(",
       "\t$0",
       ")py\""
     ]
   },
-  "Shell code block": {
+  "Shell code block (string)": {
     "scope": "cpp",
-    "prefix": "sh",
+    "prefix": [
+      "sh"
+    ],
+    "description": "Insert a Shell code block string",
     "body": [
       "R\"sh(",
       "\t$0",
       ")sh\""
     ]
   },
-  "SQL code block": {
+  "SQL code block (string)": {
     "scope": "cpp",
-    "prefix": "sql",
+    "prefix": [
+      "sql"
+    ],
+    "description": "Insert a SQL code block string",
     "body": [
       "R\"sql(",
       "\t$0",
       ")sql\""
     ]
   },
-  "TOML code block": {
+  "TOML code block (string)": {
     "scope": "cpp",
-    "prefix": "toml",
+    "prefix": [
+      "toml"
+    ],
+    "description": "Insert a TOML code block string",
     "body": [
       "R\"toml(",
       "\t$0",
       ")toml\""
     ]
   },
-  "XML code block": {
+  "XML code block (string)": {
     "scope": "cpp",
-    "prefix": "xml",
+    "prefix": [
+      "xml"
+    ],
+    "description": "Insert a XML code block string",
     "body": [
       "R\"xml(",
       "\t$0",
       ")xml\""
     ]
   },
-  "YAML code block": {
+  "YAML code block (string)": {
     "scope": "cpp",
-    "prefix": "yaml",
+    "prefix": [
+      "yaml"
+    ],
+    "description": "Insert a YAML code block string",
     "body": [
       "R\"yaml(",
       "\t$0",
       ")yaml\""
     ]
   },
-  "C code block": {
+  "C code block (string)": {
     "scope": "cpp",
-    "prefix": "c",
+    "prefix": [
+      "c"
+    ],
+    "description": "Insert a C code block string",
     "body": [
       "R\"c(",
       "\t$0",
       ")c\""
     ]
   },
-  "HLSL code block": {
+  "HLSL code block (string)": {
     "scope": "cpp",
-    "prefix": "hlsl",
+    "prefix": [
+      "hlsl"
+    ],
+    "description": "Insert a HLSL code block string",
     "body": [
       "R\"hlsl(",
       "\t$0",
       ")hlsl\""
     ]
   },
-  "GLSL code block": {
+  "GLSL code block (string)": {
     "scope": "cpp",
-    "prefix": "glsl",
+    "prefix": [
+      "glsl"
+    ],
+    "description": "Insert a GLSL code block string",
     "body": [
       "R\"glsl(",
       "\t$0",
       ")glsl\""
     ]
   },
-  "Metal code block": {
+  "Metal code block (string)": {
     "scope": "cpp",
-    "prefix": "metal",
+    "prefix": [
+      "metal"
+    ],
+    "description": "Insert a Metal code block string",
     "body": [
       "R\"metal(",
       "\t$0",
       ")metal\""
     ]
   },
-  "WGSL code block": {
+  "WGSL code block (string)": {
     "scope": "cpp",
-    "prefix": "wgsl",
+    "prefix": [
+      "wgsl"
+    ],
+    "description": "Insert a WGSL code block string",
     "body": [
       "R\"wgsl(",
       "\t$0",
       ")wgsl\""
     ]
   },
-  "Lua code block": {
+  "Lua code block (string)": {
     "scope": "cpp",
-    "prefix": "lua",
+    "prefix": [
+      "lua"
+    ],
+    "description": "Insert a Lua code block string",
     "body": [
       "R\"lua(",
       "\t$0",
       ")lua\""
     ]
   },
-  "Makefile code block": {
+  "Makefile code block (string)": {
     "scope": "cpp",
-    "prefix": "make",
+    "prefix": [
+      "make"
+    ],
+    "description": "Insert a Makefile code block string",
     "body": [
       "R\"make(",
       "\t$0",
       ")make\""
     ]
   },
-  "GraphQL code block": {
+  "GraphQL code block (string)": {
     "scope": "cpp",
-    "prefix": "graphql",
+    "prefix": [
+      "graphql"
+    ],
+    "description": "Insert a GraphQL code block string",
     "body": [
       "R\"graphql(",
       "\t$0",
       ")graphql\""
     ]
   },
-  "TypeScript code block": {
+  "TypeScript code block (string)": {
     "scope": "cpp",
-    "prefix": "typescript",
+    "prefix": [
+      "typescript"
+    ],
+    "description": "Insert a TypeScript code block string",
     "body": [
       "R\"typescript(",
       "\t$0",
       ")typescript\""
     ]
   },
-  "LaTeX code block": {
+  "LaTeX code block (string)": {
     "scope": "cpp",
-    "prefix": "latex",
+    "prefix": [
+      "latex"
+    ],
+    "description": "Insert a LaTeX code block string",
     "body": [
       "R\"latex(",
       "\t$0",
       ")latex\""
     ]
   },
-  "TeX code block": {
+  "TeX code block (string)": {
     "scope": "cpp",
-    "prefix": "tex",
+    "prefix": [
+      "tex"
+    ],
+    "description": "Insert a TeX code block string",
     "body": [
       "R\"tex(",
       "\t$0",
       ")tex\""
     ]
   },
-  "Graphviz code block": {
+  "Graphviz code block (string)": {
     "scope": "cpp",
-    "prefix": "graphviz",
+    "prefix": [
+      "graphviz"
+    ],
+    "description": "Insert a Graphviz code block string",
     "body": [
       "R\"graphviz(",
       "\t$0",
       ")graphviz\""
     ]
   },
-  "ARM Assembly code block": {
+  "ARM Assembly code block (string)": {
     "scope": "cpp",
-    "prefix": "arm",
+    "prefix": [
+      "arm"
+    ],
+    "description": "Insert a ARM Assembly code block string",
     "body": [
       "R\"arm(",
       "\t$0",
       ")arm\""
     ]
   },
-  "x86 / x64 Assembly code block": {
+  "x86 / x64 Assembly code block (string)": {
     "scope": "cpp",
-    "prefix": "x86",
+    "prefix": [
+      "x86"
+    ],
+    "description": "Insert a x86 / x64 Assembly code block string",
     "body": [
       "R\"x86(",
       "\t$0",

@@ -5,11 +5,12 @@
 import fs from 'fs';
 import path from 'path';
 import { readEmbeddedSpecs } from './embedded_language_specs.js';
-import { buildPythonSyntax } from './syntax_templates/python_syntax.js';
 import { buildCppSyntax } from './syntax_templates/cpp_syntax.js';
-import { buildYamlSyntax } from './syntax_templates/yaml_syntax.js';
+import { buildGoSyntax } from './syntax_templates/go_syntax.js';
 import { buildJavascriptSyntax } from './syntax_templates/javascript_syntax.js';
+import { buildPythonSyntax } from './syntax_templates/python_syntax.js';
 import { buildRustSyntax } from './syntax_templates/rust_syntax.js';
+import { buildYamlSyntax } from './syntax_templates/yaml_syntax.js';
 
 const PACKAGE_JSON_PATH = path.join('..', 'package.json');
 // These dirs are relative to the PACKAGE_JSON_PATH
@@ -59,10 +60,11 @@ function generateAllSnippets(hostSpecs, embeddedSpecs) {
                 .replace('<ID>', embedded.ids[0])
                 .replace('<COMMENT>', embedded.example_comment));
             return [
-                `${embedded.name} code block`,
+                `${embedded.name} code block (string)`,
                 {
                     scope: spec.vsname,
-                    prefix: embedded.ids[0],
+                    prefix: [embedded.ids[0]],
+                    description: `Insert a ${embedded.name} code block string`,
                     body: [
                         snippetStart,
                         '\t$0',
@@ -156,6 +158,15 @@ function main() {
             // respectively
             snippet_start: 'R"<ID>(',
             snippet_end: ')<ID>"',
+        },
+        {
+            file: 'go.embedded.json',
+            root_scope: 'source.go',
+            syntax_builder: buildGoSyntax,
+            vsname: 'go',
+            embedded_scope: 'source.go.embedded.codeblock',
+            snippet_start: '/*<ID>*/ `',
+            snippet_end: '`',
         },
         {
             file: 'python.embedded.json',

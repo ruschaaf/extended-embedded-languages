@@ -15,6 +15,8 @@ const EXAMPLE_OUTPUT_DIR = path.join('..', 'examples');
 
 const hostLanguages = [
     { template: 'cpp.ejs', output: 'example.cpp' },
+    { template: 'go.ejs', output: 'example.go',
+        escapes: [['`', '`+"`"+`']] },
     { template: 'python.ejs', output: 'example.py' },
     { template: 'yaml.ejs', output: 'example.yaml' },
     {

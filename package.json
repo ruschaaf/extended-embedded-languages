@@ -3,7 +3,7 @@
   "displayName": "Extended Embedded Languages",
   "publisher": "ruschaaf",
   "icon": "images/EEL_icon_256.png",
-  "description": "Adds syntax highlighting within multi-line strings, for C++, Python, Javascript, Rust, and YAML. Dozens of languages can be used within the strings such as SQL, HTML, CSS, GLSL, WSGL, LaTeX, JSON, YAML, and more.",
+  "description": "Adds syntax highlighting within multi-line strings, for C++, Go, Python, Javascript, Rust, and YAML. Dozens of languages can be used within the strings such as SQL, HTML, CSS, GLSL, WSGL, LaTeX, JSON, YAML, and more.",
   "version": "1.1.0",
   "license": "MIT",
   "engines": {
@@ -47,7 +47,7 @@
           "meta.embedded.block.json.cpp": "json",
           "meta.embedded.block.jsonc.cpp": "jsonc",
           "meta.embedded.block.python.cpp": "python",
-          "meta.embedded.block.shell.cpp": "shell",
+          "meta.embedded.block.shellscript.cpp": "shellscript",
           "meta.embedded.block.sql.cpp": "sql",
           "meta.embedded.block.toml.cpp": "toml",
           "meta.embedded.block.xml.cpp": "xml",
@@ -69,6 +69,43 @@
         }
       },
       {
+        "scopeName": "source.go.embedded.codeblock",
+        "injectTo": [
+          "source.go"
+        ],
+        "path": "syntaxes/go.embedded.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.bat.go": "bat",
+          "meta.embedded.block.cpp.go": "cpp",
+          "meta.embedded.block.css.go": "css",
+          "meta.embedded.block.html.go": "html",
+          "meta.embedded.block.ini.go": "ini",
+          "meta.embedded.block.javascript.go": "javascript",
+          "meta.embedded.block.json.go": "json",
+          "meta.embedded.block.jsonc.go": "jsonc",
+          "meta.embedded.block.python.go": "python",
+          "meta.embedded.block.shellscript.go": "shellscript",
+          "meta.embedded.block.sql.go": "sql",
+          "meta.embedded.block.toml.go": "toml",
+          "meta.embedded.block.xml.go": "xml",
+          "meta.embedded.block.yaml.go": "yaml",
+          "meta.embedded.block.c.go": "c",
+          "meta.embedded.block.hlsl.go": "hlsl",
+          "meta.embedded.block.glsl.go": "glsl",
+          "meta.embedded.block.metal.go": "metal",
+          "meta.embedded.block.wgsl.go": "wgsl",
+          "meta.embedded.block.lua.go": "lua",
+          "meta.embedded.block.makefile.go": "makefile",
+          "meta.embedded.block.graphql.go": "graphql",
+          "meta.embedded.block.typescript.go": "typescript",
+          "meta.embedded.block.latex.go": "latex",
+          "meta.embedded.block.tex.go": "tex",
+          "meta.embedded.block.dot.go": "dot",
+          "meta.embedded.block.arm.go": "arm",
+          "meta.embedded.block.asm-intel-x86-generic.go": "asm-intel-x86-generic"
+        }
+      },
+      {
         "scopeName": "source.python.embedded.codeblock",
         "injectTo": [
           "source.python"
@@ -84,7 +121,7 @@
           "meta.embedded.block.json.python": "json",
           "meta.embedded.block.jsonc.python": "jsonc",
           "meta.embedded.block.python.python": "python",
-          "meta.embedded.block.shell.python": "shell",
+          "meta.embedded.block.shellscript.python": "shellscript",
           "meta.embedded.block.sql.python": "sql",
           "meta.embedded.block.toml.python": "toml",
           "meta.embedded.block.xml.python": "xml",
@@ -121,7 +158,7 @@
           "meta.embedded.block.json.yaml": "json",
           "meta.embedded.block.jsonc.yaml": "jsonc",
           "meta.embedded.block.python.yaml": "python",
-          "meta.embedded.block.shell.yaml": "shell",
+          "meta.embedded.block.shellscript.yaml": "shellscript",
           "meta.embedded.block.sql.yaml": "sql",
           "meta.embedded.block.toml.yaml": "toml",
           "meta.embedded.block.xml.yaml": "xml",
@@ -158,7 +195,7 @@
           "meta.embedded.block.json.javascript": "json",
           "meta.embedded.block.jsonc.javascript": "jsonc",
           "meta.embedded.block.python.javascript": "python",
-          "meta.embedded.block.shell.javascript": "shell",
+          "meta.embedded.block.shellscript.javascript": "shellscript",
           "meta.embedded.block.sql.javascript": "sql",
           "meta.embedded.block.toml.javascript": "toml",
           "meta.embedded.block.xml.javascript": "xml",
@@ -195,7 +232,7 @@
           "meta.embedded.block.json.rust": "json",
           "meta.embedded.block.jsonc.rust": "jsonc",
           "meta.embedded.block.python.rust": "python",
-          "meta.embedded.block.shell.rust": "shell",
+          "meta.embedded.block.shellscript.rust": "shellscript",
           "meta.embedded.block.sql.rust": "sql",
           "meta.embedded.block.toml.rust": "toml",
           "meta.embedded.block.xml.rust": "xml",
@@ -217,6 +254,31 @@
         }
       }
     ],
-    "snippets": []
+    "snippets": [
+      {
+        "language": "cpp",
+        "path": "snippets/../snippets/cpp.code-snippets"
+      },
+      {
+        "language": "go",
+        "path": "snippets/../snippets/go.code-snippets"
+      },
+      {
+        "language": "python",
+        "path": "snippets/../snippets/python.code-snippets"
+      },
+      {
+        "language": "yaml",
+        "path": "snippets/../snippets/yaml.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "snippets/../snippets/javascript.code-snippets"
+      },
+      {
+        "language": "rust",
+        "path": "snippets/../snippets/rust.code-snippets"
+      }
+    ]
   }
 }

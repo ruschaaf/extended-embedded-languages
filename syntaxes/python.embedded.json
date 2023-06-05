@@ -217,7 +217,7 @@
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:\\#sh|\\#bash|\\#shell|\\#!/bin/sh|\\#!/bin/bash|\\#!/usr/bin/env/sbash) \\b )",
           "end": "(\\2)",
-          "contentName": "meta.embedded.block.shell.python source.shell",
+          "contentName": "meta.embedded.block.shellscript.python source.shell",
           "patterns": [
             {
               "include": "source.shell"

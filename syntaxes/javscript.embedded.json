@@ -351,7 +351,7 @@
         {
           "comment": "Shell formatted template strings",
           "begin": "(?x)\n(/\\*(?i:sh|bash|shell|shellscript)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
-          "contentName": "meta.embedded.block.shell.javascript source.shell",
+          "contentName": "meta.embedded.block.shellscript.javascript source.shell",
           "end": "`",
           "beginCaptures": {
             "1": {
@@ -1329,7 +1329,7 @@
         {
           "comment": "Shell formatted template strings",
           "begin": "(?x)\n(?i:sh|bash|shell|shellscript)\n(\\`)",
-          "contentName": "meta.embedded.block.shell.javascript source.shell",
+          "contentName": "meta.embedded.block.shellscript.javascript source.shell",
           "beginCaptures": {
             "1": {
               "name": "entity.name.function.tagged-template.js"

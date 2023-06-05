@@ -358,7 +358,7 @@
                   "include": "source.shell"
                 }
               ],
-              "name": "meta.embedded.block.shell.yaml source.shell"
+              "name": "meta.embedded.block.shellscript.yaml source.shell"
             }
           ]
         },

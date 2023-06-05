@@ -322,7 +322,7 @@
           "comment": "Shell-formatted raw strings",
           "begin": "(/\\*(?i:sh|bash|shell|shellscript)\\*/)\\s*(b?r)(#*)(\")",
           "end": "(\")(\\3)",
-          "contentName": "meta.embedded.block.shell.rust source.shell",
+          "contentName": "meta.embedded.block.shellscript.rust source.shell",
           "patterns": [
             {
               "include": "source.shell"
