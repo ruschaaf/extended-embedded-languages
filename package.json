@@ -222,6 +222,44 @@
         }
       },
       {
+        "scopeName": "source.ts.embedded.codeblock",
+        "injectTo": [
+          "source.ts"
+        ],
+        "path": "syntaxes/typescript.embedded.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.bat.typescript": "bat",
+          "meta.embedded.block.cpp.typescript": "cpp",
+          "meta.embedded.block.css.typescript": "css",
+          "meta.embedded.block.html.typescript": "html",
+          "meta.embedded.block.ini.typescript": "ini",
+          "meta.embedded.block.javascript.typescript": "javascript",
+          "meta.embedded.block.json.typescript": "json",
+          "meta.embedded.block.jsonc.typescript": "jsonc",
+          "meta.embedded.block.python.typescript": "python",
+          "meta.embedded.block.shellscript.typescript": "shellscript",
+          "meta.embedded.block.sql.typescript": "sql",
+          "meta.embedded.block.toml.typescript": "toml",
+          "meta.embedded.block.xml.typescript": "xml",
+          "meta.embedded.block.yaml.typescript": "yaml",
+          "meta.embedded.block.c.typescript": "c",
+          "meta.embedded.block.hlsl.typescript": "hlsl",
+          "meta.embedded.block.glsl.typescript": "glsl",
+          "meta.embedded.block.metal.typescript": "metal",
+          "meta.embedded.block.wgsl.typescript": "wgsl",
+          "meta.embedded.block.lua.typescript": "lua",
+          "meta.embedded.block.makefile.typescript": "makefile",
+          "meta.embedded.block.graphql.typescript": "graphql",
+          "meta.embedded.block.typescript.typescript": "typescript",
+          "meta.embedded.block.latex.typescript": "latex",
+          "meta.embedded.block.tex.typescript": "tex",
+          "meta.embedded.block.dot.typescript": "dot",
+          "meta.embedded.block.arm.typescript": "arm",
+          "meta.embedded.block.asm-intel-x86-generic.typescript": "asm-intel-x86-generic",
+          "meta.embedded.block.handlebars.typescript": "handlebars"
+        }
+      },
+      {
         "scopeName": "source.rust.embedded.codeblock",
         "injectTo": [
           "source.rust"
