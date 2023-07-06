@@ -795,6 +795,34 @@
           "endCaptures": {
             "name": "punctuation.definition.string.end.go"
           }
+        },
+        {
+          "comment": "Handlebars-formatted raw strings",
+          "begin": "(?x)\n( (/\\*) \\s*\n(?i:hbs|handlebars)\n\\s* (\\*/) )\n\\s* (\\`)\n",
+          "beginCaptures": {
+            "1": {
+              "name": "comment.block.go"
+            },
+            "2": {
+              "name": "punctuation.definition.comment.go"
+            },
+            "3": {
+              "name": "punctuation.definition.comment.go"
+            },
+            "4": {
+              "name": "punctuation.definition.string.begin.go"
+            }
+          },
+          "contentName": "meta.embedded.block.handlebars.go text.html.handlebars",
+          "patterns": [
+            {
+              "include": "text.html.handlebars"
+            }
+          ],
+          "end": "`",
+          "endCaptures": {
+            "name": "punctuation.definition.string.end.go"
+          }
         }
       ]
     }

@@ -1050,6 +1050,43 @@
               "include": "source.asm.x86_64"
             }
           ]
+        },
+        {
+          "comment": "Handlebars formatted template strings",
+          "begin": "(?x)\n(/\\*(?i:hbs|handlebars)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
+          "contentName": "meta.embedded.block.handlebars.javascript text.html.handlebars",
+          "end": "`",
+          "beginCaptures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "source.js#comment"
+                }
+              ]
+            },
+            "2": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "3": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "text.html.handlebars"
+            }
+          ]
         }
       ]
     },
@@ -1893,6 +1930,36 @@
             },
             {
               "include": "source.asm.x86_64"
+            }
+          ]
+        },
+        {
+          "comment": "Handlebars formatted template strings",
+          "begin": "(?x)\n(?i:hbs|handlebars)\n(\\`)",
+          "contentName": "meta.embedded.block.handlebars.javascript text.html.handlebars",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.function.tagged-template.js"
+            },
+            "2": {
+              "name": "string.template.js punctuation.definition.string.template.begin.js"
+            }
+          },
+          "end": "`",
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js punctuation.definition.string.template.end.js"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "text.html.handlebars"
             }
           ]
         }

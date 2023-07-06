@@ -879,6 +879,37 @@
               "name": "meta.encoding.cpp"
             }
           }
+        },
+        {
+          "comment": "Handlebars-formatted raw strings",
+          "begin": "(?x)\n\\b \n( (?:u|U|L|u8)? R ) \" \n( (?i:hbs|handlebars) \\b [^\\(]* ) \n\\(",
+          "end": "\\)(\\2)\"",
+          "contentName": "meta.embedded.block.handlebars.cpp text.html.handlebars",
+          "patterns": [
+            {
+              "include": "text.html.handlebars"
+            }
+          ],
+          "name": "string.quoted.double.raw.embedded.cpp",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            },
+            "2": {
+              "name": "meta.encoding.cpp"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.cpp"
+            },
+            "1": {
+              "name": "meta.encoding.cpp"
+            }
+          }
         }
       ]
     }

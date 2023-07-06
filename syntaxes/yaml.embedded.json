@@ -991,6 +991,41 @@
               "name": "meta.embedded.block.asm-intel-x86-generic.yaml source.asm.x86_64"
             }
           ]
+        },
+        {
+          "comment": "Handlebars-formatted block scalar strings",
+          "name": "string.quoted.multi.embedded.yaml",
+          "begin": "(?x)\n(?:(\\|)|(>)) ([1-9])? ([-+])? \\s* \n( \\# (?i:hbs|handlebars) ) \\b \\s* \\n?",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.flow.block-scalar.literal.yaml"
+            },
+            "2": {
+              "name": "keyword.control.flow.block-scalar.folded.yaml"
+            },
+            "3": {
+              "name": "constant.numeric.indentation-indicator.yaml"
+            },
+            "4": {
+              "name": "storage.modifier.chomping-indicator.yaml"
+            },
+            "5": {
+              "name": "meta.encoding.yaml"
+            }
+          },
+          "end": "^(?=\\S)|(?!\\G)",
+          "patterns": [
+            {
+              "begin": "^([ ]+)(?! )",
+              "end": "^(?!\\1|\\s*$)",
+              "patterns": [
+                {
+                  "include": "text.html.handlebars"
+                }
+              ],
+              "name": "meta.embedded.block.handlebars.yaml text.html.handlebars"
+            }
+          ]
         }
       ]
     }

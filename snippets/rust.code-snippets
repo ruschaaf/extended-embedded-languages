@@ -334,5 +334,17 @@
       "\t$0",
       "\"#"
     ]
+  },
+  "Handlebars code block (string)": {
+    "scope": "rust",
+    "prefix": [
+      "hbs"
+    ],
+    "description": "Insert a Handlebars code block string",
+    "body": [
+      "/*hbs*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
   }
 }

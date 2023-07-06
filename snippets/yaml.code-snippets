@@ -334,5 +334,17 @@
       "\t$0",
       ""
     ]
+  },
+  "Handlebars code block (string)": {
+    "scope": "yaml",
+    "prefix": [
+      "hbs"
+    ],
+    "description": "Insert a Handlebars code block string",
+    "body": [
+      "| #hbs",
+      "\t$0",
+      ""
+    ]
   }
 }

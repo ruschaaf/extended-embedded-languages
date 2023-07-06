@@ -12,7 +12,7 @@ This Visual Studio Code extension enables syntax highlighting _within_
 strings that contain source code. For example, a Python script might
 have strings containing SQL or HTML or Bash. This plugin will add
 syntax highlighting, and additionally code folding and
-language-specific editor features within those strings. 
+language-specific editor features within those strings.
 
 This is similar to how you can select syntax highlighting within
 Markdown documents using a language specifier (e.g. ` ```py `) or
@@ -23,7 +23,7 @@ switch between HTML, Javascript, and CSS in the same HTML document.
 
 This plugin extends the syntax highlighting of several **host**
 languages in order to highlight **embedded** sub-languages within
-strings. 
+strings.
 
 You need to specify which language you are using within the string.
 How this is done depends on the host language (see below). Once that
@@ -38,9 +38,9 @@ the natural structure of the embedded language block too - collapsing
 ---
 ## Host Language - C++
 
-C++ uses _raw strings_ to specify the language. 
+C++ uses _raw strings_ to specify the language.
 
-A raw string in C++ looks like 
+A raw string in C++ looks like
 ```cpp
 auto s = R"foo( ...text )foo";
 ```
@@ -63,7 +63,7 @@ code goes here
 `;
 ```
 
-Or as a _tagged template_, this style expects there to be a function with the name of the language which can process the string (see the [tagged template documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates) for 
+Or as a _tagged template_, this style expects there to be a function with the name of the language which can process the string (see the [tagged template documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates) for
 examples and for an identity template which just returns the input string)
 ```javascript
 const s = lang_id`
@@ -109,10 +109,10 @@ use the multiline raw strings that begin with `r#"` (where there are
 ---
 ## Host Language - Go
 
-All Go strings are multi-line, but this extension uses _raw strings_ 
+All Go strings are multi-line, but this extension uses _raw strings_
 for code blocks. These are strings that are surrounded by backticks
-and can contain quote and backslash characters without the need for 
-escaping them (they can not, however, easily contain backticks). 
+and can contain quote and backslash characters without the need for
+escaping them (they can not, however, easily contain backticks).
 These strings must be prefixed with an inline comment indicating the language ID
 
 ![go_example.png](images/go_example.png)
@@ -138,6 +138,7 @@ signal which language you are using.
 | GLSL                   | glsl                         | `//glsl`                                       |
 | GraphQL                | graphql, gql                 | `#graphql`, `#gql`                             |
 | Graphviz               | graphviz, dot                | `//graphviz`, `//dot`                          |
+| Handlebars             | handlebars, hbs              | `//handlebars`, `//hbs`                        |
 | HLSL                   | hlsl                         | `//hlsl`                                       |
 | HTML                   | html                         | `<!DOCTYPE`, `<html`, `<!--html`               |
 | Ini                    | ini                          | `;ini`                                         |
@@ -161,7 +162,7 @@ signal which language you are using.
 
 
 [^1]: JSON does not support comments, so there is no way to indicate a
-  string is a JSON document within the string. 
+  string is a JSON document within the string.
 
 ## Developer Notes
 
@@ -201,4 +202,3 @@ Added Rust and Go as new host languages. Updated documentation
 ### 1.0.0
 
 Initial release of Extended Embedded Languages
-
