@@ -1,9 +1,9 @@
 # Extended Embedded Languages
 
-Adds syntax highlighting to C++, Go, Javascript, Python, Rust and YAML
-for strings containing source code. Dozens of languages can be used
-within the strings such as markup languages (HTML, LaTeX), query
-languages (SQL, GraphQL), data languages (JSON, YAML), shader
+Adds syntax highlighting to C++, Go, Javascript, TypeScript, Python,
+Rust and YAML for strings containing source code. Dozens of languages
+can be used within the strings such as markup languages (HTML, LaTeX),
+query languages (SQL, GraphQL), data languages (JSON, YAML), shader
 languages (GLSL, WSGL), scripts (Shell, Bat) and many more.
 
 ![extension_example](images/extension_usage_anim.gif)
@@ -52,9 +52,12 @@ the string as well:
 ![cpp_example.png](images/cpp_example.png)
 
 ---
-## Host language - Javascript
+## Host language - Javascript and TypeScript
 
-Javascript template strings delimited by backticks (e.g. `` `...text...` ``) can be multiline. This extension supports two different ways to specify the language in a multiline template string.
+Javascript and TypeScript template strings delimited by backticks
+(e.g. `` `...text...` ``) can be multiline. This extension supports
+two different ways to specify the language in a multiline template
+string.
 
 As an inline comment before the beginning of the string:
 ```javascript
@@ -63,14 +66,17 @@ code goes here
 `;
 ```
 
-Or as a _tagged template_, this style expects there to be a function with the name of the language which can process the string (see the [tagged template documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates) for
-examples and for an identity template which just returns the input string)
+Or as a _tagged template_, this style expects there to be a function
+with the name of the language which can process the string (see the
+[tagged template
+documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates)
+for examples and for an identity template which just returns the input
+string)
 ```javascript
 const s = lang_id`
 code goes here
 `;
 ```
-
 
 
 ![js_example.png](images/js_example.png)
@@ -112,8 +118,9 @@ use the multiline raw strings that begin with `r#"` (where there are
 All Go strings are multi-line, but this extension uses _raw strings_
 for code blocks. These are strings that are surrounded by backticks
 and can contain quote and backslash characters without the need for
-escaping them (they can not, however, easily contain backticks).
-These strings must be prefixed with an inline comment indicating the language ID
+escaping them (they can not, however, easily contain backticks). These
+strings must be prefixed with an inline comment indicating the
+language ID
 
 ![go_example.png](images/go_example.png)
 
@@ -121,11 +128,11 @@ These strings must be prefixed with an inline comment indicating the language ID
 ## Embedded Languages
 
 This extension supports a large number of embedded languages, listed
-below. The "ID" column shows the IDs you can use in host languages like
-C++ and YAML where you can specify an ID in the _host_ language. The
-"Comment" column is for host languages like Python which have no way
-to indicate the embedded language type directly, and shows what the
-first characters of the _embedded_ language string needs to be to
+below. The "ID" column shows the IDs you can use in host languages
+like C++ and YAML where you can specify an ID in the _host_ language.
+The "Comment" column is for host languages like Python which have no
+way to indicate the embedded language type directly, and shows what
+the first characters of the _embedded_ language string needs to be to
 signal which language you are using.
 
 | Name                   | ID                           | Comment                                        |

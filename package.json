@@ -3,7 +3,7 @@
   "displayName": "Extended Embedded Languages",
   "publisher": "ruschaaf",
   "icon": "images/EEL_icon_256.png",
-  "description": "Adds syntax highlighting to C++, Go, Javascript, Python, Rust and YAML for strings containing source code. Dozens of languages may be embedded, including languages for: markup (HTML, LaTeX), query (SQL, GraphQL), data (JSON, YAML), shader (GLSL, WSGL), scripts (Shell, Bat) and many more.",
+  "description": "Adds syntax highlighting to C++, Go, Javascript, TypesScript, Python, Rust and YAML for strings containing source code. Dozens of languages may be embedded, such as: markup (HTML, LaTeX), query (SQL, GraphQL), data (JSON, YAML), shader (GLSL, WSGL), scripts (Shell, Bat) and many more.",
   "version": "1.1.1",
   "license": "MIT",
   "engines": {
