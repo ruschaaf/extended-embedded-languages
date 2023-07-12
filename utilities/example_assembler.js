@@ -23,6 +23,10 @@ const hostLanguages = [
         template: 'javascript.ejs', output: 'example.js',
         escapes: [['`', '\\`'], ['$', '\\$']],
     },
+    {
+        template: 'typescript.ejs', output: 'example.ts',
+        escapes: [['`', '\\`'], ['$', '\\$']],
+    },
     { template: 'rust.ejs', output: 'example.rs' },
 ];
 

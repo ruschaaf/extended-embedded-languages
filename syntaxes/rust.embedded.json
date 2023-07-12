@@ -963,6 +963,40 @@
               "name": "punctuation.definition.string.raw.rust"
             }
           }
+        },
+        {
+          "comment": "Handlebars-formatted raw strings",
+          "begin": "(/\\*(?i:hbs|handlebars)\\*/)\\s*(b?r)(#*)(\")",
+          "end": "(\")(\\3)",
+          "contentName": "meta.embedded.block.handlebars.rust text.html.handlebars",
+          "patterns": [
+            {
+              "include": "text.html.handlebars"
+            }
+          ],
+          "name": "string.quoted.double.rust",
+          "beginCaptures": {
+            "1": {
+              "name": "comment.block.rust"
+            },
+            "2": {
+              "name": "string.quoted.byte.raw.rust"
+            },
+            "3": {
+              "name": "punctuation.definition.string.raw.rust"
+            },
+            "4": {
+              "name": "punctuation.definition.string.rust"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.rust"
+            },
+            "2": {
+              "name": "punctuation.definition.string.raw.rust"
+            }
+          }
         }
       ]
     }

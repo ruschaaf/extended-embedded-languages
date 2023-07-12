@@ -387,6 +387,16 @@ start:
 """
 
 
+# Handlebars Example
+hbs_string = """/*hbs*/
+<ul class="people_list">
+  {{#each people}}
+    <li>{{this}}</li>
+  {{/each}}
+</ul>
+"""
+
+
 ######################################################################
 ## Test Code:
 

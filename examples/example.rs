@@ -422,5 +422,16 @@ start:
 "#;
 
 
+//////////////////////////////////////////////////////////////////////
+// Handlebars Example
+let hbs_string = /*hbs*/ r#"
+<ul class="people_list">
+  {{#each people}}
+    <li>{{this}}</li>
+  {{/each}}
+</ul>
+"#;
+
+
 
 }

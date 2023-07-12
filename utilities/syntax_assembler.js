@@ -8,6 +8,7 @@ import { readEmbeddedSpecs } from './embedded_language_specs.js';
 import { buildCppSyntax } from './syntax_templates/cpp_syntax.js';
 import { buildGoSyntax } from './syntax_templates/go_syntax.js';
 import { buildJavascriptSyntax } from './syntax_templates/javascript_syntax.js';
+import { buildTypescriptSyntax } from './syntax_templates/typescript_syntax.js';
 import { buildPythonSyntax } from './syntax_templates/python_syntax.js';
 import { buildRustSyntax } from './syntax_templates/rust_syntax.js';
 import { buildYamlSyntax } from './syntax_templates/yaml_syntax.js';
@@ -76,6 +77,15 @@ const HOST_LANGUAGE_SPECS = [
         syntax_builder: buildJavascriptSyntax,
         vsname: 'javascript',
         embedded_scope: 'source.js.embedded.codeblock',
+        snippet_start: '/*<ID>*/ `',
+        snippet_end: '`',
+    },
+    {
+        file: 'typescript.embedded.json',
+        root_scope: 'source.ts',
+        syntax_builder: buildTypescriptSyntax,
+        vsname: 'typescript',
+        embedded_scope: 'source.ts.embedded.codeblock',
         snippet_start: '/*<ID>*/ `',
         snippet_end: '`',
     },

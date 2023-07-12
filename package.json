@@ -3,7 +3,7 @@
   "displayName": "Extended Embedded Languages",
   "publisher": "ruschaaf",
   "icon": "images/EEL_icon_256.png",
-  "description": "Adds syntax highlighting to C++, Go, Javascript, Python, Rust and YAML for strings containing source code. Dozens of languages may be embedded, including languages for: markup (HTML, LaTeX), query (SQL, GraphQL), data (JSON, YAML), shader (GLSL, WSGL), scripts (Shell, Bat) and many more.",
+  "description": "Adds syntax highlighting to C++, Go, Javascript, TypesScript, Python, Rust and YAML for strings containing source code. Dozens of languages may be embedded, such as: markup (HTML, LaTeX), query (SQL, GraphQL), data (JSON, YAML), shader (GLSL, WSGL), scripts (Shell, Bat) and many more.",
   "version": "1.1.1",
   "license": "MIT",
   "engines": {
@@ -65,7 +65,8 @@
           "meta.embedded.block.tex.cpp": "tex",
           "meta.embedded.block.dot.cpp": "dot",
           "meta.embedded.block.arm.cpp": "arm",
-          "meta.embedded.block.asm-intel-x86-generic.cpp": "asm-intel-x86-generic"
+          "meta.embedded.block.asm-intel-x86-generic.cpp": "asm-intel-x86-generic",
+          "meta.embedded.block.handlebars.cpp": "handlebars"
         }
       },
       {
@@ -102,7 +103,8 @@
           "meta.embedded.block.tex.go": "tex",
           "meta.embedded.block.dot.go": "dot",
           "meta.embedded.block.arm.go": "arm",
-          "meta.embedded.block.asm-intel-x86-generic.go": "asm-intel-x86-generic"
+          "meta.embedded.block.asm-intel-x86-generic.go": "asm-intel-x86-generic",
+          "meta.embedded.block.handlebars.go": "handlebars"
         }
       },
       {
@@ -139,7 +141,8 @@
           "meta.embedded.block.tex.python": "tex",
           "meta.embedded.block.dot.python": "dot",
           "meta.embedded.block.arm.python": "arm",
-          "meta.embedded.block.asm-intel-x86-generic.python": "asm-intel-x86-generic"
+          "meta.embedded.block.asm-intel-x86-generic.python": "asm-intel-x86-generic",
+          "meta.embedded.block.handlebars.python": "handlebars"
         }
       },
       {
@@ -176,7 +179,8 @@
           "meta.embedded.block.tex.yaml": "tex",
           "meta.embedded.block.dot.yaml": "dot",
           "meta.embedded.block.arm.yaml": "arm",
-          "meta.embedded.block.asm-intel-x86-generic.yaml": "asm-intel-x86-generic"
+          "meta.embedded.block.asm-intel-x86-generic.yaml": "asm-intel-x86-generic",
+          "meta.embedded.block.handlebars.yaml": "handlebars"
         }
       },
       {
@@ -213,7 +217,46 @@
           "meta.embedded.block.tex.javascript": "tex",
           "meta.embedded.block.dot.javascript": "dot",
           "meta.embedded.block.arm.javascript": "arm",
-          "meta.embedded.block.asm-intel-x86-generic.javascript": "asm-intel-x86-generic"
+          "meta.embedded.block.asm-intel-x86-generic.javascript": "asm-intel-x86-generic",
+          "meta.embedded.block.handlebars.javascript": "handlebars"
+        }
+      },
+      {
+        "scopeName": "source.ts.embedded.codeblock",
+        "injectTo": [
+          "source.ts"
+        ],
+        "path": "syntaxes/typescript.embedded.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.bat.typescript": "bat",
+          "meta.embedded.block.cpp.typescript": "cpp",
+          "meta.embedded.block.css.typescript": "css",
+          "meta.embedded.block.html.typescript": "html",
+          "meta.embedded.block.ini.typescript": "ini",
+          "meta.embedded.block.javascript.typescript": "javascript",
+          "meta.embedded.block.json.typescript": "json",
+          "meta.embedded.block.jsonc.typescript": "jsonc",
+          "meta.embedded.block.python.typescript": "python",
+          "meta.embedded.block.shellscript.typescript": "shellscript",
+          "meta.embedded.block.sql.typescript": "sql",
+          "meta.embedded.block.toml.typescript": "toml",
+          "meta.embedded.block.xml.typescript": "xml",
+          "meta.embedded.block.yaml.typescript": "yaml",
+          "meta.embedded.block.c.typescript": "c",
+          "meta.embedded.block.hlsl.typescript": "hlsl",
+          "meta.embedded.block.glsl.typescript": "glsl",
+          "meta.embedded.block.metal.typescript": "metal",
+          "meta.embedded.block.wgsl.typescript": "wgsl",
+          "meta.embedded.block.lua.typescript": "lua",
+          "meta.embedded.block.makefile.typescript": "makefile",
+          "meta.embedded.block.graphql.typescript": "graphql",
+          "meta.embedded.block.typescript.typescript": "typescript",
+          "meta.embedded.block.latex.typescript": "latex",
+          "meta.embedded.block.tex.typescript": "tex",
+          "meta.embedded.block.dot.typescript": "dot",
+          "meta.embedded.block.arm.typescript": "arm",
+          "meta.embedded.block.asm-intel-x86-generic.typescript": "asm-intel-x86-generic",
+          "meta.embedded.block.handlebars.typescript": "handlebars"
         }
       },
       {
@@ -250,7 +293,8 @@
           "meta.embedded.block.tex.rust": "tex",
           "meta.embedded.block.dot.rust": "dot",
           "meta.embedded.block.arm.rust": "arm",
-          "meta.embedded.block.asm-intel-x86-generic.rust": "asm-intel-x86-generic"
+          "meta.embedded.block.asm-intel-x86-generic.rust": "asm-intel-x86-generic",
+          "meta.embedded.block.handlebars.rust": "handlebars"
         }
       }
     ],

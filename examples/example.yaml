@@ -341,6 +341,14 @@ embedded_examples:
         jnz start
     
 
+  # Handlebars Example
+  sample_hbs: | #hbs
+    <ul class="people_list">
+      {{#each people}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+
 
 
 ######################################################################
