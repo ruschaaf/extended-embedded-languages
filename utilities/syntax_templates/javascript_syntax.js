@@ -21,7 +21,7 @@ export function buildJavascriptSyntax(hostSpec, embeddedSpecs) {
             'contentName': `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
             'end': '`',
             'beginCaptures': {
-                '1': { 'patterns': [{ 'include': `${hostSpec.root_scope}#comment` }] },
+                '1': { 'patterns': [{ 'include': 'source.js#comment' }] },
                 '2': { 'name': 'entity.name.function.tagged-template.js' },
                 '3': { 'name': 'string.template.js punctuation.definition.string.template.begin.js' },
             },

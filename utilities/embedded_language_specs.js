@@ -16,7 +16,8 @@ const SAMPLE_NAME = 'sample';
  * @property {string} extension - Standard file extension for this
  * language (used when searching for example samples)}
  * @property {string} root_scope - The root TextMate scope for this
- * language
+ * language (this determines _which_ grammar to use for the embedded
+ * language)
  * @property {string[]} ids - Array of IDs that can be used to specify
  * this language, in a host language that is able to use language IDs
  * @property {string[]} comments - Array of comment prefixes that can

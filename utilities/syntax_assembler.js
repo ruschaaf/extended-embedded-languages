@@ -22,8 +22,10 @@ const SYNTAX_DIR = 'syntaxes';
  * A list of all host languages that we support. Each host language
  * has the following properties:
  * - file: The name of the syntax file to generate
- * - root_scope: The root scope of the host language, where we will
- *     inject the embedded language syntax
+ * - root_scopes: The root scopes of the host language, where we will
+ *     inject the embedded language syntax. In rare cases there may
+ *     be more than one root scope that is able to use the same
+ *     language injection.
  * - syntax_builder: A function that will generate the syntax file
  * - vsname: The name of the language as used by VSCode
  * - embedded_scope: The scope we will use for the embedded language
@@ -37,7 +39,7 @@ const SYNTAX_DIR = 'syntaxes';
 const HOST_LANGUAGE_SPECS = [
     {
         file: 'cpp.embedded.json',
-        root_scope: 'source.cpp',
+        root_scopes: ['source.cpp'],
         syntax_builder: buildCppSyntax,
         vsname: 'cpp',
         embedded_scope: 'source.cpp.embedded.codeblock',
@@ -46,7 +48,7 @@ const HOST_LANGUAGE_SPECS = [
     },
     {
         file: 'go.embedded.json',
-        root_scope: 'source.go',
+        root_scopes: ['source.go'],
         syntax_builder: buildGoSyntax,
         vsname: 'go',
         embedded_scope: 'source.go.embedded.codeblock',
@@ -55,7 +57,7 @@ const HOST_LANGUAGE_SPECS = [
     },
     {
         file: 'python.embedded.json',
-        root_scope: 'source.python',
+        root_scopes: ['source.python'],
         syntax_builder: buildPythonSyntax,
         vsname: 'python',
         embedded_scope: 'source.python.embedded.codeblock',
@@ -64,7 +66,7 @@ const HOST_LANGUAGE_SPECS = [
     },
     {
         file: 'yaml.embedded.json',
-        root_scope: 'source.yaml',
+        root_scopes: ['source.yaml', 'text.yaml.jinja'],
         syntax_builder: buildYamlSyntax,
         vsname: 'yaml',
         embedded_scope: 'source.yaml.embedded.codeblock',
@@ -73,7 +75,7 @@ const HOST_LANGUAGE_SPECS = [
     },
     {
         file: 'javascript.embedded.json',
-        root_scope: 'source.js',
+        root_scopes: ['source.js'],
         syntax_builder: buildJavascriptSyntax,
         vsname: 'javascript',
         embedded_scope: 'source.js.embedded.codeblock',
@@ -82,7 +84,7 @@ const HOST_LANGUAGE_SPECS = [
     },
     {
         file: 'typescript.embedded.json',
-        root_scope: 'source.ts',
+        root_scopes: ['source.ts'],
         syntax_builder: buildTypescriptSyntax,
         vsname: 'typescript',
         embedded_scope: 'source.ts.embedded.codeblock',
@@ -91,7 +93,7 @@ const HOST_LANGUAGE_SPECS = [
     },
     {
         file: 'rust.embedded.json',
-        root_scope: 'source.rust',
+        root_scopes: ['source.rust'],
         syntax_builder: buildRustSyntax,
         vsname: 'rust',
         embedded_scope: 'source.rust.embedded.codeblock',
@@ -212,7 +214,7 @@ function generateAllSyntaxes(hostSpecs, embeddedSpecs) {
 
         packageJson.contributes.grammars.push({
             'scopeName': spec.embedded_scope,
-            'injectTo': [spec.root_scope],
+            'injectTo': spec.root_scopes,
             'path': `${SYNTAX_DIR}/${spec.file}`,
             'embeddedLanguages': Object.fromEntries(embeddingsArray),
         });

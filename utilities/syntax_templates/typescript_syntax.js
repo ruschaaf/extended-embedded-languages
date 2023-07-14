@@ -21,7 +21,7 @@ export function buildTypescriptSyntax(hostSpec, embeddedSpecs) {
             'contentName': `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
             'end': '`',
             'beginCaptures': {
-                '1': { 'patterns': [{ 'include': `${hostSpec.root_scope}#comment` }] },
+                '1': { 'patterns': [{ 'include': 'source.ts#comment' }] },
                 '2': { 'name': 'entity.name.function.tagged-template.ts' },
                 '3': { 'name': 'string.template.ts punctuation.definition.string.template.begin.ts' },
             },
