@@ -1,8 +1,12 @@
 # Change Log
 
-All notable changes to the "extended-embedded-languages" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [v1.2.0]
+
+* Added `TypeScript` as a host language, and `Handlebars` as an embedded language (thanks to [@AVor0n](https://github.com/AVor0n) for these additions)
+* Loading the most popular Jinja extension no longer disables syntax highlighting in YAML files (Issue [#1](https://github.com/ruschaaf/extended-embedded-languages/issues/1))
+* Updated docs
+
 
 ## [v1.1.1]
 

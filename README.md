@@ -198,14 +198,5 @@ discussion on what is going on.
 
 ## Release Notes
 
-### 1.1.1
+See CHANGELOG.md for full list of changes
 
-Updated package description, it was too long
-
-### 1.1.0
-
-Added Rust and Go as new host languages. Updated documentation
-
-### 1.0.0
-
-Initial release of Extended Embedded Languages

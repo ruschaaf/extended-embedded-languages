@@ -20,6 +20,20 @@ prefix lines with `--` not `//`. Code folding will use the natural
 structure of the embedded language block too - collapsing `<tags>` in
 an XML string, or `{` braces in a C string
 
+## Architecture
+
+Most of what VSCode thinks of as the extension is in fact generated.
+This includes everything in the `snippets` and `syntaxes`
+subdirectories, as well as the `examples` and most of `package.json`.
+Two utility scripts described below are responsible for doing the
+generation. So contributions to this extension will likely mean
+contributing to the code generators and then running them to rebuild
+the active extension. 
+
+Often, you can test changes by editing the syntaxes or package.json
+files directly, but this should be used purely for testing. Any
+changes here may be overwritten by the automated generator.
+
 ## Utilities
 
 There are two utilities within the `utilities` folder you will need,
@@ -66,7 +80,7 @@ Embedded languages are relatively simple to add.
       document
     * `extension` - The standard file extension used for these files
       (used when generating example code)
-    * `root_scope` - The root TextMate scope for this language. Find
+    * `root_scopes` - The root TextMate scope(s) for this language. Find
       this by either using the "Inspect...Scopes" command described
       below or looking at the `package.json` file for the extension
       that adds that language parser (many of these are available at
@@ -104,32 +118,59 @@ language. This is a JSON file containing TextMate rules for how to
 identify a code block in a particular language, and then how to syntax
 highlight that code block.
 
-Basic steps are:
-* Create a new `utilities/syntax_templates` file containing a function
-  that generates the language injection given a list of embedded
-  languages.
-* Add the new language to `utilities/syntax_assembler.js`
-* Create an example file so you can see if it works. Add a new
-  template to `utilities/example_host_templates` and update
-  `example_assembler.js`
-* Test it in the VSCode extension host (press F5 or `Debug: Start
-  Debugging` from this workspace to open a new window with the
-  extension loaded )
-* Use the Scope Inspector to debug your textmate grammar (`Developer:
-  Inspect Editor Token and Scopes`)
-* Take new screenshots of the language, update documentation
+1. Create a new syntax template. 
+  * Find the language definition for the host language you are
+    extending. These are usually `.tmLanguage.json` files that you can
+    find inside whichever VSCode extension does the syntax
+    highlighting. From there you can look at the structure of the
+    syntax and find how multiline strings are highlighted. 
+  * Determine how to identify the embedded language within the host
+    language. See below for suggestions. 
+  * Add a `utilities/syntax_templates` file containing a function
+  that generates the language injection as a JSON object which will
+  then get written to a file. It takes a list of embedded
+  language specifications - each of these will be used to form the
+  regular expression we will match, and to insert the embedded
+  language's grammar into the host language.
+2. Add the host language specification to
+   `utilities/syntax_assembler.js`. This includes loading the function
+   defined above, and filling out some metadata about the host language.
+3. Create an example file
+  * In `utilities/example_host_templates`, create a
+   `<HOST_LANGUAGE>.ejs` This is an EJS template which will generate
+   an example of the host language that contains **all** of the
+   embedded languages. You can also use this file to demonstrate
+   examples of what would and would not get highlighted, or unique
+   features of the host language.
+  * Update `example_assembler.js` to include the new host language.
+4. Generate the code (`make all`) and test it out
+  * Test it in the VSCode extension host (press F5 or `Debug: Start
+    Debugging` from this workspace to open a new window with the
+    extension loaded )
+  * Use the Scope Inspector to debug your textmate grammar (`Developer:
+    Inspect Editor Token and Scopes`)
+5. Take new screenshots of the language, update documentation
+  * README.md should describe how users will specify the embedded
+    language within this host.
 
 When adding a rule to the host language, here are some things to keep
 in mind:
 
 * If the host language supports "here docs" or similar text blocks
   that have an arbitrary delimiter, use this delimiter to hold the
-  language ID
+  language ID. Try and let the user customize the delimiter as long as
+  it starts with a language ID (followed by a non-alphabetic
+  character, so that 'css' and 'c' don't both match the C language
+  regexp)
 ```c++
 // C++
 str = R"css(
   .h1 { .color = #003366; }
-)";
+)css";
+
+str = R"c_header(
+#include "stdio.h"
+)c_header";
 ```
 
 * If the host langugate supports multiline strings _and_ inline
@@ -144,7 +185,8 @@ str = /*css*/`
 
 * If there is no way to specify the language in the host (without
   changing the semantics of the host code), we can fall back to
-  specifying in the embedded language.
+  specifying using a comment in the embedded language. Each embedded
+  language's definition includes a comment string that we can match.
 
 ```py
 # Python
