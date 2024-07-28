@@ -1161,6 +1161,43 @@
               "include": "text.html.markdown"
             }
           ]
+        },
+        {
+          "comment": "Caddyfile formatted template strings",
+          "begin": "(?x)\n(/\\*(?i:caddyfile)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
+          "contentName": "meta.embedded.block.caddyfile.typescriptreact source.Caddyfile",
+          "end": "`",
+          "beginCaptures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "source.tsx#comment"
+                }
+              ]
+            },
+            "2": {
+              "name": "entity.name.function.tagged-template.tsx"
+            },
+            "3": {
+              "name": "string.template.tsx punctuation.definition.string.template.begin.tsx"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "string.template.tsx punctuation.definition.string.template.end.tsx"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "source.Caddyfile"
+            }
+          ]
         }
       ]
     },
@@ -2094,6 +2131,36 @@
             },
             {
               "include": "text.html.markdown"
+            }
+          ]
+        },
+        {
+          "comment": "Caddyfile formatted template strings",
+          "begin": "(?x)\n(?i:caddyfile)\n(\\`)",
+          "contentName": "meta.embedded.block.caddyfile.typescriptreact source.Caddyfile",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.function.tagged-template.tsx"
+            },
+            "2": {
+              "name": "string.template.tsx punctuation.definition.string.template.begin.tsx"
+            }
+          },
+          "end": "`",
+          "endCaptures": {
+            "0": {
+              "name": "string.template.tsx punctuation.definition.string.template.end.tsx"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "source.Caddyfile"
             }
           ]
         }

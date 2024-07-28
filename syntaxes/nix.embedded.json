@@ -786,6 +786,31 @@
               "name": "punctuation.definition.string.other.end.nix"
             }
           }
+        },
+        {
+          "comment": "Caddyfile-formatted strings",
+          "begin": "(/\\*(?i:caddyfile)\\*/)\\s*(\\'\\')",
+          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "contentName": "meta.embedded.block.caddyfile.nix source.Caddyfile",
+          "patterns": [
+            {
+              "include": "source.Caddyfile"
+            }
+          ],
+          "name": "string.quoted.other.nix",
+          "beginCaptures": {
+            "1": {
+              "name": "comment.block.nix"
+            },
+            "2": {
+              "name": "punctuation.definition.string.other.start.nix"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.other.end.nix"
+            }
+          }
         }
       ]
     }

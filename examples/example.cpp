@@ -471,6 +471,34 @@ This is a (paragraph)[http://example.com] of text in **bold** and *italic*.
 )md";
 
 
+//////////////////////////////////////////////////////////////////////
+// Caddyfile Example
+static const char* caddyfile_string = R"caddyfile(
+# Sample Caddyfile comment!
+
+:80 {
+	root * /usr/share/caddy
+	file_server
+}
+
+(common) {
+	errors {
+		log /var/log/caddy/errors.log
+	}
+
+	log {
+		output file /var/log/caddy/access.log
+	}
+}
+
+hello.world {
+	import common
+	reverse_proxy localhost:8080
+}
+
+)caddyfile";
+
+
 
 
 //////////////////////////////////////////////////////////////////////

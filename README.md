@@ -160,6 +160,7 @@ signal which language you are using.
 | Batch                  | bat                          | `REM`, `@REM`, `::bat`                         |
 | C                      | c                            | `/*c*/`                                        |
 | C++                    | cpp, c++                     | `//cpp`, `//c++`                               |
+| Caddyfile              | caddyfile                    | `#caddyfile`                                   |
 | CSS                    | css                          | `/*css*/`                                      |
 | GLSL                   | glsl                         | `//glsl`                                       |
 | GraphQL                | graphql, gql                 | `#graphql`, `#gql`                             |

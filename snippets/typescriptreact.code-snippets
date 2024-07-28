@@ -370,5 +370,17 @@
       "\t$0",
       "`"
     ]
+  },
+  "Caddyfile code block (string)": {
+    "scope": "typescriptreact",
+    "prefix": [
+      "caddyfile"
+    ],
+    "description": "Insert a Caddyfile code block string",
+    "body": [
+      "/*caddyfile*/ `",
+      "\t$0",
+      "`"
+    ]
   }
 }

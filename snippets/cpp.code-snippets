@@ -370,5 +370,17 @@
       "\t$0",
       ")md\""
     ]
+  },
+  "Caddyfile code block (string)": {
+    "scope": "cpp",
+    "prefix": [
+      "caddyfile"
+    ],
+    "description": "Insert a Caddyfile code block string",
+    "body": [
+      "R\"caddyfile(",
+      "\t$0",
+      ")caddyfile\""
+    ]
   }
 }

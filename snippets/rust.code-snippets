@@ -370,5 +370,17 @@
       "\t$0",
       "\"#"
     ]
+  },
+  "Caddyfile code block (string)": {
+    "scope": "rust",
+    "prefix": [
+      "caddyfile"
+    ],
+    "description": "Insert a Caddyfile code block string",
+    "body": [
+      "/*caddyfile*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
   }
 }

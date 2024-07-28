@@ -1,7 +1,7 @@
 import foo from 'bar'
 
 // These strings all contain example embedded languages using the
-// typescript template string syntax
+// javascript/typescript template string syntax
 
 //////////////////////////////////////////////////////////////////////
 // Documentation Examples:
@@ -11,7 +11,7 @@ const sql = (strings, ...values) => String.raw({raw: strings}, ...values);
 
 const s1 = /*sql*/  `
 SELECT user_name FROM users WHERE id = 1234
-   `;
+`;
 
 // ` and $ need to be escaped within template strings
 const s2 = /*py*/ `
@@ -26,14 +26,6 @@ SELECT user_name FROM users WHERE id = 1234
 //////////////////////////////////////////////////////////////////////
 // Embedded Examples:
 
-function Component() {
-    return <div>//md
-  # Markdown example
-  
-  - tomato
-  - orange
-</div>
-  }
 
 
 // Batch Example
@@ -446,6 +438,33 @@ This is a (paragraph)[http://example.com] of text in **bold** and *italic*.
 
 > This is a blockquote.
 
+
+`;
+
+
+// Caddyfile Example
+const caddyfile_string = /*caddyfile*/ `
+# Sample Caddyfile comment!
+
+:80 {
+	root * /usr/share/caddy
+	file_server
+}
+
+(common) {
+	errors {
+		log /var/log/caddy/errors.log
+	}
+
+	log {
+		output file /var/log/caddy/access.log
+	}
+}
+
+hello.world {
+	import common
+	reverse_proxy localhost:8080
+}
 
 `;
 

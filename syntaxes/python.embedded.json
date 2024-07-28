@@ -761,6 +761,31 @@
               "name": "punctuation.definition.string.end.python"
             }
           }
+        },
+        {
+          "comment": "Caddyfile-formatted triple-quoted strings",
+          "name": "string.quoted.multi.embedded.python",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:\\#caddyfile) \\b )",
+          "end": "(\\2)",
+          "contentName": "meta.embedded.block.caddyfile.python source.Caddyfile",
+          "patterns": [
+            {
+              "include": "source.Caddyfile"
+            }
+          ],
+          "beginCaptures": {
+            "1": {
+              "name": "storage.type.string.python"
+            },
+            "2": {
+              "name": "punctuation.definition.string.begin.python"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.end.python"
+            }
+          }
         }
       ]
     }

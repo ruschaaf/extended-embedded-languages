@@ -1,7 +1,7 @@
 import foo from 'bar'
 
 // These strings all contain example embedded languages using the
-// typescript template string syntax
+// javascript/typescript template string syntax
 
 //////////////////////////////////////////////////////////////////////
 // Documentation Examples:
@@ -438,6 +438,33 @@ This is a (paragraph)[http://example.com] of text in **bold** and *italic*.
 
 > This is a blockquote.
 
+
+`;
+
+
+// Caddyfile Example
+const caddyfile_string = /*caddyfile*/ `
+# Sample Caddyfile comment!
+
+:80 {
+	root * /usr/share/caddy
+	file_server
+}
+
+(common) {
+	errors {
+		log /var/log/caddy/errors.log
+	}
+
+	log {
+		output file /var/log/caddy/access.log
+	}
+}
+
+hello.world {
+	import common
+	reverse_proxy localhost:8080
+}
 
 `;
 

@@ -463,5 +463,33 @@ This is a (paragraph)[http://example.com] of text in **bold** and *italic*.
 "#;
 
 
+//////////////////////////////////////////////////////////////////////
+// Caddyfile Example
+let caddyfile_string = /*caddyfile*/ r#"
+# Sample Caddyfile comment!
+
+:80 {
+	root * /usr/share/caddy
+	file_server
+}
+
+(common) {
+	errors {
+		log /var/log/caddy/errors.log
+	}
+
+	log {
+		output file /var/log/caddy/access.log
+	}
+}
+
+hello.world {
+	import common
+	reverse_proxy localhost:8080
+}
+
+"#;
+
+
 
 }

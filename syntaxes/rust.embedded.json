@@ -1065,6 +1065,40 @@
               "name": "punctuation.definition.string.raw.rust"
             }
           }
+        },
+        {
+          "comment": "Caddyfile-formatted raw strings",
+          "begin": "(/\\*(?i:caddyfile)\\*/)\\s*(b?r)(#*)(\")",
+          "end": "(\")(\\3)",
+          "contentName": "meta.embedded.block.caddyfile.rust source.Caddyfile",
+          "patterns": [
+            {
+              "include": "source.Caddyfile"
+            }
+          ],
+          "name": "string.quoted.double.rust",
+          "beginCaptures": {
+            "1": {
+              "name": "comment.block.rust"
+            },
+            "2": {
+              "name": "string.quoted.byte.raw.rust"
+            },
+            "3": {
+              "name": "punctuation.definition.string.raw.rust"
+            },
+            "4": {
+              "name": "punctuation.definition.string.rust"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.rust"
+            },
+            "2": {
+              "name": "punctuation.definition.string.raw.rust"
+            }
+          }
         }
       ]
     }
