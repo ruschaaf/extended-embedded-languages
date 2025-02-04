@@ -1161,6 +1161,43 @@
               "include": "text.html.markdown"
             }
           ]
+        },
+        {
+          "comment": "Go formatted template strings",
+          "begin": "(?x)\n(/\\*(?i:go|golang)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
+          "contentName": "meta.embedded.block.go.typescript source.go",
+          "end": "`",
+          "beginCaptures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "source.ts#comment"
+                }
+              ]
+            },
+            "2": {
+              "name": "entity.name.function.tagged-template.ts"
+            },
+            "3": {
+              "name": "string.template.ts punctuation.definition.string.template.begin.ts"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "string.template.ts punctuation.definition.string.template.end.ts"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "source.go"
+            }
+          ]
         }
       ]
     },
@@ -1908,6 +1945,30 @@
           "patterns": [
             {
               "include": "text.html.markdown"
+            }
+          ]
+        },
+        {
+          "comment": "Go formatted template strings",
+          "begin": "(?x)\n(?i:go|golang)\n(\\`)",
+          "contentName": "meta.embedded.block.go.typescript source.go",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.function.tagged-template.ts"
+            },
+            "2": {
+              "name": "string.template.ts punctuation.definition.string.template.begin.ts"
+            }
+          },
+          "end": "`",
+          "endCaptures": {
+            "0": {
+              "name": "string.template.ts punctuation.definition.string.template.end.ts"
+            }
+          },
+          "patterns": [
+            {
+              "include": "source.go"
             }
           ]
         }

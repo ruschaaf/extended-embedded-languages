@@ -941,6 +941,36 @@
               "name": "string.quoted.single.heredoc.powershell punctuation.definition.string.end.powershell"
             }
           }
+        },
+        {
+          "comment": "Go-formatted raw strings",
+          "begin": "(?x)\n( (<\\#) \\s* \n(?i:go|golang)\n\\s* (\\#>) )\n\\s* (@['\"])\n\\s*$",
+          "end": "^(['\"]@)",
+          "contentName": "meta.embedded.block.go.powershell source.go",
+          "patterns": [
+            {
+              "include": "source.go"
+            }
+          ],
+          "beginCaptures": {
+            "1": {
+              "name": "comment.block.powershell"
+            },
+            "2": {
+              "name": "punctuation.definition.comment.block.begin.powershell"
+            },
+            "3": {
+              "name": "punctuation.definition.comment.block.end.powershell"
+            },
+            "4": {
+              "name": "string.quoted.single.heredoc.powershell punctuation.definition.string.begin.powershell"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "string.quoted.single.heredoc.powershell punctuation.definition.string.end.powershell"
+            }
+          }
         }
       ]
     }

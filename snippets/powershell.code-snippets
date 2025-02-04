@@ -370,5 +370,17 @@
       "\t$0",
       ""
     ]
+  },
+  "Go code block (string)": {
+    "scope": "powershell",
+    "prefix": [
+      "go"
+    ],
+    "description": "Insert a Go code block string",
+    "body": [
+      "<#go#> @\"",
+      "\t$0",
+      ""
+    ]
   }
 }

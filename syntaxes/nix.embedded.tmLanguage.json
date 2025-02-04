@@ -786,6 +786,31 @@
               "name": "punctuation.definition.string.other.end.nix"
             }
           }
+        },
+        {
+          "comment": "Go-formatted strings",
+          "begin": "(/\\*(?i:go|golang)\\*/)\\s*(\\'\\')",
+          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "contentName": "meta.embedded.block.go.nix source.go",
+          "patterns": [
+            {
+              "include": "source.go"
+            }
+          ],
+          "name": "string.quoted.other.nix",
+          "beginCaptures": {
+            "1": {
+              "name": "comment.block.nix"
+            },
+            "2": {
+              "name": "punctuation.definition.string.other.start.nix"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.other.end.nix"
+            }
+          }
         }
       ]
     }

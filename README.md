@@ -175,6 +175,7 @@ signal which language you are using.
 | C++                    | cpp, c++                     | `//cpp`, `//c++`                               |
 | CSS                    | css                          | `/*css*/`                                      |
 | GLSL                   | glsl                         | `//glsl`                                       |
+| Go                     | go, golang                   | `//go`, `//golang`                             |
 | GraphQL                | graphql, gql                 | `#graphql`, `#gql`                             |
 | Graphviz               | graphviz, dot                | `//graphviz`, `//dot`                          |
 | Handlebars             | handlebars, hbs              | `//handlebars`, `//hbs`                        |

@@ -370,5 +370,17 @@
       "\t$0",
       "\"#"
     ]
+  },
+  "Go code block (string)": {
+    "scope": "rust",
+    "prefix": [
+      "go"
+    ],
+    "description": "Insert a Go code block string",
+    "body": [
+      "/*go*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
   }
 }

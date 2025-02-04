@@ -1096,6 +1096,41 @@
               "name": "meta.embedded.block.Markdown.github-actions-workflow text.html.markdown"
             }
           ]
+        },
+        {
+          "comment": "Go-formatted block scalar strings",
+          "name": "string.quoted.multi.embedded.yaml",
+          "begin": "(?x)\n(?:(\\|)|(>)) ([1-9])? ([-+])? \\s* \n( \\# (?i:go|golang) ) \\b \\s* \\n?",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.flow.block-scalar.literal.yaml"
+            },
+            "2": {
+              "name": "keyword.control.flow.block-scalar.folded.yaml"
+            },
+            "3": {
+              "name": "constant.numeric.indentation-indicator.yaml"
+            },
+            "4": {
+              "name": "storage.modifier.chomping-indicator.yaml"
+            },
+            "5": {
+              "name": "meta.encoding.yaml"
+            }
+          },
+          "end": "^(?=\\S)|(?!\\G)",
+          "patterns": [
+            {
+              "begin": "(?>^|\\\\G)([ ]+)(?! )",
+              "end": "^(?!\\1|\\s*$)",
+              "patterns": [
+                {
+                  "include": "source.go"
+                }
+              ],
+              "name": "meta.embedded.block.go.github-actions-workflow source.go"
+            }
+          ]
         }
       ]
     }

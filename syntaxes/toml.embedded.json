@@ -671,6 +671,28 @@
               "name": "punctuation.definition.string.end.toml"
             }
           }
+        },
+        {
+          "comment": "Go-formatted triple-quoted strings",
+          "name": "string.quoted.multi.embedded.toml",
+          "begin": "(?x)\n(''') \n(?= (?i://go|//golang) \\b )",
+          "end": "(\\1)",
+          "contentName": "meta.embedded.block.go.toml source.go",
+          "patterns": [
+            {
+              "include": "source.go"
+            }
+          ],
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.begin.toml"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.end.toml"
+            }
+          }
         }
       ]
     }

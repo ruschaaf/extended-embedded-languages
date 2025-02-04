@@ -761,6 +761,31 @@
               "name": "punctuation.definition.string.end.python"
             }
           }
+        },
+        {
+          "comment": "Go-formatted triple-quoted strings",
+          "name": "string.quoted.multi.embedded.python",
+          "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://go|//golang) \\b )",
+          "end": "(\\2)",
+          "contentName": "meta.embedded.block.go.python source.go",
+          "patterns": [
+            {
+              "include": "source.go"
+            }
+          ],
+          "beginCaptures": {
+            "1": {
+              "name": "storage.type.string.python"
+            },
+            "2": {
+              "name": "punctuation.definition.string.begin.python"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.end.python"
+            }
+          }
         }
       ]
     }

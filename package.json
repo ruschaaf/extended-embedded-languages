@@ -68,7 +68,8 @@
           "meta.embedded.block.asm-intel-x86-generic.cpp": "asm-intel-x86-generic",
           "meta.embedded.block.handlebars.cpp": "handlebars",
           "meta.embedded.block.powershell.cpp": "powershell",
-          "meta.embedded.block.Markdown.cpp": "Markdown"
+          "meta.embedded.block.Markdown.cpp": "Markdown",
+          "meta.embedded.block.go.cpp": "go"
         }
       },
       {
@@ -108,7 +109,8 @@
           "meta.embedded.block.asm-intel-x86-generic.go": "asm-intel-x86-generic",
           "meta.embedded.block.handlebars.go": "handlebars",
           "meta.embedded.block.powershell.go": "powershell",
-          "meta.embedded.block.Markdown.go": "Markdown"
+          "meta.embedded.block.Markdown.go": "Markdown",
+          "meta.embedded.block.go.go": "go"
         }
       },
       {
@@ -148,7 +150,8 @@
           "meta.embedded.block.asm-intel-x86-generic.nix": "asm-intel-x86-generic",
           "meta.embedded.block.handlebars.nix": "handlebars",
           "meta.embedded.block.powershell.nix": "powershell",
-          "meta.embedded.block.Markdown.nix": "Markdown"
+          "meta.embedded.block.Markdown.nix": "Markdown",
+          "meta.embedded.block.go.nix": "go"
         }
       },
       {
@@ -188,7 +191,8 @@
           "meta.embedded.block.asm-intel-x86-generic.python": "asm-intel-x86-generic",
           "meta.embedded.block.handlebars.python": "handlebars",
           "meta.embedded.block.powershell.python": "powershell",
-          "meta.embedded.block.Markdown.python": "Markdown"
+          "meta.embedded.block.Markdown.python": "Markdown",
+          "meta.embedded.block.go.python": "go"
         }
       },
       {
@@ -229,7 +233,8 @@
           "meta.embedded.block.asm-intel-x86-generic.yaml": "asm-intel-x86-generic",
           "meta.embedded.block.handlebars.yaml": "handlebars",
           "meta.embedded.block.powershell.yaml": "powershell",
-          "meta.embedded.block.Markdown.yaml": "Markdown"
+          "meta.embedded.block.Markdown.yaml": "Markdown",
+          "meta.embedded.block.go.yaml": "go"
         }
       },
       {
@@ -269,7 +274,8 @@
           "meta.embedded.block.asm-intel-x86-generic.github-actions-workflow": "asm-intel-x86-generic",
           "meta.embedded.block.handlebars.github-actions-workflow": "handlebars",
           "meta.embedded.block.powershell.github-actions-workflow": "powershell",
-          "meta.embedded.block.Markdown.github-actions-workflow": "Markdown"
+          "meta.embedded.block.Markdown.github-actions-workflow": "Markdown",
+          "meta.embedded.block.go.github-actions-workflow": "go"
         }
       },
       {
@@ -309,7 +315,8 @@
           "meta.embedded.block.asm-intel-x86-generic.javascript": "asm-intel-x86-generic",
           "meta.embedded.block.handlebars.javascript": "handlebars",
           "meta.embedded.block.powershell.javascript": "powershell",
-          "meta.embedded.block.Markdown.javascript": "Markdown"
+          "meta.embedded.block.Markdown.javascript": "Markdown",
+          "meta.embedded.block.go.javascript": "go"
         }
       },
       {
@@ -349,7 +356,8 @@
           "meta.embedded.block.asm-intel-x86-generic.javascriptreact": "asm-intel-x86-generic",
           "meta.embedded.block.handlebars.javascriptreact": "handlebars",
           "meta.embedded.block.powershell.javascriptreact": "powershell",
-          "meta.embedded.block.Markdown.javascriptreact": "Markdown"
+          "meta.embedded.block.Markdown.javascriptreact": "Markdown",
+          "meta.embedded.block.go.javascriptreact": "go"
         }
       },
       {
@@ -389,7 +397,8 @@
           "meta.embedded.block.asm-intel-x86-generic.powershell": "asm-intel-x86-generic",
           "meta.embedded.block.handlebars.powershell": "handlebars",
           "meta.embedded.block.powershell.powershell": "powershell",
-          "meta.embedded.block.Markdown.powershell": "Markdown"
+          "meta.embedded.block.Markdown.powershell": "Markdown",
+          "meta.embedded.block.go.powershell": "go"
         }
       },
       {
@@ -429,7 +438,8 @@
           "meta.embedded.block.asm-intel-x86-generic.typescript": "asm-intel-x86-generic",
           "meta.embedded.block.handlebars.typescript": "handlebars",
           "meta.embedded.block.powershell.typescript": "powershell",
-          "meta.embedded.block.Markdown.typescript": "Markdown"
+          "meta.embedded.block.Markdown.typescript": "Markdown",
+          "meta.embedded.block.go.typescript": "go"
         }
       },
       {
@@ -469,7 +479,8 @@
           "meta.embedded.block.asm-intel-x86-generic.typescriptreact": "asm-intel-x86-generic",
           "meta.embedded.block.handlebars.typescriptreact": "handlebars",
           "meta.embedded.block.powershell.typescriptreact": "powershell",
-          "meta.embedded.block.Markdown.typescriptreact": "Markdown"
+          "meta.embedded.block.Markdown.typescriptreact": "Markdown",
+          "meta.embedded.block.go.typescriptreact": "go"
         }
       },
       {
@@ -509,7 +520,8 @@
           "meta.embedded.block.asm-intel-x86-generic.rust": "asm-intel-x86-generic",
           "meta.embedded.block.handlebars.rust": "handlebars",
           "meta.embedded.block.powershell.rust": "powershell",
-          "meta.embedded.block.Markdown.rust": "Markdown"
+          "meta.embedded.block.Markdown.rust": "Markdown",
+          "meta.embedded.block.go.rust": "go"
         }
       },
       {
@@ -549,7 +561,8 @@
           "meta.embedded.block.asm-intel-x86-generic.toml": "asm-intel-x86-generic",
           "meta.embedded.block.handlebars.toml": "handlebars",
           "meta.embedded.block.powershell.toml": "powershell",
-          "meta.embedded.block.Markdown.toml": "Markdown"
+          "meta.embedded.block.Markdown.toml": "Markdown",
+          "meta.embedded.block.go.toml": "go"
         }
       }
     ],
