@@ -195,7 +195,8 @@
         "scopeName": "source.yaml.embedded.codeblock",
         "injectTo": [
           "source.yaml",
-          "text.yaml.jinja"
+          "text.yaml.jinja",
+          "source.github-actions-workflow"
         ],
         "path": "syntaxes/yaml.embedded.tmLanguage.json",
         "embeddedLanguages": {
@@ -230,46 +231,6 @@
           "meta.embedded.block.handlebars.yaml": "handlebars",
           "meta.embedded.block.powershell.yaml": "powershell",
           "meta.embedded.block.Markdown.yaml": "Markdown"
-        }
-      },
-      {
-        "scopeName": "source.yaml.embedded.codeblock",
-        "injectTo": [
-          "source.github-actions-workflow"
-        ],
-        "path": "syntaxes/github-actions-workflow.embedded.tmLanguage.json",
-        "embeddedLanguages": {
-          "meta.embedded.block.bat.github-actions-workflow": "bat",
-          "meta.embedded.block.cpp.github-actions-workflow": "cpp",
-          "meta.embedded.block.css.github-actions-workflow": "css",
-          "meta.embedded.block.html.github-actions-workflow": "html",
-          "meta.embedded.block.ini.github-actions-workflow": "ini",
-          "meta.embedded.block.javascript.github-actions-workflow": "javascript",
-          "meta.embedded.block.json.github-actions-workflow": "json",
-          "meta.embedded.block.jsonc.github-actions-workflow": "jsonc",
-          "meta.embedded.block.python.github-actions-workflow": "python",
-          "meta.embedded.block.shellscript.github-actions-workflow": "shellscript",
-          "meta.embedded.block.sql.github-actions-workflow": "sql",
-          "meta.embedded.block.toml.github-actions-workflow": "toml",
-          "meta.embedded.block.xml.github-actions-workflow": "xml",
-          "meta.embedded.block.yaml.github-actions-workflow": "yaml",
-          "meta.embedded.block.c.github-actions-workflow": "c",
-          "meta.embedded.block.hlsl.github-actions-workflow": "hlsl",
-          "meta.embedded.block.glsl.github-actions-workflow": "glsl",
-          "meta.embedded.block.metal.github-actions-workflow": "metal",
-          "meta.embedded.block.wgsl.github-actions-workflow": "wgsl",
-          "meta.embedded.block.lua.github-actions-workflow": "lua",
-          "meta.embedded.block.makefile.github-actions-workflow": "makefile",
-          "meta.embedded.block.graphql.github-actions-workflow": "graphql",
-          "meta.embedded.block.typescript.github-actions-workflow": "typescript",
-          "meta.embedded.block.latex.github-actions-workflow": "latex",
-          "meta.embedded.block.tex.github-actions-workflow": "tex",
-          "meta.embedded.block.dot.github-actions-workflow": "dot",
-          "meta.embedded.block.arm.github-actions-workflow": "arm",
-          "meta.embedded.block.asm-intel-x86-generic.github-actions-workflow": "asm-intel-x86-generic",
-          "meta.embedded.block.handlebars.github-actions-workflow": "handlebars",
-          "meta.embedded.block.powershell.github-actions-workflow": "powershell",
-          "meta.embedded.block.Markdown.github-actions-workflow": "Markdown"
         }
       },
       {

@@ -1,0 +1,14 @@
+# basic test
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: | #bash
+         echo "Hello, world!"
