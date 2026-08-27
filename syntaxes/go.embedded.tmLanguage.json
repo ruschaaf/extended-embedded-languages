@@ -88,6 +88,9 @@
           "contentName": "meta.embedded.block.java.go source.java",
           "patterns": [
             {
+              "include": "source.java#class-body"
+            },
+            {
               "include": "source.java"
             }
           ],

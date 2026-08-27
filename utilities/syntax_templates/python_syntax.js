@@ -20,7 +20,7 @@ export function buildPythonSyntax(hostSpec, embeddedSpecs) {
 (?= (?i:${embedded.comment_choice_re}) \b )`,
             'end': String.raw`(\2)`,
             'contentName': `meta.embedded.block.${embedded.vsname}.${hostSpec.vsname} ${embedded.root_scope}`,
-            'patterns': [{ 'include': `${embedded.root_scope}` }],
+            'patterns': embedded.embed_scopes.map((scope) => ({ 'include': scope })),
             'beginCaptures': {
                 '1': { 'name': 'storage.type.string.python' },
                 '2': { 'name': 'punctuation.definition.string.begin.python' },

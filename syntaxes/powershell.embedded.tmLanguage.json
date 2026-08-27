@@ -79,6 +79,9 @@
           "contentName": "meta.embedded.block.java.powershell source.java",
           "patterns": [
             {
+              "include": "source.java#class-body"
+            },
+            {
               "include": "source.java"
             }
           ],

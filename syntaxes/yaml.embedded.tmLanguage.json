@@ -110,6 +110,9 @@
               "end": "^(?!\\1|\\s*$)",
               "patterns": [
                 {
+                  "include": "source.java#class-body"
+                },
+                {
                   "include": "source.java"
                 }
               ],

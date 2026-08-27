@@ -8,6 +8,20 @@ const LANG_SPEC_CSV = 'embedded_language_specs.csv';
 const SAMPLE_PATH = 'embedded_samples';
 const SAMPLE_NAME = 'sample';
 
+// By default an embedded block is parsed by including the language's
+// root scope, which treats the string as a whole source file. Some
+// languages highlight better when the string is treated as a fragment
+// instead. Java, for example, only applies method/field highlighting
+// inside a class body, so a "floating" top-level method in an embedded
+// string looks wrong when parsed as a file. Overriding it to include
+// `source.java#class-body` (with the root scope kept as a fallback for
+// file-level constructs like module/package/import) makes bare methods
+// and fields highlight correctly. Keyed by `vsname`, value is the
+// ordered list of scopes to include for the embedded block.
+const EMBED_SCOPE_OVERRIDES = {
+    java: ['source.java#class-body', 'source.java'],
+};
+
 /**
  * @typedef {Object} EmbeddedSpec
  * @property {string} name - Human readable name of the language
@@ -54,6 +68,12 @@ export function readEmbeddedSpecs(withExamples) {
         } else {
             lang.comments = [];
         }
+
+        // Scopes to include when parsing an embedded block of this
+        // language. Defaults to just the root scope (parse as a whole
+        // file); see EMBED_SCOPE_OVERRIDES for exceptions.
+        lang.embed_scopes = EMBED_SCOPE_OVERRIDES[lang.vsname] ||
+            [lang.root_scope];
 
         // See if we need to read sample snippets as well
         if (withExamples) {

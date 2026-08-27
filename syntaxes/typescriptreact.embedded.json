@@ -122,6 +122,9 @@
               "include": "#string-character-escape"
             },
             {
+              "include": "source.java#class-body"
+            },
+            {
               "include": "source.java"
             }
           ]
@@ -1271,6 +1274,9 @@
             }
           },
           "patterns": [
+            {
+              "include": "source.java#class-body"
+            },
             {
               "include": "source.java"
             }

@@ -57,7 +57,7 @@ export function buildTypescriptFamilySyntax(hostSpec, embeddedSpecs) {
             'patterns': [
                 { 'include': '#template-substitution-element' },
                 { 'include': '#string-character-escape' },
-                { 'include': `${lang.root_scope}` },
+                ...lang.embed_scopes.map((scope) => ({ 'include': scope })),
             ],
         };
     });
@@ -88,7 +88,7 @@ export function buildTypescriptFamilySyntax(hostSpec, embeddedSpecs) {
                 //    const py_string = /*py*/ `
                 //    print("Hello ${(await fetch('http://example.com')).body.json();}")
                 //    `;
-                { 'include': `${lang.root_scope}` },
+                ...lang.embed_scopes.map((scope) => ({ 'include': scope })),
             ],
         };
     });

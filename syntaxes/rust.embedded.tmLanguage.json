@@ -87,6 +87,9 @@
           "contentName": "meta.embedded.block.java.rust source.java",
           "patterns": [
             {
+              "include": "source.java#class-body"
+            },
+            {
               "include": "source.java"
             }
           ],

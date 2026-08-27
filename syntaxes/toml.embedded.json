@@ -64,6 +64,9 @@
           "contentName": "meta.embedded.block.java.toml source.java",
           "patterns": [
             {
+              "include": "source.java#class-body"
+            },
+            {
               "include": "source.java"
             }
           ],

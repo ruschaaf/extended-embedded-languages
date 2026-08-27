@@ -81,6 +81,9 @@
           "contentName": "meta.embedded.block.java.cpp source.java",
           "patterns": [
             {
+              "include": "source.java#class-body"
+            },
+            {
               "include": "source.java"
             }
           ],

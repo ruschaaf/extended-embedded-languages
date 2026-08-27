@@ -70,6 +70,9 @@
           "contentName": "meta.embedded.block.java.python source.java",
           "patterns": [
             {
+              "include": "source.java#class-body"
+            },
+            {
               "include": "source.java"
             }
           ],
