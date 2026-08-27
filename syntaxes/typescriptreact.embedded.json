@@ -90,6 +90,43 @@
           ]
         },
         {
+          "comment": "Java formatted template strings",
+          "begin": "(?x)\n(/\\*(?i:java)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
+          "contentName": "meta.embedded.block.java.typescriptreact source.java",
+          "end": "`",
+          "beginCaptures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "source.tsx#comment"
+                }
+              ]
+            },
+            "2": {
+              "name": "entity.name.function.tagged-template.tsx"
+            },
+            "3": {
+              "name": "string.template.tsx punctuation.definition.string.template.begin.tsx"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "string.template.tsx punctuation.definition.string.template.end.tsx"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "source.java"
+            }
+          ]
+        },
+        {
           "comment": "CSS formatted template strings",
           "begin": "(?x)\n(/\\*(?i:css)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.css.typescriptreact source.css",
@@ -1212,6 +1249,30 @@
           "patterns": [
             {
               "include": "source.cpp"
+            }
+          ]
+        },
+        {
+          "comment": "Java formatted template strings",
+          "begin": "(?x)\n(?i:java)\n(\\`)",
+          "contentName": "meta.embedded.block.java.typescriptreact source.java",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.function.tagged-template.tsx"
+            },
+            "2": {
+              "name": "string.template.tsx punctuation.definition.string.template.begin.tsx"
+            }
+          },
+          "end": "`",
+          "endCaptures": {
+            "0": {
+              "name": "string.template.tsx punctuation.definition.string.template.end.tsx"
+            }
+          },
+          "patterns": [
+            {
+              "include": "source.java"
             }
           ]
         },

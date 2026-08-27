@@ -63,6 +63,31 @@
           }
         },
         {
+          "comment": "Java-formatted strings",
+          "begin": "(/\\*(?i:java)\\*/)\\s*(\\'\\')",
+          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "contentName": "meta.embedded.block.java.nix source.java",
+          "patterns": [
+            {
+              "include": "source.java"
+            }
+          ],
+          "name": "string.quoted.other.nix",
+          "beginCaptures": {
+            "1": {
+              "name": "comment.block.nix"
+            },
+            "2": {
+              "name": "punctuation.definition.string.other.start.nix"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.other.end.nix"
+            }
+          }
+        },
+        {
           "comment": "CSS-formatted strings",
           "begin": "(/\\*(?i:css)\\*/)\\s*(\\'\\')",
           "end": "\\'\\'(?!\\$|\\'|\\\\.)",

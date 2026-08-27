@@ -90,6 +90,43 @@
           ]
         },
         {
+          "comment": "Java formatted template strings",
+          "begin": "(?x)\n(/\\*(?i:java)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
+          "contentName": "meta.embedded.block.java.javascriptreact source.java",
+          "end": "`",
+          "beginCaptures": {
+            "1": {
+              "patterns": [
+                {
+                  "include": "source.js.jsx#comment"
+                }
+              ]
+            },
+            "2": {
+              "name": "entity.name.function.tagged-template.js.jsx"
+            },
+            "3": {
+              "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#template-substitution-element"
+            },
+            {
+              "include": "#string-character-escape"
+            },
+            {
+              "include": "source.java"
+            }
+          ]
+        },
+        {
           "comment": "CSS formatted template strings",
           "begin": "(?x)\n(/\\*(?i:css)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.css.javascriptreact source.css",
@@ -1212,6 +1249,30 @@
           "patterns": [
             {
               "include": "source.cpp"
+            }
+          ]
+        },
+        {
+          "comment": "Java formatted template strings",
+          "begin": "(?x)\n(?i:java)\n(\\`)",
+          "contentName": "meta.embedded.block.java.javascriptreact source.java",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.function.tagged-template.js.jsx"
+            },
+            "2": {
+              "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
+            }
+          },
+          "end": "`",
+          "endCaptures": {
+            "0": {
+              "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
+            }
+          },
+          "patterns": [
+            {
+              "include": "source.java"
             }
           ]
         },
