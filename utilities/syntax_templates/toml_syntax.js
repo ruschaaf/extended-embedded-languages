@@ -22,7 +22,7 @@ export function buildTomlSyntax(hostSpec, embeddedSpecs) {
 (?= (?i:${embedded.comment_choice_re}) \b )`,
             'end': String.raw`(\1)`,
             'contentName': `meta.embedded.block.${embedded.vsname}.${hostSpec.vsname} ${embedded.root_scope}`,
-            'patterns': [{ 'include': `${embedded.root_scope}` }],
+            'patterns': embedded.embed_scopes.map((scope) => ({ 'include': scope })),
             'beginCaptures': {
                 '1': { 'name': 'punctuation.definition.string.begin.toml' },
             },

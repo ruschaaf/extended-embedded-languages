@@ -17,7 +17,7 @@ export function buildRustSyntax(hostSpec, embeddedSpecs) {
             'begin': String.raw`(/\*(?i:${lang.id_choice_re})\*/)\s*(b?r)(#*)(")`,
             'end': String.raw`(")(\3)`,
             'contentName': `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
-            'patterns': [{ 'include': `${lang.root_scope}` }],
+            'patterns': lang.embed_scopes.map((scope) => ({ 'include': scope })),
             'name': 'string.quoted.double.rust',
             'beginCaptures': {
                 '1': { 'name': 'comment.block.rust' },

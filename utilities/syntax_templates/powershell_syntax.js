@@ -21,7 +21,7 @@ export function buildPowerShellSyntax(hostSpec, embeddedSpecs) {
 \s*$`,
             end: String.raw`^(['"]@)`,
             contentName: `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
-            patterns: [{ include: `${lang.root_scope}` }],
+            patterns: lang.embed_scopes.map((scope) => ({ include: scope })),
             beginCaptures: {
                 1: { name: 'comment.block.powershell' },
                 2: { name: 'punctuation.definition.comment.block.begin.powershell' },

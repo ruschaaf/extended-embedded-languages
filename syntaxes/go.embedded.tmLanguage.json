@@ -69,6 +69,37 @@
           }
         },
         {
+          "comment": "Java-formatted raw strings",
+          "begin": "(?x)\n( (/\\*) \\s*\n(?i:java)\n\\s* (\\*/) )\n\\s* (\\`)\n",
+          "beginCaptures": {
+            "1": {
+              "name": "comment.block.go"
+            },
+            "2": {
+              "name": "punctuation.definition.comment.go"
+            },
+            "3": {
+              "name": "punctuation.definition.comment.go"
+            },
+            "4": {
+              "name": "punctuation.definition.string.begin.go"
+            }
+          },
+          "contentName": "meta.embedded.block.java.go source.java",
+          "patterns": [
+            {
+              "include": "source.java#class-body"
+            },
+            {
+              "include": "source.java"
+            }
+          ],
+          "end": "`",
+          "endCaptures": {
+            "name": "punctuation.definition.string.end.go"
+          }
+        },
+        {
           "comment": "CSS-formatted raw strings",
           "begin": "(?x)\n( (/\\*) \\s*\n(?i:css)\n\\s* (\\*/) )\n\\s* (\\`)\n",
           "beginCaptures": {

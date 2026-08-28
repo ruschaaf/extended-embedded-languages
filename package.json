@@ -40,6 +40,7 @@
         "embeddedLanguages": {
           "meta.embedded.block.bat.cpp": "bat",
           "meta.embedded.block.cpp.cpp": "cpp",
+          "meta.embedded.block.java.cpp": "java",
           "meta.embedded.block.css.cpp": "css",
           "meta.embedded.block.html.cpp": "html",
           "meta.embedded.block.ini.cpp": "ini",
@@ -80,6 +81,7 @@
         "embeddedLanguages": {
           "meta.embedded.block.bat.go": "bat",
           "meta.embedded.block.cpp.go": "cpp",
+          "meta.embedded.block.java.go": "java",
           "meta.embedded.block.css.go": "css",
           "meta.embedded.block.html.go": "html",
           "meta.embedded.block.ini.go": "ini",
@@ -120,6 +122,7 @@
         "embeddedLanguages": {
           "meta.embedded.block.bat.nix": "bat",
           "meta.embedded.block.cpp.nix": "cpp",
+          "meta.embedded.block.java.nix": "java",
           "meta.embedded.block.css.nix": "css",
           "meta.embedded.block.html.nix": "html",
           "meta.embedded.block.ini.nix": "ini",
@@ -160,6 +163,7 @@
         "embeddedLanguages": {
           "meta.embedded.block.bat.python": "bat",
           "meta.embedded.block.cpp.python": "cpp",
+          "meta.embedded.block.java.python": "java",
           "meta.embedded.block.css.python": "css",
           "meta.embedded.block.html.python": "html",
           "meta.embedded.block.ini.python": "ini",
@@ -201,6 +205,7 @@
         "embeddedLanguages": {
           "meta.embedded.block.bat.yaml": "bat",
           "meta.embedded.block.cpp.yaml": "cpp",
+          "meta.embedded.block.java.yaml": "java",
           "meta.embedded.block.css.yaml": "css",
           "meta.embedded.block.html.yaml": "html",
           "meta.embedded.block.ini.yaml": "ini",
@@ -241,6 +246,7 @@
         "embeddedLanguages": {
           "meta.embedded.block.bat.github-actions-workflow": "bat",
           "meta.embedded.block.cpp.github-actions-workflow": "cpp",
+          "meta.embedded.block.java.github-actions-workflow": "java",
           "meta.embedded.block.css.github-actions-workflow": "css",
           "meta.embedded.block.html.github-actions-workflow": "html",
           "meta.embedded.block.ini.github-actions-workflow": "ini",
@@ -281,6 +287,7 @@
         "embeddedLanguages": {
           "meta.embedded.block.bat.javascript": "bat",
           "meta.embedded.block.cpp.javascript": "cpp",
+          "meta.embedded.block.java.javascript": "java",
           "meta.embedded.block.css.javascript": "css",
           "meta.embedded.block.html.javascript": "html",
           "meta.embedded.block.ini.javascript": "ini",
@@ -321,6 +328,7 @@
         "embeddedLanguages": {
           "meta.embedded.block.bat.javascriptreact": "bat",
           "meta.embedded.block.cpp.javascriptreact": "cpp",
+          "meta.embedded.block.java.javascriptreact": "java",
           "meta.embedded.block.css.javascriptreact": "css",
           "meta.embedded.block.html.javascriptreact": "html",
           "meta.embedded.block.ini.javascriptreact": "ini",
@@ -361,6 +369,7 @@
         "embeddedLanguages": {
           "meta.embedded.block.bat.powershell": "bat",
           "meta.embedded.block.cpp.powershell": "cpp",
+          "meta.embedded.block.java.powershell": "java",
           "meta.embedded.block.css.powershell": "css",
           "meta.embedded.block.html.powershell": "html",
           "meta.embedded.block.ini.powershell": "ini",
@@ -401,6 +410,7 @@
         "embeddedLanguages": {
           "meta.embedded.block.bat.typescript": "bat",
           "meta.embedded.block.cpp.typescript": "cpp",
+          "meta.embedded.block.java.typescript": "java",
           "meta.embedded.block.css.typescript": "css",
           "meta.embedded.block.html.typescript": "html",
           "meta.embedded.block.ini.typescript": "ini",
@@ -441,6 +451,7 @@
         "embeddedLanguages": {
           "meta.embedded.block.bat.typescriptreact": "bat",
           "meta.embedded.block.cpp.typescriptreact": "cpp",
+          "meta.embedded.block.java.typescriptreact": "java",
           "meta.embedded.block.css.typescriptreact": "css",
           "meta.embedded.block.html.typescriptreact": "html",
           "meta.embedded.block.ini.typescriptreact": "ini",
@@ -481,6 +492,7 @@
         "embeddedLanguages": {
           "meta.embedded.block.bat.rust": "bat",
           "meta.embedded.block.cpp.rust": "cpp",
+          "meta.embedded.block.java.rust": "java",
           "meta.embedded.block.css.rust": "css",
           "meta.embedded.block.html.rust": "html",
           "meta.embedded.block.ini.rust": "ini",
@@ -521,6 +533,7 @@
         "embeddedLanguages": {
           "meta.embedded.block.bat.toml": "bat",
           "meta.embedded.block.cpp.toml": "cpp",
+          "meta.embedded.block.java.toml": "java",
           "meta.embedded.block.css.toml": "css",
           "meta.embedded.block.html.toml": "html",
           "meta.embedded.block.ini.toml": "ini",

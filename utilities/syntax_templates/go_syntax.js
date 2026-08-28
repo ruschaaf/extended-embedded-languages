@@ -25,7 +25,7 @@ export function buildGoSyntax(hostSpec, embeddedSpecs) {
                 '4': { 'name': 'punctuation.definition.string.begin.go' },
             },
             'contentName': `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
-            'patterns': [{ 'include': `${lang.root_scope}` }],
+            'patterns': lang.embed_scopes.map((scope) => ({ 'include': scope })),
             'end': '`',
             'endCaptures': {
                 'name': 'punctuation.definition.string.end.go',

@@ -57,6 +57,31 @@
           }
         },
         {
+          "comment": "Java-formatted triple-quoted strings",
+          "name": "string.quoted.multi.embedded.toml",
+          "begin": "(?x)\n(''') \n(?= (?i://java|/\\*java) \\b )",
+          "end": "(\\1)",
+          "contentName": "meta.embedded.block.java.toml source.java",
+          "patterns": [
+            {
+              "include": "source.java#class-body"
+            },
+            {
+              "include": "source.java"
+            }
+          ],
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.begin.toml"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.string.end.toml"
+            }
+          }
+        },
+        {
           "comment": "CSS-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.toml",
           "begin": "(?x)\n(''') \n(?= (?i:/\\*css) \\b )",

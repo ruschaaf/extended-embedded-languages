@@ -181,6 +181,7 @@ signal which language you are using.
 | HLSL                   | hlsl                         | `//hlsl`                                       |
 | HTML                   | html                         | `<!DOCTYPE`, `<html`, `<!--html`               |
 | Ini                    | ini                          | `;ini`                                         |
+| Java                   | java                         | `//java`, `/*java`                             |
 | Javascript             | js, javascript               | `//js`                                         |
 | JSON                   | json                         | [^1]                                           |
 | JSONC                  | jsonc                        | `//jsonc`                                      |

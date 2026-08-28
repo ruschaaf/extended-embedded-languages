@@ -23,6 +23,18 @@
       ")cpp\""
     ]
   },
+  "Java code block (string)": {
+    "scope": "cpp",
+    "prefix": [
+      "java"
+    ],
+    "description": "Insert a Java code block string",
+    "body": [
+      "R\"java(",
+      "\t$0",
+      ")java\""
+    ]
+  },
   "CSS code block (string)": {
     "scope": "cpp",
     "prefix": [

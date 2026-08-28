@@ -83,6 +83,44 @@
           ]
         },
         {
+          "comment": "Java-formatted block scalar strings",
+          "name": "string.quoted.multi.embedded.yaml",
+          "begin": "(?x)\n(?:(\\|)|(>)) ([1-9])? ([-+])? \\s* \n( \\# (?i:java) ) \\b \\s* \\n?",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.flow.block-scalar.literal.yaml"
+            },
+            "2": {
+              "name": "keyword.control.flow.block-scalar.folded.yaml"
+            },
+            "3": {
+              "name": "constant.numeric.indentation-indicator.yaml"
+            },
+            "4": {
+              "name": "storage.modifier.chomping-indicator.yaml"
+            },
+            "5": {
+              "name": "meta.encoding.yaml"
+            }
+          },
+          "end": "^(?=\\S)|(?!\\G)",
+          "patterns": [
+            {
+              "begin": "(?>^|\\\\G)([ ]+)(?! )",
+              "end": "^(?!\\1|\\s*$)",
+              "patterns": [
+                {
+                  "include": "source.java#class-body"
+                },
+                {
+                  "include": "source.java"
+                }
+              ],
+              "name": "meta.embedded.block.java.github-actions-workflow source.java"
+            }
+          ]
+        },
+        {
           "comment": "CSS-formatted block scalar strings",
           "name": "string.quoted.multi.embedded.yaml",
           "begin": "(?x)\n(?:(\\|)|(>)) ([1-9])? ([-+])? \\s* \n( \\# (?i:css) ) \\b \\s* \\n?",

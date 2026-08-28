@@ -17,7 +17,7 @@ export function buildNixSyntax(hostSpec, embeddedSpecs) {
             'begin': String.raw`(/\*(?i:${lang.id_choice_re})\*/)\s*(\'\')`,
             'end': String.raw`\'\'(?!\$|\'|\\.)`,
             'contentName': `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
-            'patterns': [{ 'include': `${lang.root_scope}` }],
+            'patterns': lang.embed_scopes.map((scope) => ({ 'include': scope })),
             'name': 'string.quoted.other.nix',
             'beginCaptures': {
                 '1': { 'name': 'comment.block.nix' },

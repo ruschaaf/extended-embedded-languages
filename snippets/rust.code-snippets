@@ -23,6 +23,18 @@
       "\"#"
     ]
   },
+  "Java code block (string)": {
+    "scope": "rust",
+    "prefix": [
+      "java"
+    ],
+    "description": "Insert a Java code block string",
+    "body": [
+      "/*java*/ r#\"",
+      "\t$0",
+      "\"#"
+    ]
+  },
   "CSS code block (string)": {
     "scope": "rust",
     "prefix": [

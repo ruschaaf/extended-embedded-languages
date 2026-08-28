@@ -20,7 +20,7 @@ export function buildCppSyntax(hostSpec, embeddedSpecs) {
 \(`,
             'end': String.raw`\)(\2)"`,
             'contentName': `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
-            'patterns': [{ 'include': `${lang.root_scope}` }],
+            'patterns': lang.embed_scopes.map((scope) => ({ 'include': scope })),
             'name': 'string.quoted.double.raw.embedded.cpp',
             'beginCaptures': {
                 '0': { 'name': 'punctuation.definition.string.begin.cpp' },
